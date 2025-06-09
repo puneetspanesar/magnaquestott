@@ -53,7 +53,7 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-white/98 backdrop-blur-lg shadow-sm sticky top-0 z-50 border-b border-gray-100/50">
+    <header className="bg-white/99 backdrop-blur-lg shadow-sm sticky top-0 z-50 border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-5">
           {/* Logo */}

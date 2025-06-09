@@ -83,27 +83,25 @@ export default function IndustryVerticals() {
           ))}
         </div>
 
-        <div className="mt-16 text-center animate-fadeIn">
-          <div className="bg-white rounded-3xl p-8 shadow-lg max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Industry-Specific Expertise</h3>
-            <p className="text-gray-600 mb-6">
-              With 25+ years of experience, we understand the unique challenges and requirements 
-              of each industry, delivering tailored solutions that drive business growth.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <span className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
-                Regulatory Compliance
-              </span>
-              <span className="bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-medium">
-                Industry Standards
-              </span>
-              <span className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
-                Custom Integrations
-              </span>
-              <span className="bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-medium">
-                Scalable Architecture
-              </span>
-            </div>
+        <div className="mt-12 bg-gray-50 rounded-2xl p-8 text-center animate-fadeIn">
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">Industry-Specific Expertise</h3>
+          <p className="text-gray-600 mb-6 max-w-3xl mx-auto">
+            With 25+ years of experience, we understand the unique challenges and requirements 
+            of each industry, delivering tailored solutions that drive business growth.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <span className="bg-primary text-white px-4 py-2 rounded-full text-sm font-medium">
+              Regulatory Compliance
+            </span>
+            <span className="bg-primary text-white px-4 py-2 rounded-full text-sm font-medium">
+              Industry Standards
+            </span>
+            <span className="bg-primary text-white px-4 py-2 rounded-full text-sm font-medium">
+              Custom Integrations
+            </span>
+            <span className="bg-primary text-white px-4 py-2 rounded-full text-sm font-medium">
+              Scalable Architecture
+            </span>
           </div>
         </div>
       </div>

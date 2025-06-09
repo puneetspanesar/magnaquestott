@@ -20,31 +20,29 @@ export default function CustomerLogos() {
           </p>
         </div>
 
-        {/* Auto-scrolling Customer Logos */}
-        <div className="relative">
-          <div className="flex space-x-8 scroll-container">
-            {doubledCustomers.map((customer, index) => (
-              <div key={index} className="flex-shrink-0 group">
-                <div className="bg-gray-50 hover:bg-primary/5 border border-gray-100 hover:border-primary/20 rounded-xl p-6 w-48 h-24 transition-all duration-300 group-hover:shadow-lg flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-2">
-                      <div className="w-4 h-4 bg-primary rounded-sm"></div>
-                    </div>
-                    <span className="text-gray-700 text-sm font-medium group-hover:text-primary transition-colors">
-                      {customer}
-                    </span>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+        {/* Customer Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8">
+          {featuredCustomers.slice(0, 12).map((customer, index) => (
+            <div key={index} className="bg-gray-50 hover:bg-primary/5 border border-gray-100 hover:border-primary/20 rounded-lg p-4 transition-all duration-300 flex items-center justify-center">
+              <span className="text-gray-700 text-sm font-medium text-center">
+                {customer}
+              </span>
+            </div>
+          ))}
         </div>
 
-        {/* Bottom note */}
-        <div className="mt-8 text-center animate-fadeIn">
-          <p className="text-gray-500 text-sm">
-            Hover over the logos to pause the animation
+        <div className="bg-gray-50 rounded-2xl p-8 text-center animate-fadeIn">
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">Trusted by Industry Leaders</h3>
+          <p className="text-gray-600 mb-6 max-w-3xl mx-auto">
+            From telecommunications giants to streaming platforms, our enterprise-grade solutions 
+            power subscription businesses across diverse industries worldwide.
           </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <span className="bg-primary text-white px-4 py-2 rounded-full text-sm font-medium">250+ Customers</span>
+            <span className="bg-primary text-white px-4 py-2 rounded-full text-sm font-medium">50+ Countries</span>
+            <span className="bg-primary text-white px-4 py-2 rounded-full text-sm font-medium">25+ Years Experience</span>
+            <span className="bg-primary text-white px-4 py-2 rounded-full text-sm font-medium">24/7 Support</span>
+          </div>
         </div>
       </div>
     </section>

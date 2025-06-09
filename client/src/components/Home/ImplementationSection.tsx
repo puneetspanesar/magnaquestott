@@ -34,19 +34,17 @@ export default function ImplementationSection() {
             />
           </div>
           <div className="animate-slideInUp">
-            <h2 className="text-4xl font-bold text-gray-900 mb-8">
+            <h2 className="text-3xl font-semibold text-gray-900 mb-8 tracking-tight">
               Fast Implementation, Lasting Results
             </h2>
             
             <div className="space-y-6">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start">
-                  <div className={`${benefit.color} text-white p-3 rounded-full mr-4 flex-shrink-0`}>
-                    <benefit.icon className="w-6 h-6" />
-                  </div>
+                  <benefit.icon className={`w-6 h-6 mr-4 flex-shrink-0 ${benefit.color === 'bg-primary' ? 'text-primary' : 'text-accent'}`} />
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{benefit.title}</h3>
-                    <p className="text-gray-600">{benefit.description}</p>
+                    <h3 className="text-lg font-medium text-gray-900 mb-2">{benefit.title}</h3>
+                    <p className="text-gray-600 font-normal">{benefit.description}</p>
                   </div>
                 </div>
               ))}

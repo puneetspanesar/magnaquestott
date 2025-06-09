@@ -82,54 +82,23 @@ export default function SolutionOfferings() {
           </p>
         </div>
         
-        <div className="grid lg:grid-cols-2 gap-8">
-          {/* Left column */}
-          <div className="space-y-6">
-            {offerings.slice(0, 3).map((offering, index) => (
-              <div key={index} className="bg-white rounded-lg p-6 border border-gray-200 hover:border-primary/30 transition-all animate-fadeIn group">
-                <div className="flex items-start space-x-4">
-                  <div className={`${offering.color} p-3 rounded-lg flex-shrink-0`}>
-                    <offering.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-lg font-medium text-gray-900 mb-3">{offering.category}</h3>
-                    <div className="grid grid-cols-2 gap-2">
-                      {offering.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-start">
-                          <div className="w-1 h-1 bg-primary rounded-full mt-2 mr-2 flex-shrink-0"></div>
-                          <span className="text-gray-600 text-sm font-normal">{feature}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {offerings.map((offering, index) => (
+            <div key={index} className="bg-white rounded-lg p-6 border border-gray-200 hover:border-primary/30 transition-all animate-fadeIn group">
+              <div className="flex items-center space-x-3 mb-4">
+                <offering.icon className={`w-6 h-6 ${offering.color === 'bg-primary' ? 'text-primary' : offering.color === 'bg-accent' ? 'text-accent' : 'text-blue-600'}`} />
+                <h3 className="text-lg font-medium text-gray-900">{offering.category}</h3>
               </div>
-            ))}
-          </div>
-          
-          {/* Right column */}
-          <div className="space-y-6">
-            {offerings.slice(3, 6).map((offering, index) => (
-              <div key={index} className="bg-white rounded-lg p-6 border border-gray-200 hover:border-primary/30 transition-all animate-fadeIn group">
-                <div className="flex items-start space-x-4">
-                  <div className={`${offering.color} p-3 rounded-lg flex-shrink-0`}>
-                    <offering.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-lg font-medium text-gray-900 mb-3">{offering.category}</h3>
-                    <div className="grid grid-cols-2 gap-2">
-                      {offering.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-start">
-                          <div className="w-1 h-1 bg-primary rounded-full mt-2 mr-2 flex-shrink-0"></div>
-                          <span className="text-gray-600 text-sm font-normal">{feature}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+              <ul className="space-y-2">
+                {offering.features.map((feature, featureIndex) => (
+                  <li key={featureIndex} className="flex items-start">
+                    <div className="w-1.5 h-1.5 bg-primary rounded-full mt-1.5 mr-3 flex-shrink-0"></div>
+                    <span className="text-gray-600 text-sm font-normal">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
         
         <div className="mt-16 bg-gray-50 rounded-2xl p-8 text-center animate-fadeIn">

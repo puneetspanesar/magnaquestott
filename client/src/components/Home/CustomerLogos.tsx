@@ -33,33 +33,77 @@ export default function CustomerLogos() {
           </div>
         </div>
 
-        {/* CTA Section */}
-        <div className="bg-gradient-to-r from-primary to-blue-700 rounded-2xl p-12 text-center text-white">
-          <h3 className="text-3xl font-bold mb-4">Join Industry Leaders Worldwide</h3>
-          <p className="text-xl mb-8 text-blue-100">
-            Transform your subscription business with enterprise-grade solutions trusted by 250+ companies
-          </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
-            <div className="text-center">
-              <div className="text-2xl font-bold">250+</div>
-              <div className="text-blue-200 text-sm">Global Customers</div>
+        {/* Enhanced CTA Section */}
+        <div className="relative overflow-hidden bg-gradient-to-br from-primary via-blue-600 to-blue-800 rounded-3xl p-12">
+          {/* Background Pattern */}
+          <div className="absolute inset-0 opacity-10">
+            <svg className="w-full h-full" viewBox="0 0 100 100">
+              <defs>
+                <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+                  <path d="M 10 0 L 0 0 0 10" fill="none" stroke="white" strokeWidth="0.5"/>
+                </pattern>
+              </defs>
+              <rect width="100%" height="100%" fill="url(#grid)" />
+            </svg>
+          </div>
+          
+          <div className="relative z-10">
+            <div className="text-center mb-12">
+              <h3 className="text-4xl font-bold text-white mb-6 leading-tight">
+                Join Industry Leaders Worldwide
+              </h3>
+              <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
+                Transform your subscription business with enterprise-grade solutions trusted by industry leaders
+              </p>
             </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold">50+</div>
-              <div className="text-blue-200 text-sm">Countries</div>
+            
+            {/* Enhanced Stats Grid */}
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+              <div className="text-center group">
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all">
+                  <div className="text-4xl font-bold text-white mb-2">250+</div>
+                  <div className="text-blue-200 font-medium">Global Customers</div>
+                  <div className="text-blue-300 text-sm mt-1">Across all industries</div>
+                </div>
+              </div>
+              <div className="text-center group">
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all">
+                  <div className="text-4xl font-bold text-white mb-2">50+</div>
+                  <div className="text-blue-200 font-medium">Countries</div>
+                  <div className="text-blue-300 text-sm mt-1">Global presence</div>
+                </div>
+              </div>
+              <div className="text-center group">
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all">
+                  <div className="text-4xl font-bold text-white mb-2">300M+</div>
+                  <div className="text-blue-200 font-medium">Subscribers</div>
+                  <div className="text-blue-300 text-sm mt-1">Under management</div>
+                </div>
+              </div>
+              <div className="text-center group">
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all">
+                  <div className="text-4xl font-bold text-white mb-2">99.9%</div>
+                  <div className="text-blue-200 font-medium">Uptime SLA</div>
+                  <div className="text-blue-300 text-sm mt-1">Guaranteed reliability</div>
+                </div>
+              </div>
             </div>
+            
+            {/* CTA Buttons */}
             <div className="text-center">
-              <div className="text-2xl font-bold">300M+</div>
-              <div className="text-blue-200 text-sm">Subscribers</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold">99.9%</div>
-              <div className="text-blue-200 text-sm">Uptime SLA</div>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <button className="bg-white text-primary px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg">
+                  Schedule Demo
+                </button>
+                <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-primary transition-all">
+                  View Case Studies
+                </button>
+              </div>
+              <p className="text-blue-200 text-sm mt-4">
+                Join companies like BGE Home, MBC Group, STAR, and Discovery
+              </p>
             </div>
           </div>
-          <button className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-            Schedule Demo
-          </button>
         </div>
       </div>
     </section>

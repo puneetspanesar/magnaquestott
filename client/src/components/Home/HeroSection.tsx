@@ -25,7 +25,7 @@ export default function HeroSection() {
               <span className="text-blue-100 text-sm font-medium">🚀 Inspired By The Future</span>
             </div>
             
-            <h1 className="text-5xl lg:text-7xl font-bold leading-tight mb-6">
+            <h1 className="text-4xl lg:text-5xl font-semibold leading-tight mb-6 tracking-tight">
               Increase{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-white">
                 Subscription Revenue
@@ -34,7 +34,7 @@ export default function HeroSection() {
               With Magnaquest
             </h1>
             
-            <p className="text-xl text-blue-100 mb-8 leading-relaxed max-w-2xl">
+            <p className="text-lg text-blue-100 mb-8 leading-relaxed max-w-2xl font-normal">
               SURE is an end-to-end Subscription, Billing and CRM platform built around 
               a solid CRM core to manage and handle the entire subscriber lifecycle seamlessly.
             </p>

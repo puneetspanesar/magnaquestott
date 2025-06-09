@@ -11,7 +11,7 @@ export default function HeroSection() {
   ];
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary via-primary to-primary/80 text-white overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary via-primary to-accent text-white overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-pulse"></div>
@@ -42,7 +42,7 @@ export default function HeroSection() {
           {/* Main Headline */}
           <h1 className="text-5xl lg:text-7xl font-bold leading-tight mb-8">
             <span className="block text-white mb-4">Transform Your</span>
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-200 via-accent to-blue-200 animate-pulse">
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-200 via-white to-blue-200 animate-pulse">
               Subscription Business
             </span>
             <span className="block text-white text-4xl lg:text-5xl mt-4 font-semibold">

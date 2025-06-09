@@ -7,28 +7,28 @@ export default function StatsSection() {
       number: "25+",
       label: "Years of Excellence",
       description: "Pioneer in enabling subscription businesses across the world",
-      color: "bg-primary/10 text-primary"
+      color: "bg-primary"
     },
     {
       icon: Users,
       number: "250+",
       label: "Global Customers",
       description: "Serving 300 million+ subscribers every month",
-      color: "bg-accent/10 text-accent"
+      color: "bg-accent"
     },
     {
       icon: Globe,
       number: "50+",
       label: "Countries Served",
       description: "Including India, South East Asia, Africa, LATAM, JAPAC and Europe",
-      color: "bg-primary/10 text-primary"
+      color: "bg-primary"
     },
     {
       icon: DollarSign,
       number: "$Multi-Billion",
       label: "Revenue Processed",
       description: "Managing subscription revenue at enterprise scale",
-      color: "bg-accent/10 text-accent"
+      color: "bg-accent"
     }
   ];
 
@@ -47,9 +47,9 @@ export default function StatsSection() {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
-            <div key={index} className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all animate-fadeIn group border border-gray-100">
-              <div className={`${stat.color} p-6 rounded-2xl w-24 h-24 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform shadow-lg`}>
-                <stat.icon className="w-12 h-12" />
+            <div key={index} className="bg-white rounded-lg p-8 border border-gray-200 hover:border-primary/30 transition-all animate-fadeIn group">
+              <div className={`${stat.color} p-6 rounded-xl w-20 h-20 flex items-center justify-center mx-auto mb-6 group-hover:scale-105 transition-transform`}>
+                <stat.icon className="w-10 h-10 text-white" />
               </div>
               <div className="text-center">
                 <div className="text-3xl font-semibold text-gray-900 mb-2 tracking-tight">{stat.number}</div>

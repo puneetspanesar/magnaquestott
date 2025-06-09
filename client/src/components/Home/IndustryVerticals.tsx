@@ -67,9 +67,9 @@ export default function IndustryVerticals() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {industries.map((industry, index) => (
-            <div key={index} className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all animate-fadeIn group border border-gray-100">
-              <div className="bg-primary/10 p-4 rounded-2xl w-16 h-16 flex items-center justify-center mx-auto mb-6 group-hover:bg-primary group-hover:text-white transition-all">
-                <industry.icon className="w-8 h-8 text-primary group-hover:text-white transition-colors" />
+            <div key={index} className="bg-white rounded-lg p-8 border border-gray-200 hover:border-primary/30 transition-all animate-fadeIn group">
+              <div className="bg-primary p-6 rounded-xl w-20 h-20 flex items-center justify-center mx-auto mb-6 group-hover:scale-105 transition-transform">
+                <industry.icon className="w-10 h-10 text-white" />
               </div>
               
               <div className="text-center mb-6">

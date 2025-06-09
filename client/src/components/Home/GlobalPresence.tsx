@@ -1,172 +1,145 @@
-import { MapPin, Building2, Globe2 } from "lucide-react";
+import { useState } from "react";
 
 export default function GlobalPresence() {
+  const [hoveredRegion, setHoveredRegion] = useState<string | null>(null);
+
   const regions = [
     {
+      id: "north-america",
       name: "North America",
-      countries: ["USA", "Canada", "Mexico"],
-      customers: ["BGE Home", "Nagra TRANSAM", "International Hockey Federation", "Airecable", "Ultravision"],
-      color: "bg-blue-500"
+      customers: 45,
+      description: "Leading subscription businesses across US and Canada",
+      industries: ["Enterprise SaaS", "Media & Entertainment", "Healthcare"],
+      position: { x: 15, y: 35 }
     },
     {
-      name: "Latin America",
-      countries: ["Trinidad & Tobago", "Guatemala", "Mexico"],
-      customers: ["TRICO", "Airlink", "MAYARO", "Alinet"],
-      color: "bg-green-500"
-    },
-    {
+      id: "europe",
       name: "Europe",
-      countries: ["United Kingdom", "Germany", "France"],
-      customers: ["Various European Enterprises"],
-      color: "bg-purple-500"
+      customers: 68,
+      description: "Powering digital transformation across European markets",
+      industries: ["Fintech", "Telecommunications", "E-commerce"],
+      position: { x: 50, y: 25 }
     },
     {
-      name: "Africa",
-      countries: ["Nigeria", "Tanzania", "Uganda", "Kenya", "Ivory Coast"],
-      customers: ["Envivo", "Pipul TV", "Azam", "SITI Cable", "ISAT Africa", "Vipnet"],
-      color: "bg-orange-500"
-    },
-    {
+      id: "asia-pacific",
       name: "Asia Pacific",
-      countries: ["India", "Bangladesh", "Indonesia", "Philippines", "Maldives"],
-      customers: ["GTPL", "STAR", "NGC", "Link3", "Bengal Communications", "IMTV", "Mediascape"],
-      color: "bg-red-500"
+      customers: 89,
+      description: "Driving subscription growth in the world's fastest-growing region",
+      industries: ["OTT Platforms", "Gaming", "EdTech"],
+      position: { x: 75, y: 35 }
     },
     {
+      id: "india",
       name: "India",
-      countries: ["India"],
-      customers: ["Kal Media (Sun Distribution)", "UTV/Disney", "IndiaCast TV-18", "ETV", "Wishnet", "SITI Networks"],
-      color: "bg-indigo-500"
+      customers: 52,
+      description: "Supporting India's digital economy with localized solutions",
+      industries: ["Broadcasting", "Telecom", "Digital Services"],
+      position: { x: 65, y: 45 }
+    },
+    {
+      id: "middle-east-africa",
+      name: "Middle East & Africa",
+      customers: 23,
+      description: "Enabling subscription businesses across emerging markets",
+      industries: ["Media", "Financial Services", "Technology"],
+      position: { x: 55, y: 55 }
+    },
+    {
+      id: "latin-america",
+      name: "Latin America",
+      customers: 18,
+      description: "Facilitating growth in Latin American subscription economy",
+      industries: ["Streaming", "Fintech", "SaaS"],
+      position: { x: 25, y: 65 }
     }
   ];
 
-  const headquarters = {
-    location: "Hyderabad, India",
-    address: "Capital Park, #806, Madhapur, Hyderabad, Telangana, India",
-    contact: "sales@magnaquest.com"
-  };
-
   return (
-    <section className="py-20 bg-gray-900 text-white">
+    <section className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 animate-fadeIn">
-          <h2 className="text-4xl font-bold mb-4">
-            Global Presence Across 50+ Countries
+        <div className="text-center mb-12 animate-fadeIn">
+          <h2 className="text-3xl font-semibold text-gray-900 mb-4 tracking-tight">
+            Global Presence, Local Excellence
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Serving customers worldwide with localized solutions and 24/7 support 
-            across multiple time zones and regions
+          <p className="text-lg text-gray-600 font-normal">
+            Serving 250+ customers across 50+ countries with 24/7 support
           </p>
         </div>
-        
-        {/* World Map Visualization */}
-        <div className="mb-16 animate-fadeIn">
-          <div className="bg-gray-800 rounded-2xl p-8 relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20"></div>
-            <div className="relative z-10">
-              <div className="text-center mb-8">
-                <Globe2 className="w-24 h-24 text-blue-400 mx-auto mb-4" />
-                <h3 className="text-2xl font-bold">Worldwide Coverage</h3>
-                <p className="text-gray-300">Trusted by enterprises across 6 continents</p>
-              </div>
-              
-              <div className="grid md:grid-cols-3 lg:grid-cols-6 gap-4">
-                {regions.map((region, index) => (
-                  <div key={index} className="bg-gray-700 rounded-xl p-4 hover:bg-gray-600 transition-colors">
-                    <div className={`w-4 h-4 ${region.color} rounded-full mb-3`}></div>
-                    <h4 className="font-semibold mb-2">{region.name}</h4>
-                    <p className="text-gray-300 text-sm">{region.countries.length} countries</p>
-                    <p className="text-gray-400 text-xs">{region.customers.length}+ customers</p>
+
+        {/* Interactive World Map */}
+        <div className="bg-white rounded-lg border border-gray-200 p-8 mb-12 animate-fadeIn">
+          <div className="relative w-full h-96 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg overflow-hidden">
+            {/* World Map SVG Background */}
+            <svg 
+              viewBox="0 0 100 60" 
+              className="absolute inset-0 w-full h-full opacity-20"
+              style={{ fill: '#1267a9' }}
+            >
+              {/* Simplified world map paths */}
+              <path d="M10,20 L30,20 L30,40 L10,40 Z" /> {/* North America */}
+              <path d="M45,15 L60,15 L60,35 L45,35 Z" /> {/* Europe */}
+              <path d="M70,20 L90,20 L90,50 L70,50 Z" /> {/* Asia Pacific */}
+              <path d="M50,40 L65,40 L65,60 L50,60 Z" /> {/* Africa/Middle East */}
+              <path d="M20,50 L35,50 L35,70 L20,70 Z" /> {/* Latin America */}
+            </svg>
+
+            {/* Pulsing Region Markers */}
+            {regions.map((region) => (
+              <div
+                key={region.id}
+                className="absolute transform -translate-x-1/2 -translate-y-1/2 cursor-pointer"
+                style={{
+                  left: `${region.position.x}%`,
+                  top: `${region.position.y}%`
+                }}
+                onMouseEnter={() => setHoveredRegion(region.id)}
+                onMouseLeave={() => setHoveredRegion(null)}
+              >
+                {/* Pulsing animation */}
+                <div className="relative">
+                  <div className="w-4 h-4 bg-primary rounded-full animate-ping absolute"></div>
+                  <div className="w-4 h-4 bg-primary rounded-full relative"></div>
+                </div>
+
+                {/* Hover Tooltip */}
+                {hoveredRegion === region.id && (
+                  <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 bg-white rounded-lg border border-gray-200 p-4 min-w-64 z-10">
+                    <h4 className="font-semibold text-gray-900 mb-2">{region.name}</h4>
+                    <p className="text-sm text-gray-600 mb-3">{region.description}</p>
+                    <div className="text-sm">
+                      <span className="font-medium text-primary">{region.customers} customers</span>
+                    </div>
+                    <div className="mt-2 flex flex-wrap gap-1">
+                      {region.industries.map((industry, index) => (
+                        <span key={index} className="bg-primary/10 text-primary px-2 py-1 rounded text-xs">
+                          {industry}
+                        </span>
+                      ))}
+                    </div>
                   </div>
-                ))}
+                )}
               </div>
-            </div>
+            ))}
           </div>
         </div>
-        
-        {/* Regional Breakdown */}
-        <div className="grid lg:grid-cols-2 gap-12 mb-16">
-          <div className="animate-fadeIn">
-            <h3 className="text-2xl font-bold mb-8 flex items-center">
-              <MapPin className="w-6 h-6 mr-3 text-blue-400" />
-              Key Markets & Customers
-            </h3>
-            <div className="space-y-6">
-              {regions.slice(0, 3).map((region, index) => (
-                <div key={index} className="bg-gray-800 rounded-xl p-6">
-                  <div className="flex items-center mb-4">
-                    <div className={`w-3 h-3 ${region.color} rounded-full mr-3`}></div>
-                    <h4 className="text-lg font-semibold">{region.name}</h4>
-                  </div>
-                  <div className="grid grid-cols-2 gap-2 mb-4">
-                    {region.countries.map((country, countryIndex) => (
-                      <span key={countryIndex} className="text-gray-300 text-sm bg-gray-700 px-2 py-1 rounded">
-                        {country}
-                      </span>
-                    ))}
-                  </div>
-                  <div className="text-gray-400 text-sm">
-                    Notable customers: {region.customers.slice(0, 3).join(", ")}
-                    {region.customers.length > 3 && ` +${region.customers.length - 3} more`}
-                  </div>
-                </div>
-              ))}
-            </div>
+
+        {/* Global Stats */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 animate-fadeIn">
+          <div className="text-center">
+            <div className="text-3xl font-semibold text-gray-900 mb-2">250+</div>
+            <div className="text-gray-600 font-normal">Global Customers</div>
           </div>
-          
-          <div className="animate-fadeIn">
-            <h3 className="text-2xl font-bold mb-8 flex items-center">
-              <Building2 className="w-6 h-6 mr-3 text-blue-400" />
-              More Regional Coverage
-            </h3>
-            <div className="space-y-6">
-              {regions.slice(3).map((region, index) => (
-                <div key={index} className="bg-gray-800 rounded-xl p-6">
-                  <div className="flex items-center mb-4">
-                    <div className={`w-3 h-3 ${region.color} rounded-full mr-3`}></div>
-                    <h4 className="text-lg font-semibold">{region.name}</h4>
-                  </div>
-                  <div className="grid grid-cols-2 gap-2 mb-4">
-                    {region.countries.slice(0, 4).map((country, countryIndex) => (
-                      <span key={countryIndex} className="text-gray-300 text-sm bg-gray-700 px-2 py-1 rounded">
-                        {country}
-                      </span>
-                    ))}
-                  </div>
-                  <div className="text-gray-400 text-sm">
-                    Notable customers: {region.customers.slice(0, 3).join(", ")}
-                    {region.customers.length > 3 && ` +${region.customers.length - 3} more`}
-                  </div>
-                </div>
-              ))}
-            </div>
+          <div className="text-center">
+            <div className="text-3xl font-semibold text-gray-900 mb-2">50+</div>
+            <div className="text-gray-600 font-normal">Countries</div>
           </div>
-        </div>
-        
-        {/* Headquarters */}
-        <div className="bg-gradient-to-r from-primary to-accent rounded-2xl p-8 text-center animate-fadeIn">
-          <h3 className="text-2xl font-bold mb-4">Global Headquarters</h3>
-          <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            <div>
-              <MapPin className="w-8 h-8 mx-auto mb-3 text-blue-200" />
-              <h4 className="font-semibold mb-2">Location</h4>
-              <p className="text-blue-100">{headquarters.location}</p>
-            </div>
-            <div>
-              <Building2 className="w-8 h-8 mx-auto mb-3 text-blue-200" />
-              <h4 className="font-semibold mb-2">Address</h4>
-              <p className="text-blue-100 text-sm">{headquarters.address}</p>
-            </div>
-            <div>
-              <Globe2 className="w-8 h-8 mx-auto mb-3 text-blue-200" />
-              <h4 className="font-semibold mb-2">Contact</h4>
-              <p className="text-blue-100">{headquarters.contact}</p>
-            </div>
+          <div className="text-center">
+            <div className="text-3xl font-semibold text-gray-900 mb-2">300M+</div>
+            <div className="text-gray-600 font-normal">Subscribers Managed</div>
           </div>
-          <div className="mt-8">
-            <button className="bg-white text-primary hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors">
-              Contact Our Team
-            </button>
+          <div className="text-center">
+            <div className="text-3xl font-semibold text-gray-900 mb-2">24/7</div>
+            <div className="text-gray-600 font-normal">Global Support</div>
           </div>
         </div>
       </div>

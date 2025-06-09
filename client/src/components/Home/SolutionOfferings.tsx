@@ -5,7 +5,7 @@ export default function SolutionOfferings() {
     {
       category: "Subscription Management",
       icon: Database,
-      color: "bg-primary/10 text-primary",
+      color: "bg-primary",
       features: [
         "Subscriber Information & Management",
         "Subscriber Engagement",
@@ -16,7 +16,7 @@ export default function SolutionOfferings() {
     {
       category: "Payments",
       icon: CreditCard,
-      color: "bg-accent/10 text-accent",
+      color: "bg-accent",
       features: [
         "Multiple Payment Gateways",
         "Automatic Collections",
@@ -27,7 +27,7 @@ export default function SolutionOfferings() {
     {
       category: "Insights & Analytics",
       icon: BarChart3,
-      color: "bg-primary/10 text-primary",
+      color: "bg-primary",
       features: [
         "Revenue Insights",
         "Subscriber Analytics",
@@ -38,7 +38,7 @@ export default function SolutionOfferings() {
     {
       category: "Finance",
       icon: Shield,
-      color: "bg-accent/10 text-accent",
+      color: "bg-accent",
       features: [
         "Revenue Recognition",
         "Revenue Reconciliations",
@@ -49,7 +49,7 @@ export default function SolutionOfferings() {
     {
       category: "CRM - Customer Care",
       icon: Phone,
-      color: "bg-primary/10 text-primary",
+      color: "bg-primary",
       features: [
         "Service Ticket Management",
         "24/7 Support Desk",
@@ -60,7 +60,7 @@ export default function SolutionOfferings() {
     {
       category: "Invoices",
       icon: Users,
-      color: "bg-accent/10 text-accent",
+      color: "bg-accent",
       features: [
         "Automatic Billing Process",
         "Bill Logs",
@@ -85,9 +85,9 @@ export default function SolutionOfferings() {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {offerings.map((offering, index) => (
-            <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all animate-fadeIn group">
-              <div className={`${offering.color} p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
-                <offering.icon className="w-8 h-8" />
+            <div key={index} className="bg-white rounded-lg p-8 border border-gray-200 hover:border-primary/30 transition-all animate-fadeIn group">
+              <div className={`${offering.color} p-6 rounded-xl w-20 h-20 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform`}>
+                <offering.icon className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-lg font-medium text-gray-900 mb-4">{offering.category}</h3>
               <ul className="space-y-3">

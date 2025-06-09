@@ -58,17 +58,12 @@ export default function Header() {
         <div className="flex justify-between items-center py-6">
           {/* Logo */}
           <Link href="/">
-            <div className="flex items-center space-x-4 cursor-pointer group">
-              <div className="w-12 h-12 gradient-premium rounded-xl flex items-center justify-center group-hover:scale-105 transition-all duration-300 shadow-lg">
-                <div className="text-white font-bold text-2xl">M</div>
-              </div>
-              <div className="text-3xl font-bold">
-                <span className="text-primary">Magna</span>
-                <span className="text-accent">quest</span>
-                <div className="text-sm text-gray-500 font-normal tracking-wider uppercase">
-                  Global Enterprise Solutions
-                </div>
-              </div>
+            <div className="flex items-center cursor-pointer group">
+              <img 
+                src="https://www.magnaquest.com/wp-content/uploads/2024/04/MagnaQuest-Logo.png" 
+                alt="Magnaquest" 
+                className="h-12 group-hover:scale-105 transition-transform duration-300"
+              />
             </div>
           </Link>
 

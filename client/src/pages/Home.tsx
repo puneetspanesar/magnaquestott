@@ -21,7 +21,6 @@ export default function Home() {
       <FeaturesSection />
       <ValuePropsSection />
       <CustomerLogos />
-      <SuccessStories />
       <GlobalPresence />
       <ImplementationSection />
       <ContactSection />

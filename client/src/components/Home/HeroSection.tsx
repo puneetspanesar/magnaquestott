@@ -34,7 +34,7 @@ export default function HeroSection() {
               With Magnaquest
             </h1>
             
-            <p className="text-lg text-blue-100 mb-8 leading-relaxed max-w-2xl font-normal">
+            <p className="section-subtitle text-blue-100 mb-8 max-w-2xl">
               SURE is an end-to-end Subscription, Billing and CRM platform built around 
               a solid CRM core to manage and handle the entire subscriber lifecycle seamlessly.
             </p>
@@ -44,7 +44,7 @@ export default function HeroSection() {
               {highlights.map((highlight, index) => (
                 <div key={index} className="flex items-center space-x-2 text-blue-100">
                   <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                  <span className="text-sm font-medium">{highlight}</span>
+                  <span className="body-text text-blue-100">{highlight}</span>
                 </div>
               ))}
             </div>

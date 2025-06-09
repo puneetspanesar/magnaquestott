@@ -26,10 +26,10 @@ export default function FeaturesSection() {
     <section className="py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 animate-fadeIn">
-          <h2 className="text-3xl font-semibold text-gray-900 mb-4 tracking-tight">
+          <h2 className="section-title">
             Complete Subscription Management Solutions
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto font-normal">
+          <p className="section-subtitle max-w-2xl mx-auto">
             Next-generation platform designed to maximize revenue and minimize churn
           </p>
         </div>
@@ -44,17 +44,17 @@ export default function FeaturesSection() {
               />
               <div className="flex items-center space-x-3 mb-3">
                 <feature.icon className="w-6 h-6 text-primary" />
-                <h3 className="text-lg font-medium text-gray-900">{feature.title}</h3>
+                <h3 className="card-title">{feature.title}</h3>
               </div>
-              <p className="text-gray-600 text-sm font-normal mb-4">{feature.description}</p>
+              <p className="body-text mb-4">{feature.description}</p>
               <div className="space-y-2">
                 <div className="flex items-center space-x-2">
                   <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                  <span className="text-xs text-gray-600">Real-time Processing</span>
+                  <span className="feature-item">Real-time Processing</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <div className="w-1.5 h-1.5 bg-accent rounded-full"></div>
-                  <span className="text-xs text-gray-600">Enterprise Security</span>
+                  <span className="feature-item">Enterprise Security</span>
                 </div>
               </div>
             </div>

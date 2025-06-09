@@ -72,6 +72,27 @@
     line-height: 1.2;
     letter-spacing: -0.025em;
   }
+
+  /* Standardized Typography Classes */
+  .section-title {
+    @apply text-3xl font-semibold text-gray-900 tracking-tight leading-tight mb-4;
+  }
+
+  .section-subtitle {
+    @apply text-lg text-gray-600 font-normal leading-relaxed;
+  }
+
+  .card-title {
+    @apply text-lg font-medium text-gray-900 leading-normal;
+  }
+
+  .body-text {
+    @apply text-gray-600 text-sm font-normal leading-relaxed;
+  }
+
+  .feature-item {
+    @apply text-gray-600 text-xs font-normal;
+  }
 }
 
 @layer utilities {

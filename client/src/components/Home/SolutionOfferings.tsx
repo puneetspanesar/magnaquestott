@@ -74,10 +74,10 @@ export default function SolutionOfferings() {
     <section className="py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 animate-fadeIn">
-          <h2 className="text-3xl font-semibold text-gray-900 mb-4 tracking-tight">
+          <h2 className="section-title">
             Comprehensive Solution Offerings
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto font-normal">
+          <p className="section-subtitle max-w-2xl mx-auto">
             End-to-end subscription management platform with integrated capabilities
           </p>
         </div>

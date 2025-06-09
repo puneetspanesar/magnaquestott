@@ -50,10 +50,10 @@ export default function IndustryVerticals() {
     <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-fadeIn">
-          <h2 className="text-3xl font-semibold text-gray-900 mb-4 tracking-tight">
+          <h2 className="section-title">
             Magnaquest Sure for Every Industry
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto font-normal">
+          <p className="section-subtitle max-w-3xl mx-auto">
             Our platform adapts to your industry's unique requirements, delivering specialized 
             subscription management solutions across diverse verticals
           </p>
@@ -67,13 +67,13 @@ export default function IndustryVerticals() {
                   <industry.icon className={`w-8 h-8 ${industry.color}`} />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <h3 className="text-lg font-medium text-gray-900 mb-2">{industry.title}</h3>
-                  <p className="text-gray-600 text-sm font-normal leading-relaxed mb-4">{industry.description}</p>
+                  <h3 className="card-title mb-2">{industry.title}</h3>
+                  <p className="body-text mb-4">{industry.description}</p>
                   <div className="grid grid-cols-1 gap-1">
                     {industry.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center text-xs">
+                      <div key={featureIndex} className="flex items-center">
                         <div className="w-1 h-1 bg-primary rounded-full mr-2 flex-shrink-0"></div>
-                        <span className="text-gray-600">{feature}</span>
+                        <span className="feature-item">{feature}</span>
                       </div>
                     ))}
                   </div>

@@ -34,7 +34,7 @@ export default function ImplementationSection() {
             />
           </div>
           <div className="animate-slideInUp">
-            <h2 className="text-3xl font-semibold text-gray-900 mb-8 tracking-tight">
+            <h2 className="section-title mb-8">
               Fast Implementation, Lasting Results
             </h2>
             

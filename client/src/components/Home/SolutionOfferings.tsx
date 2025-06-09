@@ -87,13 +87,13 @@ export default function SolutionOfferings() {
             <div key={index} className="bg-white rounded-lg p-6 border border-gray-200 hover:border-primary/30 transition-all animate-fadeIn group">
               <div className="flex items-center space-x-3 mb-4">
                 <offering.icon className={`w-6 h-6 ${offering.color === 'bg-primary' ? 'text-primary' : offering.color === 'bg-accent' ? 'text-accent' : 'text-blue-600'}`} />
-                <h3 className="text-lg font-medium text-gray-900">{offering.category}</h3>
+                <h3 className="card-title">{offering.category}</h3>
               </div>
               <ul className="space-y-2">
                 {offering.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-start">
                     <div className="w-1.5 h-1.5 bg-primary rounded-full mt-1.5 mr-3 flex-shrink-0"></div>
-                    <span className="text-gray-600 text-sm font-normal">{feature}</span>
+                    <span className="body-text">{feature}</span>
                   </li>
                 ))}
               </ul>

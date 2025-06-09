@@ -46,25 +46,25 @@ export default function ValuePropsSection() {
         <div className="grid lg:grid-cols-5 gap-12 items-center">
           {/* Left content */}
           <div className="lg:col-span-2">
-            <h2 className="text-3xl font-semibold text-gray-900 mb-6 tracking-tight">
+            <h2 className="section-title mb-6">
               Why Global Enterprises Choose Magnaquest Sure
             </h2>
-            <p className="text-lg text-gray-600 font-normal mb-8">
+            <p className="section-subtitle mb-8">
               Comprehensive subscription management platform trusted by 250+ customers 
               across 50+ countries for over 25 years
             </p>
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <span className="text-gray-700 font-medium">25+ Years Industry Experience</span>
+                <span className="body-text text-gray-700">25+ Years Industry Experience</span>
               </div>
               <div className="flex items-center space-x-3">
                 <div className="w-2 h-2 bg-accent rounded-full"></div>
-                <span className="text-gray-700 font-medium">Enterprise-Grade Security</span>
+                <span className="body-text text-gray-700">Enterprise-Grade Security</span>
               </div>
               <div className="flex items-center space-x-3">
                 <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <span className="text-gray-700 font-medium">99.9% Uptime Guarantee</span>
+                <span className="body-text text-gray-700">99.9% Uptime Guarantee</span>
               </div>
             </div>
           </div>
@@ -77,8 +77,8 @@ export default function ValuePropsSection() {
                   <div className="flex items-start space-x-3">
                     <prop.icon className={`w-6 h-6 ${prop.color === 'bg-primary' ? 'text-primary' : 'text-accent'} flex-shrink-0 mt-1`} />
                     <div>
-                      <h3 className="text-lg font-medium text-gray-900 mb-2">{prop.title}</h3>
-                      <p className="text-gray-600 text-sm font-normal leading-relaxed">{prop.description}</p>
+                      <h3 className="card-title mb-2">{prop.title}</h3>
+                      <p className="body-text">{prop.description}</p>
                     </div>
                   </div>
                 </div>

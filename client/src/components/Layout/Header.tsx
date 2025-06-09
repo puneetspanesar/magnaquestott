@@ -53,52 +53,48 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-white/95 backdrop-blur-lg shadow-xl sticky top-0 z-50 border-b border-gray-100">
+    <header className="bg-white/98 backdrop-blur-lg shadow-sm sticky top-0 z-50 border-b border-gray-100/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
+        <div className="flex justify-between items-center py-5">
           {/* Logo */}
           <Link href="/">
             <div className="flex items-center cursor-pointer group">
-              <div className="bg-gradient-to-r from-primary to-accent p-2 rounded-xl mr-3 group-hover:scale-105 transition-all duration-300">
-                <span className="text-white font-bold text-xl">M</span>
-              </div>
-              <div className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                Magnaquest
-              </div>
+              <img 
+                src="https://www.magnaquest.com/wp-content/uploads/2024/04/MagnaQuest-Logo.png" 
+                alt="Magnaquest" 
+                className="h-10 group-hover:scale-105 transition-transform duration-300"
+              />
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-1 bg-gray-50/50 rounded-2xl p-2">
+          <nav className="hidden lg:flex items-center">
             {/* Home */}
             <Link href="/">
-              <span className={`relative px-6 py-3 rounded-xl text-sm font-semibold transition-all duration-300 cursor-pointer group ${
+              <span className={`relative px-8 py-4 text-base font-medium transition-all duration-300 cursor-pointer ${
                 isActive("/")
-                  ? "text-white bg-gradient-to-r from-primary to-accent shadow-lg"
-                  : "text-gray-700 hover:text-primary hover:bg-white hover:shadow-md"
+                  ? "text-primary font-semibold"
+                  : "text-gray-700 hover:text-primary"
               }`}>
                 Home
-                {!isActive("/") && (
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-accent/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                )}
               </span>
             </Link>
+
+            {/* Divider */}
+            <div className="h-6 w-px bg-gradient-to-b from-transparent via-gray-300 to-transparent mx-2"></div>
 
             {/* Solutions Dropdown */}
             <div className="relative">
               <button
                 onClick={() => handleDropdownToggle('solutions')}
-                className={`relative flex items-center px-6 py-3 rounded-xl text-sm font-semibold transition-all duration-300 group ${
+                className={`relative flex items-center px-8 py-4 text-base font-medium transition-all duration-300 ${
                   isActive("/solutions") || activeDropdown === 'solutions'
-                    ? "text-white bg-gradient-to-r from-primary to-accent shadow-lg"
-                    : "text-gray-700 hover:text-primary hover:bg-white hover:shadow-md"
+                    ? "text-primary font-semibold"
+                    : "text-gray-700 hover:text-primary"
                 }`}
               >
                 Solutions
                 <ChevronDown className={`w-4 h-4 ml-2 transition-transform duration-300 ${activeDropdown === 'solutions' ? 'rotate-180' : ''}`} />
-                {!isActive("/solutions") && activeDropdown !== 'solutions' && (
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-accent/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                )}
               </button>
               
               {activeDropdown === 'solutions' && (
@@ -135,21 +131,21 @@ export default function Header() {
               )}
             </div>
 
+            {/* Divider */}
+            <div className="h-6 w-px bg-gradient-to-b from-transparent via-gray-300 to-transparent mx-2"></div>
+
             {/* Company Dropdown */}
             <div className="relative">
               <button
                 onClick={() => handleDropdownToggle('company')}
-                className={`relative flex items-center px-6 py-3 rounded-xl text-sm font-semibold transition-all duration-300 group ${
+                className={`relative flex items-center px-8 py-4 text-base font-medium transition-all duration-300 ${
                   isActive("/about") || activeDropdown === 'company'
-                    ? "text-white bg-gradient-to-r from-primary to-accent shadow-lg"
-                    : "text-gray-700 hover:text-primary hover:bg-white hover:shadow-md"
+                    ? "text-primary font-semibold"
+                    : "text-gray-700 hover:text-primary"
                 }`}
               >
                 Company
                 <ChevronDown className={`w-4 h-4 ml-2 transition-transform duration-300 ${activeDropdown === 'company' ? 'rotate-180' : ''}`} />
-                {!isActive("/about") && activeDropdown !== 'company' && (
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-accent/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                )}
               </button>
               
               {activeDropdown === 'company' && (
@@ -174,21 +170,21 @@ export default function Header() {
               )}
             </div>
 
+            {/* Divider */}
+            <div className="h-6 w-px bg-gradient-to-b from-transparent via-gray-300 to-transparent mx-2"></div>
+
             {/* Resources Dropdown */}
             <div className="relative">
               <button
                 onClick={() => handleDropdownToggle('resources')}
-                className={`relative flex items-center px-6 py-3 rounded-xl text-sm font-semibold transition-all duration-300 group ${
+                className={`relative flex items-center px-8 py-4 text-base font-medium transition-all duration-300 ${
                   isActive("/resources") || activeDropdown === 'resources'
-                    ? "text-white bg-gradient-to-r from-primary to-accent shadow-lg"
-                    : "text-gray-700 hover:text-primary hover:bg-white hover:shadow-md"
+                    ? "text-primary font-semibold"
+                    : "text-gray-700 hover:text-primary"
                 }`}
               >
                 Resources
                 <ChevronDown className={`w-4 h-4 ml-2 transition-transform duration-300 ${activeDropdown === 'resources' ? 'rotate-180' : ''}`} />
-                {!isActive("/resources") && activeDropdown !== 'resources' && (
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-accent/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                )}
               </button>
               
               {activeDropdown === 'resources' && (
@@ -213,25 +209,25 @@ export default function Header() {
               )}
             </div>
 
+            {/* Divider */}
+            <div className="h-6 w-px bg-gradient-to-b from-transparent via-gray-300 to-transparent mx-2"></div>
+
             {/* Contact */}
             <Link href="/contact">
-              <span className={`relative px-6 py-3 rounded-xl text-sm font-semibold transition-all duration-300 cursor-pointer group ${
+              <span className={`relative px-8 py-4 text-base font-medium transition-all duration-300 cursor-pointer ${
                 isActive("/contact")
-                  ? "text-white bg-gradient-to-r from-primary to-accent shadow-lg"
-                  : "text-gray-700 hover:text-primary hover:bg-white hover:shadow-md"
+                  ? "text-primary font-semibold"
+                  : "text-gray-700 hover:text-primary"
               }`}>
                 Contact
-                {!isActive("/contact") && (
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-accent/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                )}
               </span>
             </Link>
           </nav>
 
           {/* CTA Button */}
-          <div className="hidden lg:block">
+          <div className="hidden lg:block ml-8">
             <Link href="/contact">
-              <button className="bg-gradient-to-r from-primary to-accent text-white px-8 py-3 rounded-xl font-bold text-sm shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 group">
+              <button className="bg-gradient-to-r from-primary to-accent text-white px-8 py-3 rounded-lg font-semibold text-sm shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 group">
                 <Phone className="w-4 h-4 mr-2 inline group-hover:animate-pulse" />
                 Schedule Demo
               </button>

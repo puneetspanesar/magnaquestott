@@ -52,9 +52,9 @@ export default function StatsSection() {
                 <stat.icon className="w-12 h-12" />
               </div>
               <div className="text-center">
-                <div className="text-5xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-3">{stat.number}</div>
-                <div className="text-xl font-bold text-gray-900 mb-4">{stat.label}</div>
-                <div className="text-gray-600 leading-relaxed">{stat.description}</div>
+                <div className="text-3xl font-semibold text-gray-900 mb-2 tracking-tight">{stat.number}</div>
+                <div className="text-lg font-medium text-gray-900 mb-3">{stat.label}</div>
+                <div className="text-sm text-gray-600 leading-relaxed">{stat.description}</div>
               </div>
             </div>
           ))}

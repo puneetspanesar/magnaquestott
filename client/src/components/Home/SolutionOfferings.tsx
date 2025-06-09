@@ -74,10 +74,10 @@ export default function SolutionOfferings() {
     <section className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-fadeIn">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl font-semibold text-gray-900 mb-4 tracking-tight">
             Comprehensive Solution Offerings
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto font-normal">
             End-to-end subscription management platform with integrated billing, 
             CRM, analytics, and customer care capabilities
           </p>

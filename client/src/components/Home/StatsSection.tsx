@@ -36,10 +36,10 @@ export default function StatsSection() {
     <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-fadeIn">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl font-semibold text-gray-900 mb-4 tracking-tight">
             Leading the Subscription Revolution for 25+ Years
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto font-normal">
             Our flagship product, Sure, offers competitive subscription lifecycle management 
             software capabilities that are trusted by enterprises across the globe
           </p>

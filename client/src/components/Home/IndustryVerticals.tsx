@@ -56,10 +56,10 @@ export default function IndustryVerticals() {
     <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-fadeIn">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl font-semibold text-gray-900 mb-4 tracking-tight">
             Magnaquest Sure for Every Industry
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto font-normal">
             Our platform adapts to your industry's unique requirements, delivering specialized 
             subscription management solutions across diverse verticals
           </p>
@@ -73,8 +73,8 @@ export default function IndustryVerticals() {
               </div>
               
               <div className="text-center mb-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{industry.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{industry.description}</p>
+                <h3 className="text-lg font-medium text-gray-900 mb-3">{industry.title}</h3>
+                <p className="text-gray-600 text-sm font-normal leading-relaxed">{industry.description}</p>
               </div>
 
               <div className="space-y-2">

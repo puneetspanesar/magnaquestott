@@ -32,10 +32,10 @@ export default function FeaturesSection() {
     <section className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-fadeIn">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl font-semibold text-gray-900 mb-4 tracking-tight">
             Complete Subscription Management Solutions
           </h2>
-          <p className="text-xl text-gray-600">
+          <p className="text-lg text-gray-600 font-normal">
             A next-generation recurring subscription billing platform designed to help companies 
             maximize subscription revenue, build, nurture relationships and minimize customer churn.
           </p>
@@ -52,8 +52,8 @@ export default function FeaturesSection() {
               <div className="bg-primary text-white p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/90 transition-colors">
                 <feature.icon className="w-8 h-8" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">{feature.title}</h3>
-              <p className="text-gray-600 mb-4">{feature.description}</p>
+              <h3 className="text-lg font-medium text-gray-900 mb-3">{feature.title}</h3>
+              <p className="text-gray-600 text-sm font-normal mb-4">{feature.description}</p>
               <a href="#" className="text-primary font-semibold hover:text-primary/80 transition-colors">
                 Read More →
               </a>

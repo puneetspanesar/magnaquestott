@@ -89,12 +89,12 @@ export default function SolutionOfferings() {
               <div className={`${offering.color} p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
                 <offering.icon className="w-8 h-8" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-6">{offering.category}</h3>
+              <h3 className="text-lg font-medium text-gray-900 mb-4">{offering.category}</h3>
               <ul className="space-y-3">
                 {offering.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-start">
                     <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                    <span className="text-gray-600 text-sm">{feature}</span>
+                    <span className="text-gray-600 text-sm font-normal">{feature}</span>
                   </li>
                 ))}
               </ul>

@@ -65,9 +65,9 @@ export default function ContactSection() {
   ];
 
   const contactInfo = [
-    { icon: Phone, label: "24/7 Support", value: "+1 (555) 123-4567" },
+    { icon: Phone, label: "24/7 Support", value: "+91 40 1234 5678" },
     { icon: Mail, label: "Sales Inquiries", value: "sales@magnaquest.com" },
-    { icon: MapPin, label: "Global HQ", value: "New York, London, Singapore" },
+    { icon: MapPin, label: "Global HQ", value: "Hyderabad, India" },
     { icon: Clock, label: "Response Time", value: "< 2 hours" }
   ];
 

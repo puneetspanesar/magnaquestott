@@ -113,11 +113,11 @@ export default function Footer() {
                 </div>
                 <div className="flex items-center space-x-3 text-gray-300">
                   <Phone className="w-5 h-5 text-primary" />
-                  <span>24/7 Global Support</span>
+                  <span>+91 40 1234 5678</span>
                 </div>
                 <div className="flex items-center space-x-3 text-gray-300">
                   <Globe className="w-5 h-5 text-primary" />
-                  <span>magnaquest.com</span>
+                  <span>Hyderabad, India</span>
                 </div>
               </div>
             </div>

@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Play, ArrowRight, CheckCircle, TrendingUp, Users, Globe, Shield } from "lucide-react";
+import EventBanner from './EventBanner';
 
 export default function HeroSection() {
   const keyFeatures = [
@@ -124,6 +125,9 @@ export default function HeroSection() {
           <path d="M0,50 C300,100 900,0 1200,50 L1200,120 L0,120 Z" fill="#df222b" fillOpacity="0.1"/>
         </svg>
       </div>
+      
+      {/* Event Banner Overlay */}
+      <EventBanner />
     </section>
   );
 }

@@ -51,18 +51,15 @@ export default function HeroSection() {
             
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
               <Link href="/contact">
-                <Button className="bg-accent text-white hover:bg-accent/90 px-8 py-4 text-lg font-semibold shadow-xl hover:shadow-2xl transition-all group">
+                <button className="btn-premium text-white px-10 py-4 text-lg font-bold rounded-xl group flex items-center justify-center">
                   Schedule A Demo
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Button>
+                </button>
               </Link>
-              <Button 
-                variant="outline" 
-                className="border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-4 text-lg font-semibold backdrop-blur-sm group"
-              >
+              <button className="btn-outline-premium px-10 py-4 text-lg font-bold rounded-xl backdrop-blur-sm group flex items-center justify-center">
                 <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
                 Watch Demo
-              </Button>
+              </button>
             </div>
             
             <div className="mt-8 flex items-center space-x-8 text-blue-200">

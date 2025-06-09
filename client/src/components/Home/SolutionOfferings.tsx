@@ -5,7 +5,7 @@ export default function SolutionOfferings() {
     {
       category: "Subscription Management",
       icon: Database,
-      color: "bg-blue-100 text-blue-600",
+      color: "bg-primary/10 text-primary",
       features: [
         "Subscriber Information & Management",
         "Subscriber Engagement",
@@ -16,7 +16,7 @@ export default function SolutionOfferings() {
     {
       category: "Payments",
       icon: CreditCard,
-      color: "bg-green-100 text-green-600",
+      color: "bg-accent/10 text-accent",
       features: [
         "Multiple Payment Gateways",
         "Automatic Collections",
@@ -27,7 +27,7 @@ export default function SolutionOfferings() {
     {
       category: "Insights & Analytics",
       icon: BarChart3,
-      color: "bg-purple-100 text-purple-600",
+      color: "bg-primary/10 text-primary",
       features: [
         "Revenue Insights",
         "Subscriber Analytics",
@@ -38,7 +38,7 @@ export default function SolutionOfferings() {
     {
       category: "Finance",
       icon: Shield,
-      color: "bg-orange-100 text-orange-600",
+      color: "bg-accent/10 text-accent",
       features: [
         "Revenue Recognition",
         "Revenue Reconciliations",
@@ -49,7 +49,7 @@ export default function SolutionOfferings() {
     {
       category: "CRM - Customer Care",
       icon: Phone,
-      color: "bg-red-100 text-red-600",
+      color: "bg-primary/10 text-primary",
       features: [
         "Service Ticket Management",
         "24/7 Support Desk",
@@ -60,7 +60,7 @@ export default function SolutionOfferings() {
     {
       category: "Invoices",
       icon: Users,
-      color: "bg-indigo-100 text-indigo-600",
+      color: "bg-accent/10 text-accent",
       features: [
         "Automatic Billing Process",
         "Bill Logs",

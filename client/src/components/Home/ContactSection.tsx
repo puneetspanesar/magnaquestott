@@ -143,13 +143,13 @@ export default function ContactSection() {
                   />
                 </div>
                 
-                <Button 
+                <button 
                   type="submit" 
-                  className="w-full bg-accent text-white hover:bg-accent/90 py-3 font-semibold"
+                  className="w-full btn-premium text-white py-4 font-bold text-lg rounded-xl"
                   disabled={demoRequestMutation.isPending}
                 >
                   {demoRequestMutation.isPending ? "Submitting..." : "Schedule Demo"}
-                </Button>
+                </button>
               </div>
             </form>
           </div>

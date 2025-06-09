@@ -7,28 +7,28 @@ export default function StatsSection() {
       number: "25+",
       label: "Years of Excellence",
       description: "Pioneer in enabling subscription businesses across the world",
-      color: "bg-blue-100 text-blue-600"
+      color: "bg-primary/10 text-primary"
     },
     {
       icon: Users,
       number: "250+",
       label: "Global Customers",
       description: "Serving 300 million+ subscribers every month",
-      color: "bg-green-100 text-green-600"
+      color: "bg-accent/10 text-accent"
     },
     {
       icon: Globe,
       number: "50+",
       label: "Countries Served",
       description: "Including India, South East Asia, Africa, LATAM, JAPAC and Europe",
-      color: "bg-purple-100 text-purple-600"
+      color: "bg-primary/10 text-primary"
     },
     {
       icon: DollarSign,
       number: "$Multi-Billion",
       label: "Revenue Processed",
       description: "Managing subscription revenue at enterprise scale",
-      color: "bg-orange-100 text-orange-600"
+      color: "bg-accent/10 text-accent"
     }
   ];
 
@@ -47,14 +47,14 @@ export default function StatsSection() {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
-            <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all animate-fadeIn group">
-              <div className={`${stat.color} p-4 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform`}>
-                <stat.icon className="w-10 h-10" />
+            <div key={index} className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all animate-fadeIn group border border-gray-100">
+              <div className={`${stat.color} p-6 rounded-2xl w-24 h-24 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform shadow-lg`}>
+                <stat.icon className="w-12 h-12" />
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-primary mb-2">{stat.number}</div>
-                <div className="text-lg font-semibold text-gray-900 mb-3">{stat.label}</div>
-                <div className="text-gray-600 text-sm leading-relaxed">{stat.description}</div>
+                <div className="text-5xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-3">{stat.number}</div>
+                <div className="text-xl font-bold text-gray-900 mb-4">{stat.label}</div>
+                <div className="text-gray-600 leading-relaxed">{stat.description}</div>
               </div>
             </div>
           ))}

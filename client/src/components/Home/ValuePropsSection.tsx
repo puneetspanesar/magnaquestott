@@ -6,37 +6,37 @@ export default function ValuePropsSection() {
       icon: Heart,
       title: "Build Strong Relationships",
       description: "With cutting-edge capabilities, flexible packages and exciting offers, address customers' pain points, nurturing relationships with them and ensuring customer loyalty",
-      color: "bg-accent/10 text-accent"
+      color: "bg-accent"
     },
     {
       icon: TrendingUp, 
       title: "Churn Management",
       description: "Profitably manage churn by cross-selling and upselling products and services, maximizing average revenue per user",
-      color: "bg-primary/10 text-primary"
+      color: "bg-primary"
     },
     {
       icon: Eye,
       title: "Customer Insights", 
       description: "Get access to deeper customer insights using our easy-to-use visualisation tools and deliver personalized experiences",
-      color: "bg-accent/10 text-accent"
+      color: "bg-accent"
     },
     {
       icon: Shield,
       title: "Enterprise Security",
       description: "Bank-grade security with multi-level authentication, data encryption, and compliance with international standards including HIPAA",
-      color: "bg-primary/10 text-primary"
+      color: "bg-primary"
     },
     {
       icon: Zap,
       title: "Rapid Implementation",
       description: "Get up and running in just 2-6 weeks with our pre-integrated solution stack and expert implementation team",
-      color: "bg-accent/10 text-accent"
+      color: "bg-accent"
     },
     {
       icon: Users2,
       title: "Partner Ecosystem",
       description: "Comprehensive partner management with revenue sharing, wallet management, and multi-level reseller support",
-      color: "bg-primary/10 text-primary"
+      color: "bg-primary"
     }
   ];
 
@@ -55,9 +55,9 @@ export default function ValuePropsSection() {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {valueProps.map((prop, index) => (
-            <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all animate-fadeIn group">
-              <div className={`${prop.color} p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
-                <prop.icon className="w-8 h-8" />
+            <div key={index} className="bg-white rounded-lg p-8 border border-gray-200 hover:border-primary/30 transition-all animate-fadeIn group">
+              <div className={`${prop.color} p-6 rounded-xl w-20 h-20 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform`}>
+                <prop.icon className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-lg font-medium text-gray-900 mb-4">{prop.title}</h3>
               <p className="text-gray-600 text-sm font-normal leading-relaxed">{prop.description}</p>

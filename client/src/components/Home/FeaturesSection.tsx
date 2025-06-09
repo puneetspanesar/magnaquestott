@@ -49,8 +49,8 @@ export default function FeaturesSection() {
                 alt={feature.title}
                 className="rounded-xl shadow-lg w-full h-48 object-cover mb-6 group-hover:shadow-xl transition-shadow" 
               />
-              <div className="bg-primary text-white p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/90 transition-colors">
-                <feature.icon className="w-8 h-8" />
+              <div className="bg-primary p-6 rounded-xl w-20 h-20 flex items-center justify-center mx-auto mb-4 group-hover:scale-105 transition-transform">
+                <feature.icon className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-lg font-medium text-gray-900 mb-3">{feature.title}</h3>
               <p className="text-gray-600 text-sm font-normal mb-4">{feature.description}</p>

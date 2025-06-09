@@ -4,7 +4,7 @@ import SolutionOfferings from "@/components/Home/SolutionOfferings";
 import FeaturesSection from "@/components/Home/FeaturesSection";
 import ValuePropsSection from "@/components/Home/ValuePropsSection";
 import ImplementationSection from "@/components/Home/ImplementationSection";
-import IndustrySolutions from "@/components/Home/IndustrySolutions";
+import IndustryVerticals from "@/components/Home/IndustryVerticals";
 import SuccessStories from "@/components/Home/SuccessStories";
 import GlobalPresence from "@/components/Home/GlobalPresence";
 import CustomerLogos from "@/components/Home/CustomerLogos";
@@ -20,10 +20,10 @@ export default function Home() {
       <FeaturesSection />
       <ValuePropsSection />
       <ImplementationSection />
-      <IndustrySolutions />
+      <IndustryVerticals />
+      <CustomerLogos />
       <SuccessStories />
       <GlobalPresence />
-      <CustomerLogos />
       <ContactSection />
       <NewsletterSection />
     </div>

@@ -43,8 +43,8 @@ export default function ImplementationSection() {
                 <div key={index} className="flex items-start">
                   <benefit.icon className={`w-6 h-6 mr-4 flex-shrink-0 ${benefit.color === 'bg-primary' ? 'text-primary' : 'text-accent'}`} />
                   <div>
-                    <h3 className="text-lg font-medium text-gray-900 mb-2">{benefit.title}</h3>
-                    <p className="text-gray-600 font-normal">{benefit.description}</p>
+                    <h3 className="card-title mb-2">{benefit.title}</h3>
+                    <p className="body-text">{benefit.description}</p>
                   </div>
                 </div>
               ))}

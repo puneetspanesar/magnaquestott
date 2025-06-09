@@ -1,0 +1,436 @@
+
+Monetization in 2025
+
+What’s hot ->
+Monetize your AI for free
+
+Get a billion credits →
+
+Chargebee
+Products
+Solutions
+Pricing
+Partners
+Developers
+Resources
+Free Trial
+Get a Demo
+
+Login
+Billing
+Invoicing, Provisioning, and Reporting
+Product Catalog
+Subscription Management
+Usage-based Pricing
+Entitlements
+CPQ
+Payment Retries and Collections
+Trial & Self-serve
+Reporting and Analytics
+Checkout
+Customer Retention
+Predict churn, deflect cancellation attempts, and grow your CLTV
+Revenue Recognition
+Recognize revenue accurately and be GAAP-compliant and audit ready
+60+ Integrations
+30+ Payment Gateways
+Docs
+API
+Payment Methods
+Security & Compliance
+USE CASES
+Launch a Subscription Model
+Experiment with Pricing
+Serve Customers Worldwide
+Transform Legacy Billing
+Enable Sales-led GTM
+Automate Product-led GTM
+Manage Customer Churn
+INDUSTRY
+Gen-AI
+B2B SaaS/Software
+Business Services
+Media & Publishing
+E-Commerce & Retail
+Education
+REGION
+North America
+Europe
+Asia Pacific
+ROLE
+Founder/CEO
+Finance
+RevOps
+Developer
+API Quickstart Tutorial
+Learn the Chargebee API, best practices and more
+Frontend Capabilities
+Integrate with Checkout, Customer Portal, Mobile SDKs
+Laravel Cashier for Chargebee
+Build subscription billing in your Laravel apps with ease
+NO CODE / LOW CODE
+Checkout Drop-in Script
+Hosted Checkout
+Send Quotes
+Send Payment Link
+Feature Provisioning
+API Reference Doc
+API Changelog
+Tutorials
+Client Libraries / SDK
+Status & Uptime
+Product Release Notes
+Time Machine
+API Explorer Explore and test Chargebee's APIs in real-time. Integrate with ease.
+A Guide to Hybrid Pricing
+How to blend 'usage based' with subscriptions
+The Ultimate Revops Guide
+Learn what goes into a good revops tech-stack
+2024 State of Subscriptions Report
+Expert insights on the future of subscriptions
+Usage-based Pricing Playbook
+Learn if usage-based pricing is right for you
+Resources Hub
+Customer Stories
+Blogs
+Guides
+Podcast
+Webinars
+Subscription Academy
+Glossaries
+Documentation and Support
+Services & Implementation
+2025 State of Recurring Revenue & Monetization Report
+Read Report
+NEW
+Join us at Beelieve'25 Roadshow on June 12th in NYC | 2025 State of Recurring Revenue & Monetization Report | Join us at Beelieve'25 Roadshow on June 12th in NYC | 2025 State of Recurring Revenue & Monetization Report
+Unlock a lifetime of subscriber growth & retention
+From fast-growing startups to global enterprises, thousands of businesses trust Chargebee's billing and monetization platform to automate billing, reduce churn, and scale their recurring revenue operations
+Chargebee has had an immense impact on our digital strategy, allowing us to craft targeted experiences for niche audiences, which led to a notable increase in customer retention
+Adam Lifshitz,
+Senior Director of Product
+Get a Demo
+Free Trial
+
+
+
+
+
+
+
+
+nasdaq
+Recognized by experts and industry leaders
+Chargebee named a leader in Gartner's 2024 Magic Quadrant for Recurring billing applications
+Ranked fastest to implement
+94% satisfaction score
+2024 Magic Quadrant ™
+A leader for recurring billing applications
+2025 State of Recurring Revenue & Monetization
+Automate crucial parts of your revenue workflow
+Drive new monetization strategies
+Manage subscriber lifecycle
+Scale financial operations
+Turn every idea into a revenue stream
+Automate Billing & Invoicing
+Test and launch new pricing in hours
+Experiment with pricing strategies without engineering delays. Deploy new models instantly—from tiered pricing to usage-based billing—and adjust based on market response. Go from idea to implementation in clicks, not code.
+Experiment with pricing
+Be Enterprise Ready from Day 1
+Make it seamless for your customers to accept your quote. Respond to prospects with the right pricing, contract duration, offer validity, terms of the deal, and details of renewal in a transparent manner.
+CPQ
+Adapt invoices to any billing need
+No-code provisioning and packaging
+Don't set calendar reminders or depend on engineering to provision or revoke access to on-trial features or to test the value of your new plans.
+Entitlements
+Catalog the catalyst for your growth
+The foundational architecture that prevents catalog bloat, supports iterations, and keeps you agile even when you are an enterprise.
+Product catalog
+Make checkout as versatile as you
+Bill based on usage
+Charge customers based on value delivered thereby reducing conversion friction points and improving invoicing transparency
+Usage-based billing
+Customers also love ❤
+Manual discounting
+Subscription ramp pricing
+Usage-based billing
+Craft a smooth subscriber journey
+Launch and scale subscription models effortlessly
+Deploy sophisticated subscription billing in days, not months. From simple fixed plans to usage-based pricing, automate invoicing and billing processes that scale with your business growth.
+Manage subscriptions
+Adapt invoices to any billing need
+Get invoicing right for any complex billing scenario. Customize and send professional invoices, monitor transactions and manage customer information from one single place.
+Automate
+billing & invoicing
+Adapt invoices to any billing need
+Adapt invoices to any billing need
+Scale customer acquisition with smart trial automation
+Convert more trials into paying customers with automated onboarding flows and flexible trial periods. Let customers self-serve to upgrade, modify, or manage their subscriptions—reducing support costs while increasing satisfaction.
+Trial management
+Tackle EU-VAT & more
+Factor in US Sales Tax, Australian GST, and even the indomitable EU-VAT automatically. And stay up-to-date with changing regulations and tax rule
+Automate tax management
+Make checkout as versatile as you
+Craft a compelling checkout experience
+Offer a personalized buying experience. Accept payments the way customers prefer from anywhere in the world with 30+ payment gateways and 100+ billing currencies.
+Checkout experiences
+Chargebee Tax Solution
+Flip every Churn into a Chance
+Turn cancellation points into retention opportunities
+Transform your cancellation flow into an AI-powered retention engine. Understand why customers leave, present targeted offers to stay, and capture insights that help prevent future churn. Track save rates and retention metrics in real-time dashboards.
+Manage customer churn
+Segment Zapier
+Customers also love ❤
+Custom invoices
+Customizable checkout
+Multi-brand cancel experiences
+Accelerate your time-to-close every quarter
+Get ‘Reporting’ that you can count on
+Track every dollar with automated financial reporting
+Turn revenue data into strategic insights instantly. Create board-ready reports and stakeholder updates in minutes with pre-built financial dashboards. No coding or spreadsheet gymnastics required—just clear, actionable metrics when you need them.
+Subscription analytics and insights
+Keep financial systems in sync
+Eliminate errors by automatically syncing all financial transactions with your accounting system. Every invoice, payment, credit note, refund, discount, and tax entry flows seamlessly into your existing tools—keeping your books accurate and audit-ready.
+Accounting integrations
+Keep financial systems in sync.
+Customize recovery strategies for every segment
+Design targeted collection workflows based on customer value, history, and payment patterns. Automatically trigger the right recovery action at the right time—from friendly reminders to personalized payment plans—to maximize successful collections.
+Chargebee Receivables
+Reconcile accounts in minutes, not days
+Match thousands of transactions automatically and catch discrepancies instantly with automatic reconciliation. Track every transaction detail—from quantity and pricing to payment terms and invoice status— from one convenient place.
+Simplify accounting
+Prevent payment failures before they cost you customers
+Stop revenue loss with 23 automated recovery tactics that catch and fix payment issues before they lead to churn. From card expiration updates to intelligent retry logic, every failed payment gets a second chance at success.
+Smart reminders and retries
+Simplify ASC 606 compliance and revenue recognition
+Chargebee’s Built-in ASC 606 and IFRS 15 compliance rules ensure accurate recognition timing and audit-ready documentation, all without manual calculations.
+Automate RevRec
+Recognize Revenue with Accuracy.
+Customers also love ❤
+80+ predefined reports
+Custom report builder
+Deferred revenue report
+Build and scale faster with developer-friendly APIs
+Accelerate development with 480+ pre-built workflows and API endpoints. Give your engineering team complete control over customer management, invoicing, and subscription plans—all with comprehensive documentation and predictable response times.
+API Explorer
+Help Docs
+API Docs
+CURL
+TypeScript
+Python
+PHP
+Java
+Ruby
+.NET
+Go
+from chargebee import Chargebee
+
+cb_client = Chargebee(api_key="{site_api_key}", site="{site}")
+response = cb_client.Subscription.create_with_items("customer_id",
+    cb_client.Subscription.CreateWithItemsParams(
+        subscription_items=[
+     
+Recovery & Collections
+Subscription management
+RevRec
+Analytics
+Invoicing
+Payment Gateways
+Retention
+Tax Integrations
+Recovery & Collections
+Subscription management
+Billing
+Analytics
+Invoicing
+Payment Gateways
+Retention
+Tax Integrations
+Invoicing
+Payment Gateways
+RevRec
+Tax Integrations
+Recovery & Collections
+Subscription management
+Retention
+Analytics
+Billing
+Tax Integrations
+Recovery & Collections
+Invoicing
+Payment Gateways
+Billing
+Tax Integrations
+Recovery & Collections
+Subscription management
+Retention
+Analytics
+RevRec
+Recovery & Collections
+Tax Integrations
+Retention
+Subscription management
+Analytics
+Invoicing
+Payment Gateways
+Billing
+Recovery & Collections
+Tax Integrations
+Retention
+Subscription management
+Analytics
+Invoicing
+Payment Gateways
+RevRec
+Invoicing
+Retention
+Analytics
+Recovery & Collections
+Subscription management
+Billing
+Tax Integrations
+Retention
+Payment Gateways
+Invoicing
+Analytics
+Recovery & Collections
+Subscription management
+Tax Integrations
+Payment Gateways
+Chargebee’s Revenue Growth Management blueprint
+Proven ways to acquire, grow, and retain business as you scale
+Read blueprint
+
+<-
+
+->
+Dave Christensen
+DAVE CHRISTENSEN
+FOUNDER & CPO
+Read story
+Damian Mansour
+DAMIAN MANSOUR
+SOFTWARE IMPLEMENTATION MANAGER
+Read story
+Ellen Towery
+ELLEN TOWERY
+VP, FINANCE & OPERATIONS
+Read story
+Julien Balmont
+JULIEN BALMONT
+CO-FOUNDER & CTO
+Read story
+SaaS
+AI
+Media
+E-Commerce
+Education
+Business services
+SaaS
+AI
+Media
+E-Commerce
+Education
+Business services
+SaaS
+AI
+Media
+E-Commerce
+Education
+Business services
+
+
+-> Launch a subscription model
+-> Experiment with pricing
+-> Serve customers worldwide
+-> Enable sales-led GTM
+-> Automate product-led GTM
+-> Transform legacy billing
+-> Manage customer churn
+Discover how leading companies are transforming their revenue strategies
+Get a Demo
+Free Trial
+WHAT'S NEW
+Reinventing monetization in the age of AI
+EVENT
+Reinventing Monetization in the age of AI
+June 12, 2025. New York City
+INDUSTRY REPORT
+2025 State of Recurring Revenue & Monetization Report
+Read now ->
+WEBINAR
+Accelerate monthly close process. Discover how Chargebee RevRec streamlines even the most complex Revenue Recognition scenarios. Join the webinar
+May 22, 2025.
+WEBINAR
+Clunky quoting slows down sales. Unlock agility for you quoting process with Chargebee CPQ. Join the webinar
+June 5, 2025.
+WEBINAR
+Pricing by usage is here to stay. Learn how to systematically layer, experiment and win usage-based pricing. Join the webinar
+June 5, 2025.
+PRICING REPOSITORY
+Get inspired or do your own benchmarking with our visual repo of pricing strategies used by top SaaS and AI businesses.
+PRICING LABS
+The untold story of how Zapier won bigger by optimizing for one metric. Read now.
+CUSTOMER STORY
+How Shadow launched products 3x faster and entered 5 new markets
+IN THE NEWS
+Preparing for ‘click-to-cancel’ regulations
+In the news
+All resources
+Save a spot.
+Join Chargebee’s upcoming events, meetups or webinars
+*
+Email Address:
+
+You acknowledge that you have read and understood our Terms and Privacy Notice. You consent to the collection, processing, and storage of your personal data.
+
+*This includes periodic newsletters, emails about usage tips, billing practices, and other communications. You can opt out anytime.
+Subscribe
+Footer
+PRODUCTS
+Billing
+Retention
+Revenue Recognition
+FEATURES
+Billing for AI
+Usage-based pricing
+CPQ
+Entitlements
+Payments
+Reporting & Analytics
+Integrations
+HELP & SUPPORT
+Security
+FAQs
+Status
+Product Documentation
+API Documentation
+Supported Payment Gateways
+RESOURCES
+Blog
+Tackling Payment Failures
+Enterprise Billing Guide
+Webinars
+Events
+Glossaries
+Subscription Academy
+COMPANY
+About us
+Customers
+Partners
+Careers
+Press
+Brand Guidelines
+Modern Slavery Act Statement
+Contact us
+Have questions? We can help. 
+Let's talk
+© 2025 Chargebee, Inc.
+
+English
+Terms of Service Privacy Policy  Do not sell or share my personal information
+Instagram
+Twitter
+YouTube
+LinkedIn
+client-id-img

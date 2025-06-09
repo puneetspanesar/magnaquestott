@@ -19,12 +19,6 @@ export default function FeaturesSection() {
       title: "Retention & Churn Management",
       description: "Reduce churn friction and improve overall customer experience.",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
-    },
-    {
-      icon: Users,
-      title: "Customer Relationship Management",
-      description: "Cultivate and nurture everlasting customer relationships.",
-      image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
     }
   ];
 

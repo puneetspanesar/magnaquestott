@@ -49,8 +49,8 @@ export default function IndustrySolutions() {
         <div className="grid md:grid-cols-3 gap-8">
           {solutions.map((solution, index) => (
             <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all group animate-fadeIn">
-              <div className="bg-primary text-white p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/90 transition-colors">
-                <solution.icon className="w-8 h-8" />
+              <div className="flex items-center justify-center mx-auto mb-6">
+                <solution.icon className="w-8 h-8 text-primary" />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">{solution.title}</h3>
               <p className="text-gray-600 mb-6">{solution.description}</p>

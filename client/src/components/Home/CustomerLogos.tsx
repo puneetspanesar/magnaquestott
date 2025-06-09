@@ -20,29 +20,46 @@ export default function CustomerLogos() {
           </p>
         </div>
 
-        {/* Customer Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8">
-          {featuredCustomers.slice(0, 12).map((customer, index) => (
-            <div key={index} className="bg-gray-50 hover:bg-primary/5 border border-gray-100 hover:border-primary/20 rounded-lg p-4 transition-all duration-300 flex items-center justify-center">
-              <span className="text-gray-700 text-sm font-medium text-center">
-                {customer}
-              </span>
-            </div>
-          ))}
+        {/* Scrolling Customer Logos */}
+        <div className="relative overflow-hidden mb-12">
+          <div className="flex animate-scroll space-x-8">
+            {doubledCustomers.map((customer, index) => (
+              <div key={index} className="flex-shrink-0 bg-white border border-gray-200 rounded-lg px-6 py-4 shadow-sm">
+                <span className="text-gray-700 font-medium whitespace-nowrap">
+                  {customer}
+                </span>
+              </div>
+            ))}
+          </div>
         </div>
 
-        <div className="bg-gray-50 rounded-2xl p-8 text-center animate-fadeIn">
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">Trusted by Industry Leaders</h3>
-          <p className="text-gray-600 mb-6 max-w-3xl mx-auto">
-            From telecommunications giants to streaming platforms, our enterprise-grade solutions 
-            power subscription businesses across diverse industries worldwide.
+        {/* CTA Section */}
+        <div className="bg-gradient-to-r from-primary to-blue-700 rounded-2xl p-12 text-center text-white">
+          <h3 className="text-3xl font-bold mb-4">Join Industry Leaders Worldwide</h3>
+          <p className="text-xl mb-8 text-blue-100">
+            Transform your subscription business with enterprise-grade solutions trusted by 250+ companies
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <span className="bg-primary text-white px-4 py-2 rounded-full text-sm font-medium">250+ Customers</span>
-            <span className="bg-primary text-white px-4 py-2 rounded-full text-sm font-medium">50+ Countries</span>
-            <span className="bg-primary text-white px-4 py-2 rounded-full text-sm font-medium">25+ Years Experience</span>
-            <span className="bg-primary text-white px-4 py-2 rounded-full text-sm font-medium">24/7 Support</span>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+            <div className="text-center">
+              <div className="text-2xl font-bold">250+</div>
+              <div className="text-blue-200 text-sm">Global Customers</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold">50+</div>
+              <div className="text-blue-200 text-sm">Countries</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold">300M+</div>
+              <div className="text-blue-200 text-sm">Subscribers</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold">99.9%</div>
+              <div className="text-blue-200 text-sm">Uptime SLA</div>
+            </div>
           </div>
+          <button className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+            Schedule Demo
+          </button>
         </div>
       </div>
     </section>

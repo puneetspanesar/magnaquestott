@@ -32,7 +32,7 @@ export default function HeroSection() {
       </div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 pt-16">
           {/* Badge */}
           <div className="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 mb-8 border border-white/20">
             <div className="w-2 h-2 bg-green-400 rounded-full mr-3 animate-pulse"></div>

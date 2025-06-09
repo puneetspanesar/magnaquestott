@@ -92,10 +92,10 @@ export default function CustomerLogos() {
             {/* CTA Buttons */}
             <div className="text-center">
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <button className="bg-white text-primary px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg">
+                <button className="bg-accent text-white px-8 py-4 rounded-xl font-semibold hover:bg-accent/90 transition-all transform hover:scale-105 shadow-lg">
                   Schedule Demo
                 </button>
-                <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-primary transition-all">
+                <button className="border-2 border-accent text-accent px-8 py-4 rounded-xl font-semibold hover:bg-accent hover:text-white transition-all">
                   View Case Studies
                 </button>
               </div>

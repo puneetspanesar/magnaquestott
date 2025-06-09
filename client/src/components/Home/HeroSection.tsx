@@ -42,7 +42,7 @@ export default function HeroSection() {
           {/* Main Headline */}
           <h1 className="text-5xl lg:text-7xl font-bold leading-tight mb-8">
             <span className="block text-white mb-4">Transform Your</span>
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-200 via-white to-blue-200 animate-pulse">
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-200 via-accent to-blue-200 animate-pulse">
               Subscription Business
             </span>
             <span className="block text-white text-4xl lg:text-5xl mt-4 font-semibold">
@@ -121,7 +121,7 @@ export default function HeroSection() {
       {/* Bottom Wave */}
       <div className="absolute bottom-0 left-0 right-0">
         <svg viewBox="0 0 1200 120" className="w-full h-auto">
-          <path d="M0,50 C300,100 900,0 1200,50 L1200,120 L0,120 Z" fill="white" fillOpacity="0.1"/>
+          <path d="M0,50 C300,100 900,0 1200,50 L1200,120 L0,120 Z" fill="#df222b" fillOpacity="0.1"/>
         </svg>
       </div>
     </section>

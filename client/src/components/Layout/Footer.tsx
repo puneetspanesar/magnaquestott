@@ -35,7 +35,11 @@ export default function Footer() {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center mb-6">
-              <div className="text-3xl font-bold text-white">Magnaquest</div>
+              <img 
+                src="https://www.magnaquest.com/wp-content/uploads/2024/04/MagnaQuest-Logo.png" 
+                alt="Magnaquest" 
+                className="h-8 brightness-0 invert"
+              />
             </div>
             <p className="text-gray-300 mb-8 text-lg leading-relaxed">
               Pioneering subscription management for 25+ years. We empower enterprises to monetize, 

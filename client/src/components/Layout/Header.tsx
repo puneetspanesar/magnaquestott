@@ -68,10 +68,10 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center">
+          <nav className="hidden lg:flex items-center ml-12">
             {/* Home */}
             <Link href="/">
-              <span className={`relative px-8 py-4 text-base font-medium transition-all duration-300 cursor-pointer ${
+              <span className={`relative px-5 py-4 text-base font-medium transition-all duration-300 cursor-pointer ${
                 isActive("/")
                   ? "text-primary font-semibold"
                   : "text-gray-700 hover:text-primary"
@@ -81,13 +81,13 @@ export default function Header() {
             </Link>
 
             {/* Divider */}
-            <div className="h-6 w-px bg-gradient-to-b from-transparent via-gray-300 to-transparent mx-2"></div>
+            <div className="h-6 w-px bg-gradient-to-b from-transparent via-gray-300 to-transparent mx-1"></div>
 
             {/* Solutions Dropdown */}
             <div className="relative">
               <button
                 onClick={() => handleDropdownToggle('solutions')}
-                className={`relative flex items-center px-8 py-4 text-base font-medium transition-all duration-300 ${
+                className={`relative flex items-center px-5 py-4 text-base font-medium transition-all duration-300 ${
                   isActive("/solutions") || activeDropdown === 'solutions'
                     ? "text-primary font-semibold"
                     : "text-gray-700 hover:text-primary"
@@ -132,13 +132,13 @@ export default function Header() {
             </div>
 
             {/* Divider */}
-            <div className="h-6 w-px bg-gradient-to-b from-transparent via-gray-300 to-transparent mx-2"></div>
+            <div className="h-6 w-px bg-gradient-to-b from-transparent via-gray-300 to-transparent mx-1"></div>
 
             {/* Company Dropdown */}
             <div className="relative">
               <button
                 onClick={() => handleDropdownToggle('company')}
-                className={`relative flex items-center px-8 py-4 text-base font-medium transition-all duration-300 ${
+                className={`relative flex items-center px-5 py-4 text-base font-medium transition-all duration-300 ${
                   isActive("/about") || activeDropdown === 'company'
                     ? "text-primary font-semibold"
                     : "text-gray-700 hover:text-primary"
@@ -171,13 +171,13 @@ export default function Header() {
             </div>
 
             {/* Divider */}
-            <div className="h-6 w-px bg-gradient-to-b from-transparent via-gray-300 to-transparent mx-2"></div>
+            <div className="h-6 w-px bg-gradient-to-b from-transparent via-gray-300 to-transparent mx-1"></div>
 
             {/* Resources Dropdown */}
             <div className="relative">
               <button
                 onClick={() => handleDropdownToggle('resources')}
-                className={`relative flex items-center px-8 py-4 text-base font-medium transition-all duration-300 ${
+                className={`relative flex items-center px-5 py-4 text-base font-medium transition-all duration-300 ${
                   isActive("/resources") || activeDropdown === 'resources'
                     ? "text-primary font-semibold"
                     : "text-gray-700 hover:text-primary"
@@ -210,11 +210,11 @@ export default function Header() {
             </div>
 
             {/* Divider */}
-            <div className="h-6 w-px bg-gradient-to-b from-transparent via-gray-300 to-transparent mx-2"></div>
+            <div className="h-6 w-px bg-gradient-to-b from-transparent via-gray-300 to-transparent mx-1"></div>
 
             {/* Contact */}
             <Link href="/contact">
-              <span className={`relative px-8 py-4 text-base font-medium transition-all duration-300 cursor-pointer ${
+              <span className={`relative px-5 py-4 text-base font-medium transition-all duration-300 cursor-pointer ${
                 isActive("/contact")
                   ? "text-primary font-semibold"
                   : "text-gray-700 hover:text-primary"
@@ -225,9 +225,9 @@ export default function Header() {
           </nav>
 
           {/* CTA Button */}
-          <div className="hidden lg:block ml-8">
+          <div className="hidden lg:block ml-12">
             <Link href="/contact">
-              <button className="bg-gradient-to-r from-primary to-accent text-white px-8 py-3 rounded-lg font-semibold text-sm shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 group">
+              <button className="bg-gradient-to-r from-primary to-accent text-white px-6 py-3 rounded-lg font-semibold text-sm shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 group whitespace-nowrap">
                 <Phone className="w-4 h-4 mr-2 inline group-hover:animate-pulse" />
                 Schedule Demo
               </button>

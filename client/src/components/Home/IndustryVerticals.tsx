@@ -7,42 +7,42 @@ export default function IndustryVerticals() {
       title: "Pay TV",
       description: "Complete subscription management for traditional broadcasters, cable operators, and media companies",
       features: ["Content Monetization", "Subscriber Analytics", "Multi-Platform Support"],
-      color: "text-blue-600"
+      color: "text-primary"
     },
     {
       icon: Smartphone,
       title: "OTT & Streaming",
       description: "End-to-end solutions for over-the-top content providers and streaming platforms",
       features: ["Flexible Billing", "Global Payments", "Content Analytics"],
-      color: "text-purple-600"
+      color: "text-accent"
     },
     {
       icon: Wifi,
       title: "Broadband",
       description: "Robust billing and subscriber management for internet service providers",
       features: ["Usage-Based Billing", "Network Integration", "Customer Lifecycle"],
-      color: "text-green-600"
+      color: "text-primary"
     },
     {
       icon: Hospital,
       title: "Healthcare",
       description: "HIPAA-compliant subscription management for healthcare providers and medical platforms",
       features: ["Compliance Ready", "Patient Data Security", "Medical Billing"],
-      color: "text-red-600"
+      color: "text-accent"
     },
     {
       icon: Building2,
       title: "B2B Enterprise",
       description: "Scalable subscription management for B2B software and enterprise service providers",
       features: ["Multi-Tenant Support", "Enterprise APIs", "Custom Workflows"],
-      color: "text-indigo-600"
+      color: "text-primary"
     },
     {
       icon: FileText,
       title: "Media & Publications",
       description: "Subscription solutions for digital publications, news platforms, and content creators",
       features: ["Content Access Control", "Subscription Tiers", "Analytics Dashboard"],
-      color: "text-orange-600"
+      color: "text-accent"
     }
   ];
 

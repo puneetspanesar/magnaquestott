@@ -4,10 +4,10 @@ import { Play, ArrowRight, CheckCircle, TrendingUp, Users, Globe, Shield } from 
 
 export default function HeroSection() {
   const keyFeatures = [
-    { icon: TrendingUp, text: "Increase Revenue by 40%", color: "text-green-400" },
-    { icon: Users, text: "Manage 300M+ Subscribers", color: "text-blue-400" },
-    { icon: Globe, text: "Deploy in 50+ Countries", color: "text-purple-400" },
-    { icon: Shield, text: "Enterprise-Grade Security", color: "text-orange-400" }
+    { icon: TrendingUp, text: "Increase Revenue by 40%", color: "text-white" },
+    { icon: Users, text: "Manage 300M+ Subscribers", color: "text-white" },
+    { icon: Globe, text: "Deploy in 50+ Countries", color: "text-white" },
+    { icon: Shield, text: "Enterprise-Grade Security", color: "text-white" }
   ];
 
   return (

@@ -105,7 +105,7 @@ export default function HeroSection() {
         </div>
         
         {/* Floating Customer Logos */}
-        <div className="text-center opacity-60">
+        <div className="text-center opacity-60 mb-20">
           <p className="text-blue-200 mb-4 font-medium">Trusted by industry leaders</p>
           <div className="flex justify-center items-center space-x-8 text-blue-300">
             <span className="font-semibold">BGE Home</span>

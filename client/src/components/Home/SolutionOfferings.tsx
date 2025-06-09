@@ -71,35 +71,65 @@ export default function SolutionOfferings() {
   ];
 
   return (
-    <section className="py-20">
+    <section className="py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 animate-fadeIn">
+        <div className="text-center mb-12 animate-fadeIn">
           <h2 className="text-3xl font-semibold text-gray-900 mb-4 tracking-tight">
             Comprehensive Solution Offerings
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto font-normal">
-            End-to-end subscription management platform with integrated billing, 
-            CRM, analytics, and customer care capabilities
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto font-normal">
+            End-to-end subscription management platform with integrated capabilities
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {offerings.map((offering, index) => (
-            <div key={index} className="bg-white rounded-lg p-8 border border-gray-200 hover:border-primary/30 transition-all animate-fadeIn group">
-              <div className={`${offering.color} p-6 rounded-xl w-20 h-20 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform`}>
-                <offering.icon className="w-10 h-10 text-white" />
+        <div className="grid lg:grid-cols-2 gap-8">
+          {/* Left column */}
+          <div className="space-y-6">
+            {offerings.slice(0, 3).map((offering, index) => (
+              <div key={index} className="bg-white rounded-lg p-6 border border-gray-200 hover:border-primary/30 transition-all animate-fadeIn group">
+                <div className="flex items-start space-x-4">
+                  <div className={`${offering.color} p-3 rounded-lg flex-shrink-0`}>
+                    <offering.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-medium text-gray-900 mb-3">{offering.category}</h3>
+                    <div className="grid grid-cols-2 gap-2">
+                      {offering.features.map((feature, featureIndex) => (
+                        <div key={featureIndex} className="flex items-start">
+                          <div className="w-1 h-1 bg-primary rounded-full mt-2 mr-2 flex-shrink-0"></div>
+                          <span className="text-gray-600 text-sm font-normal">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
               </div>
-              <h3 className="text-lg font-medium text-gray-900 mb-4">{offering.category}</h3>
-              <ul className="space-y-3">
-                {offering.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-start">
-                    <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                    <span className="text-gray-600 text-sm font-normal">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+            ))}
+          </div>
+          
+          {/* Right column */}
+          <div className="space-y-6">
+            {offerings.slice(3, 6).map((offering, index) => (
+              <div key={index} className="bg-white rounded-lg p-6 border border-gray-200 hover:border-primary/30 transition-all animate-fadeIn group">
+                <div className="flex items-start space-x-4">
+                  <div className={`${offering.color} p-3 rounded-lg flex-shrink-0`}>
+                    <offering.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-medium text-gray-900 mb-3">{offering.category}</h3>
+                    <div className="grid grid-cols-2 gap-2">
+                      {offering.features.map((feature, featureIndex) => (
+                        <div key={featureIndex} className="flex items-start">
+                          <div className="w-1 h-1 bg-primary rounded-full mt-2 mr-2 flex-shrink-0"></div>
+                          <span className="text-gray-600 text-sm font-normal">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
         
         <div className="mt-16 bg-gray-50 rounded-2xl p-8 text-center animate-fadeIn">

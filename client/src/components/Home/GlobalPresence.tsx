@@ -67,27 +67,33 @@ export default function GlobalPresence() {
         </div>
 
         {/* Interactive World Map */}
-        <div className="bg-white rounded-lg border border-gray-200 p-8 mb-12 animate-fadeIn">
-          <div className="relative w-full h-96 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg overflow-hidden">
-            {/* World Map SVG Background */}
+        <div className="bg-white rounded-lg border border-gray-200 p-8 animate-fadeIn">
+          <div className="relative w-full h-80 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg overflow-hidden">
+            {/* Detailed World Map SVG */}
             <svg 
-              viewBox="0 0 100 60" 
-              className="absolute inset-0 w-full h-full opacity-20"
-              style={{ fill: '#1267a9' }}
+              viewBox="0 0 1000 500" 
+              className="absolute inset-0 w-full h-full"
+              style={{ fill: '#e5e7eb', stroke: '#d1d5db', strokeWidth: '1' }}
             >
-              {/* Simplified world map paths */}
-              <path d="M10,20 L30,20 L30,40 L10,40 Z" /> {/* North America */}
-              <path d="M45,15 L60,15 L60,35 L45,35 Z" /> {/* Europe */}
-              <path d="M70,20 L90,20 L90,50 L70,50 Z" /> {/* Asia Pacific */}
-              <path d="M50,40 L65,40 L65,60 L50,60 Z" /> {/* Africa/Middle East */}
-              <path d="M20,50 L35,50 L35,70 L20,70 Z" /> {/* Latin America */}
+              {/* North America */}
+              <path d="M 150 120 L 300 120 L 320 180 L 280 240 L 200 260 L 150 200 Z" fill="#f3f4f6" />
+              {/* South America */}
+              <path d="M 250 280 L 300 280 L 320 380 L 280 420 L 240 400 L 220 320 Z" fill="#f3f4f6" />
+              {/* Europe */}
+              <path d="M 450 100 L 520 100 L 540 160 L 500 180 L 450 160 Z" fill="#f3f4f6" />
+              {/* Africa */}
+              <path d="M 480 200 L 580 200 L 600 340 L 520 380 L 480 320 Z" fill="#f3f4f6" />
+              {/* Asia */}
+              <path d="M 600 80 L 800 80 L 820 200 L 750 220 L 600 180 Z" fill="#f3f4f6" />
+              {/* Australia */}
+              <path d="M 720 320 L 800 320 L 820 360 L 780 380 L 720 360 Z" fill="#f3f4f6" />
             </svg>
 
             {/* Pulsing Region Markers */}
             {regions.map((region) => (
               <div
                 key={region.id}
-                className="absolute transform -translate-x-1/2 -translate-y-1/2 cursor-pointer"
+                className="absolute transform -translate-x-1/2 -translate-y-1/2 cursor-pointer z-20"
                 style={{
                   left: `${region.position.x}%`,
                   top: `${region.position.y}%`
@@ -97,19 +103,19 @@ export default function GlobalPresence() {
               >
                 {/* Pulsing animation */}
                 <div className="relative">
-                  <div className="w-4 h-4 bg-primary rounded-full animate-ping absolute"></div>
-                  <div className="w-4 h-4 bg-primary rounded-full relative"></div>
+                  <div className="w-3 h-3 bg-primary rounded-full animate-ping absolute opacity-75"></div>
+                  <div className="w-3 h-3 bg-primary rounded-full relative border-2 border-white shadow-lg"></div>
                 </div>
 
                 {/* Hover Tooltip */}
                 {hoveredRegion === region.id && (
-                  <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 bg-white rounded-lg border border-gray-200 p-4 min-w-64 z-10">
+                  <div className="absolute -top-32 left-1/2 transform -translate-x-1/2 bg-white rounded-lg border border-gray-200 p-4 w-72 z-30 shadow-xl">
                     <h4 className="font-semibold text-gray-900 mb-2">{region.name}</h4>
-                    <p className="text-sm text-gray-600 mb-3">{region.description}</p>
-                    <div className="text-sm">
+                    <p className="text-sm text-gray-600 mb-2">{region.description}</p>
+                    <div className="text-sm mb-3">
                       <span className="font-medium text-primary">{region.customers} customers</span>
                     </div>
-                    <div className="mt-2 flex flex-wrap gap-1">
+                    <div className="flex flex-wrap gap-1">
                       {region.industries.map((industry, index) => (
                         <span key={index} className="bg-primary/10 text-primary px-2 py-1 rounded text-xs">
                           {industry}
@@ -120,26 +126,6 @@ export default function GlobalPresence() {
                 )}
               </div>
             ))}
-          </div>
-        </div>
-
-        {/* Global Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 animate-fadeIn">
-          <div className="text-center">
-            <div className="text-3xl font-semibold text-gray-900 mb-2">250+</div>
-            <div className="text-gray-600 font-normal">Global Customers</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-semibold text-gray-900 mb-2">50+</div>
-            <div className="text-gray-600 font-normal">Countries</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-semibold text-gray-900 mb-2">300M+</div>
-            <div className="text-gray-600 font-normal">Subscribers Managed</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-semibold text-gray-900 mb-2">24/7</div>
-            <div className="text-gray-600 font-normal">Global Support</div>
           </div>
         </div>
       </div>

@@ -1,54 +1,48 @@
-import { Tv, Radio, Building2, Globe2, Smartphone, Factory, Hospital, GraduationCap } from "lucide-react";
+import { Tv, Radio, Building2, Globe2, Smartphone, Factory, Hospital, GraduationCap, Wifi, FileText } from "lucide-react";
 
 export default function IndustryVerticals() {
   const industries = [
     {
       icon: Tv,
-      title: "Broadcasting & Media",
+      title: "Pay TV",
       description: "Complete subscription management for traditional broadcasters, cable operators, and media companies",
-      features: ["Content Monetization", "Subscriber Analytics", "Multi-Platform Support"]
+      features: ["Content Monetization", "Subscriber Analytics", "Multi-Platform Support"],
+      color: "text-blue-600"
     },
     {
       icon: Smartphone,
       title: "OTT & Streaming",
       description: "End-to-end solutions for over-the-top content providers and streaming platforms",
-      features: ["Flexible Billing", "Global Payments", "Content Analytics"]
+      features: ["Flexible Billing", "Global Payments", "Content Analytics"],
+      color: "text-purple-600"
     },
     {
-      icon: Radio,
-      title: "Telecommunications",
-      description: "Robust billing and subscriber management for telecom operators and service providers",
-      features: ["Usage-Based Billing", "Network Integration", "Customer Lifecycle"]
-    },
-    {
-      icon: Building2,
-      title: "Enterprise Solutions",
-      description: "Scalable subscription management for B2B software and enterprise service providers",
-      features: ["Multi-Tenant Support", "Enterprise APIs", "Custom Workflows"]
-    },
-    {
-      icon: Globe2,
-      title: "Multi-Service Operators",
-      description: "Comprehensive platform for MSOs managing diverse service portfolios across regions",
-      features: ["Service Bundling", "Cross-Platform Billing", "Regional Compliance"]
-    },
-    {
-      icon: Factory,
-      title: "Manufacturing & IoT",
-      description: "Subscription billing for connected devices, industrial IoT, and manufacturing services",
-      features: ["Device Management", "Usage Tracking", "Predictive Billing"]
+      icon: Wifi,
+      title: "Broadband",
+      description: "Robust billing and subscriber management for internet service providers",
+      features: ["Usage-Based Billing", "Network Integration", "Customer Lifecycle"],
+      color: "text-green-600"
     },
     {
       icon: Hospital,
       title: "Healthcare",
       description: "HIPAA-compliant subscription management for healthcare providers and medical platforms",
-      features: ["Compliance Ready", "Patient Data Security", "Medical Billing"]
+      features: ["Compliance Ready", "Patient Data Security", "Medical Billing"],
+      color: "text-red-600"
     },
     {
-      icon: GraduationCap,
-      title: "Education & E-Learning",
-      description: "Flexible billing solutions for educational institutions and online learning platforms",
-      features: ["Student Management", "Course Subscriptions", "Academic Cycles"]
+      icon: Building2,
+      title: "B2B Enterprise",
+      description: "Scalable subscription management for B2B software and enterprise service providers",
+      features: ["Multi-Tenant Support", "Enterprise APIs", "Custom Workflows"],
+      color: "text-indigo-600"
+    },
+    {
+      icon: FileText,
+      title: "Media & Publications",
+      description: "Subscription solutions for digital publications, news platforms, and content creators",
+      features: ["Content Access Control", "Subscription Tiers", "Analytics Dashboard"],
+      color: "text-orange-600"
     }
   ];
 
@@ -65,25 +59,25 @@ export default function IndustryVerticals() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {industries.map((industry, index) => (
-            <div key={index} className="bg-white rounded-lg p-8 border border-gray-200 hover:border-primary/30 transition-all animate-fadeIn group">
-              <div className="bg-primary p-6 rounded-xl w-20 h-20 flex items-center justify-center mx-auto mb-6 group-hover:scale-105 transition-transform">
-                <industry.icon className="w-10 h-10 text-white" />
-              </div>
-              
-              <div className="text-center mb-6">
-                <h3 className="text-lg font-medium text-gray-900 mb-3">{industry.title}</h3>
-                <p className="text-gray-600 text-sm font-normal leading-relaxed">{industry.description}</p>
-              </div>
-
-              <div className="space-y-2">
-                {industry.features.map((feature, featureIndex) => (
-                  <div key={featureIndex} className="flex items-center text-sm">
-                    <div className="w-1.5 h-1.5 bg-accent rounded-full mr-3 flex-shrink-0"></div>
-                    <span className="text-gray-700">{feature}</span>
+            <div key={index} className="bg-white rounded-lg p-6 border border-gray-200 hover:border-primary/30 transition-all animate-fadeIn group">
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0">
+                  <industry.icon className={`w-8 h-8 ${industry.color}`} />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-lg font-medium text-gray-900 mb-2">{industry.title}</h3>
+                  <p className="text-gray-600 text-sm font-normal leading-relaxed mb-4">{industry.description}</p>
+                  <div className="grid grid-cols-1 gap-1">
+                    {industry.features.map((feature, featureIndex) => (
+                      <div key={featureIndex} className="flex items-center text-xs">
+                        <div className="w-1 h-1 bg-primary rounded-full mr-2 flex-shrink-0"></div>
+                        <span className="text-gray-600">{feature}</span>
+                      </div>
+                    ))}
                   </div>
-                ))}
+                </div>
               </div>
             </div>
           ))}

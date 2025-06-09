@@ -41,28 +41,50 @@ export default function ValuePropsSection() {
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 animate-fadeIn">
-          <h2 className="text-3xl font-semibold text-gray-900 mb-4 tracking-tight">
-            Why Global Enterprises Choose Magnaquest Sure
-          </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto font-normal">
-            Comprehensive subscription management platform trusted by 250+ customers 
-            across 50+ countries for over 25 years
-          </p>
-        </div>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {valueProps.map((prop, index) => (
-            <div key={index} className="bg-white rounded-lg p-8 border border-gray-200 hover:border-primary/30 transition-all animate-fadeIn group">
-              <div className={`${prop.color} p-6 rounded-xl w-20 h-20 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform`}>
-                <prop.icon className="w-10 h-10 text-white" />
+        <div className="grid lg:grid-cols-5 gap-12 items-center">
+          {/* Left content */}
+          <div className="lg:col-span-2">
+            <h2 className="text-3xl font-semibold text-gray-900 mb-6 tracking-tight">
+              Why Global Enterprises Choose Magnaquest Sure
+            </h2>
+            <p className="text-lg text-gray-600 font-normal mb-8">
+              Comprehensive subscription management platform trusted by 250+ customers 
+              across 50+ countries for over 25 years
+            </p>
+            <div className="space-y-4">
+              <div className="flex items-center space-x-3">
+                <div className="w-2 h-2 bg-primary rounded-full"></div>
+                <span className="text-gray-700 font-medium">25+ Years Industry Experience</span>
               </div>
-              <h3 className="text-lg font-medium text-gray-900 mb-4">{prop.title}</h3>
-              <p className="text-gray-600 text-sm font-normal leading-relaxed">{prop.description}</p>
+              <div className="flex items-center space-x-3">
+                <div className="w-2 h-2 bg-accent rounded-full"></div>
+                <span className="text-gray-700 font-medium">Enterprise-Grade Security</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <div className="w-2 h-2 bg-primary rounded-full"></div>
+                <span className="text-gray-700 font-medium">99.9% Uptime Guarantee</span>
+              </div>
             </div>
-          ))}
+          </div>
+          
+          {/* Right grid */}
+          <div className="lg:col-span-3">
+            <div className="grid md:grid-cols-2 gap-6">
+              {valueProps.map((prop, index) => (
+                <div key={index} className="bg-white rounded-lg p-6 border border-gray-200 hover:border-primary/30 transition-all animate-fadeIn group">
+                  <div className="flex items-start space-x-3">
+                    <prop.icon className={`w-6 h-6 ${prop.color === 'bg-primary' ? 'text-primary' : 'text-accent'} flex-shrink-0 mt-1`} />
+                    <div>
+                      <h3 className="text-lg font-medium text-gray-900 mb-2">{prop.title}</h3>
+                      <p className="text-gray-600 text-sm font-normal leading-relaxed">{prop.description}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
         
         <div className="mt-16 gradient-premium rounded-3xl p-12 text-white text-center animate-fadeIn relative overflow-hidden">

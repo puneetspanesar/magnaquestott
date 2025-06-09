@@ -41,22 +41,43 @@ export default function FeaturesSection() {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="space-y-8">
           {features.map((feature, index) => (
-            <div key={index} className="text-center group animate-fadeIn hover:transform hover:scale-105 transition-all duration-300">
-              <img 
-                src={feature.image} 
-                alt={feature.title}
-                className="rounded-xl shadow-lg w-full h-48 object-cover mb-6 group-hover:shadow-xl transition-shadow" 
-              />
-              <div className="bg-primary p-6 rounded-xl w-20 h-20 flex items-center justify-center mx-auto mb-4 group-hover:scale-105 transition-transform">
-                <feature.icon className="w-10 h-10 text-white" />
+            <div key={index} className="bg-white rounded-lg border border-gray-200 hover:border-primary/30 transition-all animate-fadeIn overflow-hidden">
+              <div className="grid lg:grid-cols-3 gap-0">
+                <div className="lg:col-span-1">
+                  <img 
+                    src={feature.image} 
+                    alt={feature.title}
+                    className="w-full h-64 lg:h-full object-cover" 
+                  />
+                </div>
+                <div className="lg:col-span-2 p-8 flex flex-col justify-center">
+                  <div className="flex items-center space-x-3 mb-4">
+                    <feature.icon className="w-8 h-8 text-primary" />
+                    <h3 className="text-xl font-semibold text-gray-900">{feature.title}</h3>
+                  </div>
+                  <p className="text-gray-600 mb-6 leading-relaxed">{feature.description}</p>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="flex items-center space-x-2">
+                      <div className="w-2 h-2 bg-primary rounded-full"></div>
+                      <span className="text-sm text-gray-700">Real-time Processing</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <div className="w-2 h-2 bg-accent rounded-full"></div>
+                      <span className="text-sm text-gray-700">Enterprise Security</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <div className="w-2 h-2 bg-primary rounded-full"></div>
+                      <span className="text-sm text-gray-700">Scalable Architecture</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <div className="w-2 h-2 bg-accent rounded-full"></div>
+                      <span className="text-sm text-gray-700">Global Support</span>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <h3 className="text-lg font-medium text-gray-900 mb-3">{feature.title}</h3>
-              <p className="text-gray-600 text-sm font-normal mb-4">{feature.description}</p>
-              <a href="#" className="text-primary font-semibold hover:text-primary/80 transition-colors">
-                Read More →
-              </a>
             </div>
           ))}
         </div>

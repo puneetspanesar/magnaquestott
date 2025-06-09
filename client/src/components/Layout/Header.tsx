@@ -1,150 +1,308 @@
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
-import { Button } from "@/components/ui/button";
-import { 
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, Globe, Building2, Users, Award, Phone, Tv, Radio, Hospital, GraduationCap } from "lucide-react";
 
 export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [location] = useLocation();
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const isActive = (path: string) => location === path;
+  const solutionsMenu = [
+    {
+      title: "By Industry",
+      items: [
+        { name: "Broadcasting & Media", icon: Tv, description: "Content monetization and subscriber management" },
+        { name: "OTT & Streaming", icon: Users, description: "End-to-end streaming platform solutions" },
+        { name: "Telecommunications", icon: Radio, description: "Telecom billing and subscriber lifecycle" },
+        { name: "Enterprise Software", icon: Building2, description: "B2B subscription management platform" }
+      ]
+    },
+    {
+      title: "By Solution",
+      items: [
+        { name: "Subscription Management", icon: Building2, description: "Complete subscriber lifecycle management" },
+        { name: "Revenue Analytics", icon: Globe, description: "Advanced insights and reporting" },
+        { name: "Payment Processing", icon: Users, description: "Multi-gateway payment solutions" },
+        { name: "Customer Experience", icon: Award, description: "360-degree customer engagement" }
+      ]
+    }
+  ];
+
+  const companyMenu = [
+    { name: "About Magnaquest", href: "/about", description: "25+ years of industry leadership" },
+    { name: "Global Presence", href: "/about#global", description: "Serving 50+ countries worldwide" },
+    { name: "Leadership Team", href: "/about#team", description: "Meet our executive leadership" },
+    { name: "Careers", href: "/careers", description: "Join our growing team" }
+  ];
+
+  const resourcesMenu = [
+    { name: "Case Studies", href: "/resources#cases", description: "Customer success stories" },
+    { name: "White Papers", href: "/resources#papers", description: "Industry insights and research" },
+    { name: "Documentation", href: "/resources#docs", description: "Technical documentation" },
+    { name: "API Reference", href: "/resources#api", description: "Developer resources" }
+  ];
+
+  const isActive = (href: string) => {
+    if (href === "/" && location === "/") return true;
+    if (href !== "/" && location.startsWith(href)) return true;
+    return false;
+  };
+
+  const handleDropdownToggle = (dropdown: string) => {
+    setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
+  };
 
   return (
-    <nav className="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50">
+    <header className="bg-white shadow-xl sticky top-0 z-50 border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center py-6">
           {/* Logo */}
-          <div className="flex items-center">
-            <Link href="/">
-              <div className="text-2xl font-bold text-primary cursor-pointer hover:text-primary/90 transition-colors">
-                Magnaquest
+          <Link href="/">
+            <div className="flex items-center space-x-4 cursor-pointer group">
+              <div className="w-12 h-12 gradient-premium rounded-xl flex items-center justify-center group-hover:scale-105 transition-all duration-300 shadow-lg">
+                <div className="text-white font-bold text-2xl">M</div>
               </div>
-            </Link>
-          </div>
-          
+              <div className="text-3xl font-bold">
+                <span className="text-primary">Magna</span>
+                <span className="text-accent">quest</span>
+                <div className="text-sm text-gray-500 font-normal tracking-wider uppercase">
+                  Global Enterprise Solutions
+                </div>
+              </div>
+            </div>
+          </Link>
+
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            <NavigationMenu>
-              <NavigationMenuList>
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-gray-700 hover:text-primary">
-                    Solutions
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <div className="w-64 p-4">
-                      <div className="mb-3">
-                        <div className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">By Size</div>
-                        <Link href="/solutions/startups">
-                          <div className="block py-1 text-gray-700 hover:text-primary cursor-pointer">Startups</div>
-                        </Link>
-                        <Link href="/solutions/scaling-up">
-                          <div className="block py-1 text-gray-700 hover:text-primary cursor-pointer">Scaling Up</div>
-                        </Link>
-                        <Link href="/solutions/enterprise">
-                          <div className="block py-1 text-gray-700 hover:text-primary cursor-pointer">Enterprise</div>
-                        </Link>
-                      </div>
-                      <div className="mb-3">
-                        <div className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">By Industry</div>
-                        <Link href="/solutions/ott">
-                          <div className="block py-1 text-gray-700 hover:text-primary cursor-pointer">OTT</div>
-                        </Link>
-                        <Link href="/solutions/paytv">
-                          <div className="block py-1 text-gray-700 hover:text-primary cursor-pointer">PayTV</div>
-                        </Link>
-                        <Link href="/solutions/healthcare">
-                          <div className="block py-1 text-gray-700 hover:text-primary cursor-pointer">Healthcare</div>
-                        </Link>
-                      </div>
-                    </div>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-              </NavigationMenuList>
-            </NavigationMenu>
-            
-            <Link href="/about">
-              <span className={`cursor-pointer transition-colors ${
-                isActive("/about") ? "text-primary" : "text-gray-700 hover:text-primary"
+          <nav className="hidden lg:flex items-center space-x-2">
+            {/* Home */}
+            <Link href="/">
+              <span className={`px-4 py-3 rounded-xl text-sm font-semibold transition-all cursor-pointer ${
+                isActive("/")
+                  ? "text-primary bg-primary/10 shadow-sm"
+                  : "text-gray-700 hover:text-primary hover:bg-gray-50"
               }`}>
-                About Us
+                Home
               </span>
             </Link>
-            
-            <Link href="/resources">
-              <span className={`cursor-pointer transition-colors ${
-                isActive("/resources") ? "text-primary" : "text-gray-700 hover:text-primary"
-              }`}>
+
+            {/* Solutions Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => handleDropdownToggle('solutions')}
+                className={`flex items-center px-4 py-3 rounded-xl text-sm font-semibold transition-all ${
+                  isActive("/solutions") || activeDropdown === 'solutions'
+                    ? "text-primary bg-primary/10 shadow-sm"
+                    : "text-gray-700 hover:text-primary hover:bg-gray-50"
+                }`}
+              >
+                Solutions
+                <ChevronDown className={`w-4 h-4 ml-1 transition-transform ${activeDropdown === 'solutions' ? 'rotate-180' : ''}`} />
+              </button>
+              
+              {activeDropdown === 'solutions' && (
+                <div className="absolute top-full left-0 mt-2 w-[600px] bg-white rounded-2xl shadow-2xl border border-gray-100 p-6 z-50">
+                  <div className="grid grid-cols-2 gap-8">
+                    {solutionsMenu.map((section, sectionIndex) => (
+                      <div key={sectionIndex}>
+                        <h3 className="text-sm font-bold text-gray-900 mb-4 uppercase tracking-wider">
+                          {section.title}
+                        </h3>
+                        <div className="space-y-3">
+                          {section.items.map((item, itemIndex) => (
+                            <Link key={itemIndex} href="/solutions">
+                              <div className="flex items-start p-3 rounded-xl hover:bg-gray-50 transition-colors cursor-pointer group">
+                                <div className="bg-primary/10 p-2 rounded-lg mr-3 group-hover:bg-primary group-hover:text-white transition-all">
+                                  <item.icon className="w-4 h-4 text-primary group-hover:text-white" />
+                                </div>
+                                <div>
+                                  <div className="font-semibold text-gray-900 group-hover:text-primary transition-colors">
+                                    {item.name}
+                                  </div>
+                                  <div className="text-xs text-gray-500 mt-1">
+                                    {item.description}
+                                  </div>
+                                </div>
+                              </div>
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Company Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => handleDropdownToggle('company')}
+                className={`flex items-center px-4 py-3 rounded-xl text-sm font-semibold transition-all ${
+                  isActive("/about") || activeDropdown === 'company'
+                    ? "text-primary bg-primary/10 shadow-sm"
+                    : "text-gray-700 hover:text-primary hover:bg-gray-50"
+                }`}
+              >
+                Company
+                <ChevronDown className={`w-4 h-4 ml-1 transition-transform ${activeDropdown === 'company' ? 'rotate-180' : ''}`} />
+              </button>
+              
+              {activeDropdown === 'company' && (
+                <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-2xl shadow-2xl border border-gray-100 p-4 z-50">
+                  <div className="space-y-2">
+                    {companyMenu.map((item, index) => (
+                      <Link key={index} href={item.href}>
+                        <div className="flex items-center p-3 rounded-xl hover:bg-gray-50 transition-colors cursor-pointer group">
+                          <div>
+                            <div className="font-semibold text-gray-900 group-hover:text-primary transition-colors">
+                              {item.name}
+                            </div>
+                            <div className="text-xs text-gray-500 mt-1">
+                              {item.description}
+                            </div>
+                          </div>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Resources Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => handleDropdownToggle('resources')}
+                className={`flex items-center px-4 py-3 rounded-xl text-sm font-semibold transition-all ${
+                  isActive("/resources") || activeDropdown === 'resources'
+                    ? "text-primary bg-primary/10 shadow-sm"
+                    : "text-gray-700 hover:text-primary hover:bg-gray-50"
+                }`}
+              >
                 Resources
-              </span>
-            </Link>
-            
+                <ChevronDown className={`w-4 h-4 ml-1 transition-transform ${activeDropdown === 'resources' ? 'rotate-180' : ''}`} />
+              </button>
+              
+              {activeDropdown === 'resources' && (
+                <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-2xl shadow-2xl border border-gray-100 p-4 z-50">
+                  <div className="space-y-2">
+                    {resourcesMenu.map((item, index) => (
+                      <Link key={index} href={item.href}>
+                        <div className="flex items-center p-3 rounded-xl hover:bg-gray-50 transition-colors cursor-pointer group">
+                          <div>
+                            <div className="font-semibold text-gray-900 group-hover:text-primary transition-colors">
+                              {item.name}
+                            </div>
+                            <div className="text-xs text-gray-500 mt-1">
+                              {item.description}
+                            </div>
+                          </div>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Contact */}
             <Link href="/contact">
-              <span className={`cursor-pointer transition-colors ${
-                isActive("/contact") ? "text-primary" : "text-gray-700 hover:text-primary"
+              <span className={`px-4 py-3 rounded-xl text-sm font-semibold transition-all cursor-pointer ${
+                isActive("/contact")
+                  ? "text-primary bg-primary/10 shadow-sm"
+                  : "text-gray-700 hover:text-primary hover:bg-gray-50"
               }`}>
                 Contact
               </span>
             </Link>
-          </div>
-          
-          {/* CTA Buttons */}
-          <div className="hidden md:flex items-center space-x-4">
-            <Link href="/contact">
-              <Button className="bg-primary text-white hover:bg-primary/90 font-medium">
-                Schedule A Demo
-              </Button>
-            </Link>
-          </div>
-          
+
+            {/* CTA Button */}
+            <div className="ml-4">
+              <Link href="/contact">
+                <button className="btn-premium text-white px-8 py-3 rounded-xl font-bold text-sm shadow-lg hover:shadow-xl transition-all">
+                  <Phone className="w-4 h-4 mr-2 inline" />
+                  Schedule Demo
+                </button>
+              </Link>
+            </div>
+          </nav>
+
           {/* Mobile menu button */}
-          <div className="md:hidden">
-            <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
-              <SheetTrigger asChild>
-                <Button variant="ghost" size="icon">
-                  <Menu className="h-6 w-6" />
-                </Button>
-              </SheetTrigger>
-              <SheetContent side="right" className="w-80">
-                <div className="flex flex-col space-y-4 mt-8">
-                  <Link href="/solutions">
-                    <div className="block py-2 text-gray-700 font-medium" onClick={() => setIsMobileMenuOpen(false)}>
-                      Solutions
-                    </div>
-                  </Link>
-                  <Link href="/about">
-                    <div className="block py-2 text-gray-700 font-medium" onClick={() => setIsMobileMenuOpen(false)}>
-                      About Us
-                    </div>
-                  </Link>
-                  <Link href="/resources">
-                    <div className="block py-2 text-gray-700 font-medium" onClick={() => setIsMobileMenuOpen(false)}>
-                      Resources
-                    </div>
-                  </Link>
-                  <Link href="/contact">
-                    <div className="block py-2 text-gray-700 font-medium" onClick={() => setIsMobileMenuOpen(false)}>
-                      Contact
-                    </div>
-                  </Link>
-                  <Link href="/contact">
-                    <Button className="w-full bg-primary text-white hover:bg-primary/90 mt-4" onClick={() => setIsMobileMenuOpen(false)}>
-                      Schedule A Demo
-                    </Button>
-                  </Link>
-                </div>
-              </SheetContent>
-            </Sheet>
+          <div className="lg:hidden">
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="p-3 rounded-xl text-gray-700 hover:text-primary hover:bg-gray-100 transition-all"
+            >
+              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
           </div>
         </div>
+
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <div className="lg:hidden border-t border-gray-200 py-6">
+            <div className="space-y-4">
+              <Link href="/">
+                <span className={`block px-4 py-3 rounded-xl text-base font-semibold cursor-pointer ${
+                  isActive("/") ? "text-primary bg-primary/10" : "text-gray-700 hover:text-primary hover:bg-gray-50"
+                }`} onClick={() => setIsMenuOpen(false)}>
+                  Home
+                </span>
+              </Link>
+              
+              <Link href="/solutions">
+                <span className={`block px-4 py-3 rounded-xl text-base font-semibold cursor-pointer ${
+                  isActive("/solutions") ? "text-primary bg-primary/10" : "text-gray-700 hover:text-primary hover:bg-gray-50"
+                }`} onClick={() => setIsMenuOpen(false)}>
+                  Solutions
+                </span>
+              </Link>
+              
+              <Link href="/about">
+                <span className={`block px-4 py-3 rounded-xl text-base font-semibold cursor-pointer ${
+                  isActive("/about") ? "text-primary bg-primary/10" : "text-gray-700 hover:text-primary hover:bg-gray-50"
+                }`} onClick={() => setIsMenuOpen(false)}>
+                  Company
+                </span>
+              </Link>
+              
+              <Link href="/resources">
+                <span className={`block px-4 py-3 rounded-xl text-base font-semibold cursor-pointer ${
+                  isActive("/resources") ? "text-primary bg-primary/10" : "text-gray-700 hover:text-primary hover:bg-gray-50"
+                }`} onClick={() => setIsMenuOpen(false)}>
+                  Resources
+                </span>
+              </Link>
+              
+              <Link href="/contact">
+                <span className={`block px-4 py-3 rounded-xl text-base font-semibold cursor-pointer ${
+                  isActive("/contact") ? "text-primary bg-primary/10" : "text-gray-700 hover:text-primary hover:bg-gray-50"
+                }`} onClick={() => setIsMenuOpen(false)}>
+                  Contact
+                </span>
+              </Link>
+              
+              <Link href="/contact">
+                <button 
+                  className="w-full mt-6 btn-premium text-white px-8 py-4 rounded-xl font-bold shadow-lg"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  <Phone className="w-4 h-4 mr-2 inline" />
+                  Schedule Demo
+                </button>
+              </Link>
+            </div>
+          </div>
+        )}
       </div>
-    </nav>
+      
+      {/* Backdrop for dropdowns */}
+      {activeDropdown && (
+        <div 
+          className="fixed inset-0 bg-black/20 backdrop-blur-sm z-40"
+          onClick={() => setActiveDropdown(null)}
+        />
+      )}
+    </header>
   );
 }

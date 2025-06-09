@@ -11,12 +11,12 @@ export default function HeroSection() {
   ];
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary via-blue-700 to-blue-900 text-white overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary via-primary to-primary/80 text-white overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-blue-400/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute top-3/4 right-1/4 w-96 h-96 bg-purple-400/20 rounded-full blur-3xl animate-pulse delay-2000"></div>
-        <div className="absolute bottom-1/4 left-1/3 w-64 h-64 bg-cyan-400/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute top-3/4 right-1/4 w-96 h-96 bg-primary/15 rounded-full blur-3xl animate-pulse delay-2000"></div>
+        <div className="absolute bottom-1/4 left-1/3 w-64 h-64 bg-primary/25 rounded-full blur-3xl animate-pulse delay-1000"></div>
       </div>
       
       {/* Grid Pattern Overlay */}

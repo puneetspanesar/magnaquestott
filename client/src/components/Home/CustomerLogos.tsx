@@ -34,7 +34,7 @@ export default function CustomerLogos() {
         </div>
 
         {/* Enhanced CTA Section */}
-        <div className="relative overflow-hidden bg-gradient-to-br from-primary via-blue-600 to-blue-800 rounded-3xl p-12">
+        <div className="relative overflow-hidden bg-gradient-to-br from-primary via-primary to-primary/90 rounded-3xl p-12">
           {/* Background Pattern */}
           <div className="absolute inset-0 opacity-10">
             <svg className="w-full h-full" viewBox="0 0 100 100">

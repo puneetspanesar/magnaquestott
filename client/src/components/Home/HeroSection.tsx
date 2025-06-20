@@ -5,10 +5,10 @@ import EventBanner from './EventBanner';
 
 export default function HeroSection() {
   const keyFeatures = [
-    { icon: TrendingUp, text: "Increase Revenue by 40%", color: "text-white" },
-    { icon: Users, text: "Manage 300M+ Subscribers", color: "text-white" },
-    { icon: Globe, text: "Deploy in 50+ Countries", color: "text-white" },
-    { icon: Shield, text: "Enterprise-Grade Security", color: "text-white" }
+    { icon: TrendingUp, text: "Increase Revenue by 40%", color: "text-white", description: "Advanced analytics and optimization strategies" },
+    { icon: Users, text: "Manage 300M+ Subscribers", color: "text-white", description: "Scalable platform handling millions of users" },
+    { icon: Globe, text: "Deploy in 50+ Countries", color: "text-white", description: "Global infrastructure with local compliance" },
+    { icon: Shield, text: "Enterprise-Grade Security", color: "text-white", description: "Bank-level security with 99.9% uptime" }
   ];
 
   return (
@@ -41,14 +41,19 @@ export default function HeroSection() {
           </div>
           
           {/* Main Headline */}
-          <h1 className="text-5xl lg:text-7xl font-bold leading-tight mb-8">
-            <span className="block text-white mb-4">Transform Your</span>
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-200 via-white to-blue-200 animate-pulse">
-              Subscription Business
-            </span>
-            <span className="block text-white text-4xl lg:text-5xl mt-4 font-semibold">
-              with Magnaquest SURE
-            </span>
+          <h1 className="text-5xl lg:text-7xl font-semibold leading-tight mb-8 tracking-wide">
+            <span className="block text-white mb-4">Drive, Grow and Scale</span>
+            <span className="block text-white mb-4">your Subscription Business</span>
+            <span className="block text-white text-4xl lg:text-5xl mb-4">with</span>
+            <div className="flex items-center justify-center gap-4">
+              <span className="bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent text-4xl lg:text-5xl font-bold">SURE</span>
+              <span className="text-white text-2xl lg:text-3xl">by</span>
+              <img 
+                src="https://www.magnaquest.com/wp-content/uploads/2024/04/MagnaQuest-Logo.png" 
+                alt="Magnaquest" 
+                className="h-12 lg:h-16 brightness-0 invert"
+              />
+            </div>
           </h1>
           
           {/* Subtitle */}
@@ -62,9 +67,15 @@ export default function HeroSection() {
           {/* Key Features Grid */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-12 max-w-5xl mx-auto">
             {keyFeatures.map((feature, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all group">
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all group relative" title={feature.description}>
                 <feature.icon className={`w-8 h-8 ${feature.color} mb-3 mx-auto group-hover:scale-110 transition-transform`} />
                 <p className="text-white font-medium text-sm leading-tight">{feature.text}</p>
+                
+                {/* Tooltip */}
+                <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-black/80 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-10">
+                  {feature.description}
+                  <div className="absolute top-full left-1/2 transform -translate-x-1/2 border-4 border-transparent border-t-black/80"></div>
+                </div>
               </div>
             ))}
           </div>
@@ -73,33 +84,40 @@ export default function HeroSection() {
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
             <Link href="/contact">
               <button className="group bg-white text-primary px-12 py-5 text-xl font-bold rounded-2xl hover:bg-gray-100 transition-all transform hover:scale-105 shadow-2xl flex items-center">
-                Start Free Demo
+                Start Your Free Trial
                 <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-1 transition-transform" />
               </button>
             </Link>
             <button className="group border-2 border-white/30 text-white px-12 py-5 text-xl font-bold rounded-2xl hover:bg-white/10 backdrop-blur-sm transition-all flex items-center">
               <Play className="w-6 h-6 mr-3 group-hover:scale-110 transition-transform" />
-              Watch 3-Min Demo
+              <div className="text-left">
+                <div>Watch Product Tour</div>
+                <div className="text-sm font-normal text-blue-200">See how global leaders grow with SURE</div>
+              </div>
             </button>
           </div>
           
           {/* Social Proof Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-white mb-2">25+</div>
-              <div className="text-blue-200 font-medium">Years Experience</div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+            <div className="text-center group">
+              <div className="text-4xl font-bold text-white mb-2 group-hover:scale-110 transition-transform">25+</div>
+              <div className="text-blue-200 font-medium">Years of Industry</div>
+              <div className="text-blue-200 font-medium">Expertise</div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-white mb-2">250+</div>
-              <div className="text-blue-200 font-medium">Enterprise Clients</div>
+            <div className="text-center group">
+              <div className="text-4xl font-bold text-white mb-2 group-hover:scale-110 transition-transform">250+</div>
+              <div className="text-blue-200 font-medium">Leading Clients</div>
+              <div className="text-blue-200 font-medium">Worldwide</div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-white mb-2">300M+</div>
-              <div className="text-blue-200 font-medium">Subscribers Managed</div>
+            <div className="text-center group">
+              <div className="text-4xl font-bold text-white mb-2 group-hover:scale-110 transition-transform">300M+</div>
+              <div className="text-blue-200 font-medium">Subscriptions</div>
+              <div className="text-blue-200 font-medium">Seamlessly Managed</div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-white mb-2">99.9%</div>
-              <div className="text-blue-200 font-medium">Uptime Guarantee</div>
+            <div className="text-center group">
+              <div className="text-4xl font-bold text-white mb-2 group-hover:scale-110 transition-transform">99.9%</div>
+              <div className="text-blue-200 font-medium">Uptime – Trusted</div>
+              <div className="text-blue-200 font-medium">Reliability</div>
             </div>
           </div>
         </div>

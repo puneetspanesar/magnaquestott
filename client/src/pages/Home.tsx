@@ -10,6 +10,7 @@ import GlobalPresence from "@/components/Home/GlobalPresence";
 import CustomerLogos from "@/components/Home/CustomerLogos";
 import ContactSection from "@/components/Home/ContactSection";
 import NewsletterSection from "@/components/Home/NewsletterSection";
+import LiveChatCTA from "@/components/Home/LiveChatCTA";
 
 export default function Home() {
   return (
@@ -25,6 +26,7 @@ export default function Home() {
       <ImplementationSection />
       <ContactSection />
       <NewsletterSection />
+      <LiveChatCTA />
     </div>
   );
 }

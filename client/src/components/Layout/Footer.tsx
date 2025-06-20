@@ -36,8 +36,8 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <div className="flex items-center mb-6">
               <img 
-                src="https://www.magnaquest.com/wp-content/uploads/2024/04/MagnaQuest-Logo.png" 
-                alt="Magnaquest" 
+                src="https://media.licdn.com/dms/image/v2/D560BAQGC1ttkjFDxwA/company-logo_200_200/company-logo_200_200/0/1739264203331?e=1755734400&v=beta&t=6E5hoClBpK7FKh-qmaU2Iy7wfa35Pp3ROMWHazZadAY" 
+                alt="SURE by Magnaquest" 
                 className="h-8 brightness-0 invert"
               />
             </div>

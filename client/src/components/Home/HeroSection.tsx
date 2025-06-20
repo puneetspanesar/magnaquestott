@@ -41,17 +41,15 @@ export default function HeroSection() {
           </div>
           
           {/* Main Headline */}
-          <h1 className="text-5xl lg:text-7xl font-semibold leading-tight mb-8 tracking-wide">
+          <h1 className="text-5xl lg:text-7xl font-bold leading-tight mb-8">
             <span className="block text-white mb-4">Drive, Grow and Scale</span>
             <span className="block text-white mb-4">your Subscription Business</span>
             <span className="block text-white text-4xl lg:text-5xl mb-4">with</span>
             <div className="flex items-center justify-center gap-4">
-              <span className="bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent text-4xl lg:text-5xl font-bold">SURE</span>
-              <span className="text-white text-2xl lg:text-3xl">by</span>
               <img 
-                src="https://www.magnaquest.com/wp-content/uploads/2024/04/MagnaQuest-Logo.png" 
-                alt="Magnaquest" 
-                className="h-12 lg:h-16 brightness-0 invert"
+                src="https://media.licdn.com/dms/image/v2/D560BAQGC1ttkjFDxwA/company-logo_200_200/company-logo_200_200/0/1739264203331?e=1755734400&v=beta&t=6E5hoClBpK7FKh-qmaU2Iy7wfa35Pp3ROMWHazZadAY" 
+                alt="SURE by Magnaquest" 
+                className="h-16 lg:h-20 brightness-0 invert"
               />
             </div>
           </h1>

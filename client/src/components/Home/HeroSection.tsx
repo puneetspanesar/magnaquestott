@@ -41,7 +41,7 @@ export default function HeroSection() {
           </div>
           
           {/* Main Headline */}
-          <h1 className="text-5xl lg:text-7xl font-heading font-medium leading-tight mb-8 tracking-wide">
+          <h1 className="text-5xl lg:text-7xl font-semibold leading-tight mb-8 tracking-wide">
             <span className="block text-white mb-4">Drive, Grow and Scale</span>
             <span className="block text-white mb-4">your Subscription Business</span>
             <span className="block text-white text-4xl lg:text-5xl mb-4">with</span>

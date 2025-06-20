@@ -93,34 +93,26 @@ export default function HeroSection() {
           {/* Social Proof Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
             <div className="text-center group">
-              <div className="flex items-center justify-center mb-2">
-                <Award className="w-5 h-5 text-blue-300 mr-2" />
-                <div className="text-4xl font-bold text-white group-hover:scale-110 transition-transform">25+</div>
-              </div>
+              <Award className="w-12 h-12 text-blue-300 mx-auto mb-4 group-hover:scale-110 transition-transform" />
+              <div className="text-4xl font-bold text-white mb-2 group-hover:scale-110 transition-transform">25+</div>
               <div className="text-blue-200 font-medium">Years of Industry</div>
               <div className="text-blue-200 font-medium">Expertise</div>
             </div>
             <div className="text-center group">
-              <div className="flex items-center justify-center mb-2">
-                <Building2 className="w-5 h-5 text-blue-300 mr-2" />
-                <div className="text-4xl font-bold text-white group-hover:scale-110 transition-transform">250+</div>
-              </div>
+              <Building2 className="w-12 h-12 text-blue-300 mx-auto mb-4 group-hover:scale-110 transition-transform" />
+              <div className="text-4xl font-bold text-white mb-2 group-hover:scale-110 transition-transform">250+</div>
               <div className="text-blue-200 font-medium">Leading Clients</div>
               <div className="text-blue-200 font-medium">Worldwide</div>
             </div>
             <div className="text-center group">
-              <div className="flex items-center justify-center mb-2">
-                <Users className="w-5 h-5 text-blue-300 mr-2" />
-                <div className="text-4xl font-bold text-white group-hover:scale-110 transition-transform">300M+</div>
-              </div>
+              <Users className="w-12 h-12 text-blue-300 mx-auto mb-4 group-hover:scale-110 transition-transform" />
+              <div className="text-4xl font-bold text-white mb-2 group-hover:scale-110 transition-transform">300M+</div>
               <div className="text-blue-200 font-medium">Subscriptions</div>
               <div className="text-blue-200 font-medium">Seamlessly Managed</div>
             </div>
             <div className="text-center group">
-              <div className="flex items-center justify-center mb-2">
-                <Zap className="w-5 h-5 text-blue-300 mr-2" />
-                <div className="text-4xl font-bold text-white group-hover:scale-110 transition-transform">99.9%</div>
-              </div>
+              <Zap className="w-12 h-12 text-blue-300 mx-auto mb-4 group-hover:scale-110 transition-transform" />
+              <div className="text-4xl font-bold text-white mb-2 group-hover:scale-110 transition-transform">99.9%</div>
               <div className="text-blue-200 font-medium">Uptime – Trusted</div>
               <div className="text-blue-200 font-medium">Reliability</div>
             </div>

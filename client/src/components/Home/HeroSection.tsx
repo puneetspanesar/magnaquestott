@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Play, ArrowRight, CheckCircle, TrendingUp, Users, Globe, Shield } from "lucide-react";
+import { Play, ArrowRight, CheckCircle, TrendingUp, Users, Globe, Shield, Award, Building2, Zap } from "lucide-react";
 import EventBanner from './EventBanner';
 
 export default function HeroSection() {
@@ -93,21 +93,25 @@ export default function HeroSection() {
           {/* Social Proof Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
             <div className="text-center group">
+              <Award className="w-8 h-8 text-blue-200 mx-auto mb-3 group-hover:scale-110 transition-transform" />
               <div className="text-4xl font-bold text-white mb-2 group-hover:scale-110 transition-transform">25+</div>
               <div className="text-blue-200 font-medium">Years of Industry</div>
               <div className="text-blue-200 font-medium">Expertise</div>
             </div>
             <div className="text-center group">
+              <Building2 className="w-8 h-8 text-blue-200 mx-auto mb-3 group-hover:scale-110 transition-transform" />
               <div className="text-4xl font-bold text-white mb-2 group-hover:scale-110 transition-transform">250+</div>
               <div className="text-blue-200 font-medium">Leading Clients</div>
               <div className="text-blue-200 font-medium">Worldwide</div>
             </div>
             <div className="text-center group">
+              <Users className="w-8 h-8 text-blue-200 mx-auto mb-3 group-hover:scale-110 transition-transform" />
               <div className="text-4xl font-bold text-white mb-2 group-hover:scale-110 transition-transform">300M+</div>
               <div className="text-blue-200 font-medium">Subscriptions</div>
               <div className="text-blue-200 font-medium">Seamlessly Managed</div>
             </div>
             <div className="text-center group">
+              <Zap className="w-8 h-8 text-blue-200 mx-auto mb-3 group-hover:scale-110 transition-transform" />
               <div className="text-4xl font-bold text-white mb-2 group-hover:scale-110 transition-transform">99.9%</div>
               <div className="text-blue-200 font-medium">Uptime – Trusted</div>
               <div className="text-blue-200 font-medium">Reliability</div>

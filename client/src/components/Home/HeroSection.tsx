@@ -44,14 +44,7 @@ export default function HeroSection() {
           <h1 className="text-5xl lg:text-7xl font-bold leading-tight mb-8">
             <span className="block text-white mb-4">Drive, Grow and Scale</span>
             <span className="block text-white mb-4">your Subscription Business</span>
-            <span className="block text-white text-4xl lg:text-5xl mb-4">with</span>
-            <div className="flex items-center justify-center gap-4">
-              <img 
-                src="https://media.licdn.com/dms/image/v2/D560BAQGC1ttkjFDxwA/company-logo_200_200/company-logo_200_200/0/1739264203331?e=1755734400&v=beta&t=6E5hoClBpK7FKh-qmaU2Iy7wfa35Pp3ROMWHazZadAY" 
-                alt="SURE by Magnaquest" 
-                className="h-16 lg:h-20 brightness-0 invert"
-              />
-            </div>
+            <span className="block text-white text-4xl lg:text-5xl">with SURE by Magnaquest</span>
           </h1>
           
           {/* Subtitle */}

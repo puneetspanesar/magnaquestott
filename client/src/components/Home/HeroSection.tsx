@@ -44,10 +44,8 @@ export default function HeroSection() {
           <h1 className="text-5xl lg:text-7xl font-bold leading-tight mb-8">
             <span className="block text-white mb-4">Drive, Grow and Scale</span>
             <span className="block text-white mb-4">your Subscription Business</span>
-            <span className="block text-4xl lg:text-5xl">
-              <span className="text-white">with </span>
-              <span className="bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent font-extrabold">SURE</span>
-              <span className="text-blue-200 text-2xl lg:text-3xl font-medium"> by Magnaquest</span>
+            <span className="block text-4xl lg:text-5xl bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent font-bold">
+              with SURE by Magnaquest
             </span>
           </h1>
           

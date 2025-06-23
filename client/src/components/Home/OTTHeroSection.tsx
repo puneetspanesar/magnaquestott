@@ -3,7 +3,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Play, ArrowRight, CheckCircle, TrendingUp, Users, Globe, Shield, Award, Building2, Zap, Mail, Phone, User, Calendar } from "lucide-react";
+import { Play, ArrowRight, CheckCircle, TrendingDown, DollarSign, Globe, CreditCard, Award, Building2, Zap, Mail, Phone, User, Calendar } from "lucide-react";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
@@ -64,10 +64,34 @@ export default function OTTHeroSection() {
   };
 
   const keyFeatures = [
-    { icon: TrendingUp, text: "Reduce Subscriber Churn", color: "text-white", description: "Personalized journeys and churn prediction analytics" },
-    { icon: Users, text: "Increase Revenue Per User", color: "text-white", description: "Upsell, cross-sell, and bundle with ease" },
-    { icon: Globe, text: "Global Reach, Local Compliance", color: "text-white", description: "Multi-currency, multi-taxation support" },
-    { icon: Shield, text: "Pay As You Grow", color: "text-white", description: "Scalable cloud-native architecture" }
+    { 
+      icon: TrendingDown, 
+      text: "Reduce Subscriber Churn", 
+      subtext: "Personalized journeys and churn prediction analytics",
+      color: "text-white", 
+      description: "Advanced AI-powered retention strategies with real-time churn prediction" 
+    },
+    { 
+      icon: DollarSign, 
+      text: "Increase Revenue Per User", 
+      subtext: "Upsell, cross-sell, and bundle with ease",
+      color: "text-white", 
+      description: "Smart monetization engine with dynamic pricing and bundling" 
+    },
+    { 
+      icon: Globe, 
+      text: "Global Reach, Local Compliance", 
+      subtext: "Multi-currency, multi-taxation support",
+      color: "text-white", 
+      description: "Seamless international expansion with automated compliance" 
+    },
+    { 
+      icon: CreditCard, 
+      text: "Pay As You Grow", 
+      subtext: "Scalable cloud-native architecture",
+      color: "text-white", 
+      description: "Flexible pricing that scales with your subscriber base" 
+    }
   ];
 
   return (
@@ -115,11 +139,12 @@ export default function OTTHeroSection() {
             </p>
             
             {/* Key Features Grid */}
-            <div className="grid grid-cols-2 gap-4 mb-12">
+            <div className="grid grid-cols-2 gap-6 mb-12">
               {keyFeatures.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-4 border border-white/10 hover:bg-white/10 transition-all group relative" title={feature.description}>
-                  <feature.icon className={`w-6 h-6 ${feature.color} mb-2 group-hover:scale-110 transition-transform`} />
-                  <p className="text-white font-medium text-sm leading-tight">{feature.text}</p>
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all group relative" title={feature.description}>
+                  <feature.icon className={`w-10 h-10 ${feature.color} mb-4 group-hover:scale-110 transition-transform`} />
+                  <h4 className="text-white font-bold text-base leading-tight mb-2">{feature.text}</h4>
+                  <p className="text-blue-200 font-medium text-sm leading-relaxed">{feature.subtext}</p>
                   
                   {/* Tooltip */}
                   <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-black/80 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-10">

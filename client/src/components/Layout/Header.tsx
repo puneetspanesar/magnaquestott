@@ -9,21 +9,21 @@ export default function Header() {
 
   const solutionsMenu = [
     {
-      title: "By Industry",
+      title: "OTT Monetization",
       items: [
-        { name: "Broadcasting & Media", icon: Tv, description: "Content monetization and subscriber management" },
-        { name: "OTT & Streaming", icon: Users, description: "End-to-end streaming platform solutions" },
-        { name: "Telecommunications", icon: Radio, description: "Telecom billing and subscriber lifecycle" },
-        { name: "Enterprise Software", icon: Building2, description: "B2B subscription management platform" }
+        { name: "SVOD Management", icon: Tv, description: "Subscription video on demand solutions" },
+        { name: "AVOD Solutions", icon: Users, description: "Ad-supported video monetization" },
+        { name: "TVOD Platform", icon: Radio, description: "Transactional video on demand" },
+        { name: "Hybrid Models", icon: Building2, description: "Mixed monetization strategies" }
       ]
     },
     {
-      title: "By Solution",
+      title: "Core Features",
       items: [
-        { name: "Subscription Management", icon: Building2, description: "Complete subscriber lifecycle management" },
-        { name: "Revenue Analytics", icon: Globe, description: "Advanced insights and reporting" },
-        { name: "Payment Processing", icon: Users, description: "Multi-gateway payment solutions" },
-        { name: "Customer Experience", icon: Award, description: "360-degree customer engagement" }
+        { name: "Churn Prevention", icon: Building2, description: "Reduce subscriber churn with smart analytics" },
+        { name: "Revenue Optimization", icon: Globe, description: "Maximize ARPU and LTV" },
+        { name: "Global Scaling", icon: Users, description: "Multi-currency and compliance" },
+        { name: "Content Entitlements", icon: Award, description: "Manage user access and permissions" }
       ]
     }
   ];
@@ -229,7 +229,7 @@ export default function Header() {
             <Link href="/contact">
               <button className="bg-gradient-to-r from-primary to-accent text-white px-6 py-3 rounded-lg font-semibold text-sm shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 group whitespace-nowrap">
                 <Phone className="w-4 h-4 mr-2 inline group-hover:animate-pulse" />
-                Schedule Demo
+                Book OTT Demo
               </button>
             </Link>
           </div>
@@ -295,7 +295,7 @@ export default function Header() {
                   onClick={() => setIsMenuOpen(false)}
                 >
                   <Phone className="w-4 h-4 mr-2 inline" />
-                  Schedule Demo
+                  Book OTT Demo
                 </button>
               </Link>
             </div>

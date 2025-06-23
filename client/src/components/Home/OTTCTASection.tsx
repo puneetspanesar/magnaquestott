@@ -33,7 +33,7 @@ export default function OTTCTASection() {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-gray-50">
+    <section id="benefits-section" className="py-20 bg-gradient-to-b from-white to-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
@@ -60,12 +60,15 @@ export default function OTTCTASection() {
               <h3 className="text-2xl font-bold text-gray-900 mb-4">{cta.title}</h3>
               <p className="text-gray-600 mb-8 leading-relaxed">{cta.description}</p>
               
-              <Link href={cta.href}>
-                <button className={`w-full px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 flex items-center justify-center group ${cta.buttonStyle} shadow-lg`}>
-                  {cta.buttonText}
-                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                </button>
-              </Link>
+              <button
+                onClick={() => {
+                  document.getElementById('demo-form')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+                className={`w-full px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 flex items-center justify-center group ${cta.buttonStyle} shadow-lg`}
+              >
+                {cta.buttonText}
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </button>
             </div>
           ))}
         </div>
@@ -81,13 +84,16 @@ export default function OTTCTASection() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Link href="/contact">
-                <button className="group bg-white text-primary px-10 py-5 text-xl font-bold rounded-2xl hover:bg-gray-100 transition-all transform hover:scale-105 shadow-2xl flex items-center">
-                  <Calendar className="w-6 h-6 mr-3" />
-                  Book Strategy Call
-                  <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-1 transition-transform" />
-                </button>
-              </Link>
+              <button
+                onClick={() => {
+                  document.getElementById('demo-form')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+                className="group bg-white text-primary px-10 py-5 text-xl font-bold rounded-2xl hover:bg-gray-100 transition-all transform hover:scale-105 shadow-2xl flex items-center"
+              >
+                <Calendar className="w-6 h-6 mr-3" />
+                Book Strategy Call
+                <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-1 transition-transform" />
+              </button>
               
               <button className="group border-2 border-white/30 text-white px-10 py-5 text-xl font-bold rounded-2xl hover:bg-white/10 backdrop-blur-sm transition-all flex items-center">
                 <Play className="w-6 h-6 mr-3 group-hover:scale-110 transition-transform" />

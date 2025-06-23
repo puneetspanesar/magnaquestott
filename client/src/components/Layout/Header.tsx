@@ -69,169 +69,71 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center ml-12">
-            {/* Home */}
-            <Link href="/">
-              <span className={`relative px-5 py-4 text-base font-medium transition-all duration-300 cursor-pointer ${
-                isActive("/")
-                  ? "text-primary font-semibold"
-                  : "text-gray-700 hover:text-primary"
-              }`}>
-                Home
-              </span>
-            </Link>
+            {/* Problem */}
+            <button
+              onClick={() => {
+                document.getElementById('problem-section')?.scrollIntoView({ behavior: 'smooth' });
+                setActiveDropdown(null);
+              }}
+              className="relative px-5 py-4 text-base font-medium transition-all duration-300 text-gray-700 hover:text-primary cursor-pointer"
+            >
+              The Challenge
+            </button>
 
             {/* Divider */}
             <div className="h-6 w-px bg-gradient-to-b from-transparent via-gray-300 to-transparent mx-1"></div>
 
-            {/* Solutions Dropdown */}
-            <div className="relative">
-              <button
-                onClick={() => handleDropdownToggle('solutions')}
-                className={`relative flex items-center px-5 py-4 text-base font-medium transition-all duration-300 ${
-                  isActive("/solutions") || activeDropdown === 'solutions'
-                    ? "text-primary font-semibold"
-                    : "text-gray-700 hover:text-primary"
-                }`}
-              >
-                Solutions
-                <ChevronDown className={`w-4 h-4 ml-2 transition-transform duration-300 ${activeDropdown === 'solutions' ? 'rotate-180' : ''}`} />
-              </button>
-              
-              {activeDropdown === 'solutions' && (
-                <div className="absolute top-full left-0 mt-2 w-[600px] bg-white rounded-2xl shadow-2xl border border-gray-100 p-6 z-50">
-                  <div className="grid grid-cols-2 gap-8">
-                    {solutionsMenu.map((section, sectionIndex) => (
-                      <div key={sectionIndex}>
-                        <h3 className="text-sm font-bold text-gray-900 mb-4 uppercase tracking-wider">
-                          {section.title}
-                        </h3>
-                        <div className="space-y-3">
-                          {section.items.map((item, itemIndex) => (
-                            <Link key={itemIndex} href="/solutions">
-                              <div className="flex items-start p-3 rounded-xl hover:bg-gray-50 transition-colors cursor-pointer group">
-                                <div className="bg-primary/10 p-2 rounded-lg mr-3 group-hover:bg-primary group-hover:text-white transition-all">
-                                  <item.icon className="w-4 h-4 text-primary group-hover:text-white" />
-                                </div>
-                                <div>
-                                  <div className="font-semibold text-gray-900 group-hover:text-primary transition-colors">
-                                    {item.name}
-                                  </div>
-                                  <div className="text-xs text-gray-500 mt-1">
-                                    {item.description}
-                                  </div>
-                                </div>
-                              </div>
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
+            {/* Solutions */}
+            <button
+              onClick={() => {
+                document.getElementById('solutions-section')?.scrollIntoView({ behavior: 'smooth' });
+                setActiveDropdown(null);
+              }}
+              className="relative px-5 py-4 text-base font-medium transition-all duration-300 text-gray-700 hover:text-primary cursor-pointer"
+            >
+              OTT Solutions
+            </button>
 
             {/* Divider */}
             <div className="h-6 w-px bg-gradient-to-b from-transparent via-gray-300 to-transparent mx-1"></div>
 
-            {/* Company Dropdown */}
-            <div className="relative">
-              <button
-                onClick={() => handleDropdownToggle('company')}
-                className={`relative flex items-center px-5 py-4 text-base font-medium transition-all duration-300 ${
-                  isActive("/about") || activeDropdown === 'company'
-                    ? "text-primary font-semibold"
-                    : "text-gray-700 hover:text-primary"
-                }`}
-              >
-                Company
-                <ChevronDown className={`w-4 h-4 ml-2 transition-transform duration-300 ${activeDropdown === 'company' ? 'rotate-180' : ''}`} />
-              </button>
-              
-              {activeDropdown === 'company' && (
-                <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-2xl shadow-2xl border border-gray-100 p-4 z-50">
-                  <div className="space-y-2">
-                    {companyMenu.map((item, index) => (
-                      <Link key={index} href={item.href}>
-                        <div className="flex items-center p-3 rounded-xl hover:bg-gray-50 transition-colors cursor-pointer group">
-                          <div>
-                            <div className="font-semibold text-gray-900 group-hover:text-primary transition-colors">
-                              {item.name}
-                            </div>
-                            <div className="text-xs text-gray-500 mt-1">
-                              {item.description}
-                            </div>
-                          </div>
-                        </div>
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
+            {/* Benefits */}
+            <button
+              onClick={() => {
+                document.getElementById('benefits-section')?.scrollIntoView({ behavior: 'smooth' });
+                setActiveDropdown(null);
+              }}
+              className="relative px-5 py-4 text-base font-medium transition-all duration-300 text-gray-700 hover:text-primary cursor-pointer"
+            >
+              Benefits
+            </button>
 
             {/* Divider */}
             <div className="h-6 w-px bg-gradient-to-b from-transparent via-gray-300 to-transparent mx-1"></div>
 
-            {/* Resources Dropdown */}
-            <div className="relative">
-              <button
-                onClick={() => handleDropdownToggle('resources')}
-                className={`relative flex items-center px-5 py-4 text-base font-medium transition-all duration-300 ${
-                  isActive("/resources") || activeDropdown === 'resources'
-                    ? "text-primary font-semibold"
-                    : "text-gray-700 hover:text-primary"
-                }`}
-              >
-                Resources
-                <ChevronDown className={`w-4 h-4 ml-2 transition-transform duration-300 ${activeDropdown === 'resources' ? 'rotate-180' : ''}`} />
-              </button>
-              
-              {activeDropdown === 'resources' && (
-                <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-2xl shadow-2xl border border-gray-100 p-4 z-50">
-                  <div className="space-y-2">
-                    {resourcesMenu.map((item, index) => (
-                      <Link key={index} href={item.href}>
-                        <div className="flex items-center p-3 rounded-xl hover:bg-gray-50 transition-colors cursor-pointer group">
-                          <div>
-                            <div className="font-semibold text-gray-900 group-hover:text-primary transition-colors">
-                              {item.name}
-                            </div>
-                            <div className="text-xs text-gray-500 mt-1">
-                              {item.description}
-                            </div>
-                          </div>
-                        </div>
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-
-            {/* Divider */}
-            <div className="h-6 w-px bg-gradient-to-b from-transparent via-gray-300 to-transparent mx-1"></div>
-
-            {/* Contact */}
-            <Link href="/contact">
-              <span className={`relative px-5 py-4 text-base font-medium transition-all duration-300 cursor-pointer ${
-                isActive("/contact")
-                  ? "text-primary font-semibold"
-                  : "text-gray-700 hover:text-primary"
-              }`}>
-                Contact
-              </span>
-            </Link>
+            {/* Demo */}
+            <button
+              onClick={() => {
+                document.getElementById('demo-form')?.scrollIntoView({ behavior: 'smooth' });
+                setActiveDropdown(null);
+              }}
+              className="relative px-5 py-4 text-base font-medium transition-all duration-300 text-primary font-semibold cursor-pointer"
+            >
+              Get Demo
+            </button>
           </nav>
 
           {/* CTA Button */}
           <div className="hidden lg:block ml-12">
-            <Link href="/contact">
-              <button className="bg-gradient-to-r from-primary to-accent text-white px-6 py-3 rounded-lg font-semibold text-sm shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 group whitespace-nowrap">
-                <Phone className="w-4 h-4 mr-2 inline group-hover:animate-pulse" />
-                Book OTT Demo
-              </button>
-            </Link>
+            <button
+              onClick={() => {
+                document.getElementById('demo-form')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="bg-gradient-to-r from-primary to-accent text-white px-6 py-3 rounded-lg font-semibold text-sm shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 group whitespace-nowrap"
+            >
+              <Phone className="w-4 h-4 mr-2 inline group-hover:animate-pulse" />
+              Book OTT Demo
+            </button>
           </div>
 
           {/* Mobile menu button */}
@@ -249,55 +151,46 @@ export default function Header() {
         {isMenuOpen && (
           <div className="lg:hidden border-t border-gray-200 py-6">
             <div className="space-y-4">
-              <Link href="/">
-                <span className={`block px-4 py-3 rounded-xl text-base font-semibold cursor-pointer ${
-                  isActive("/") ? "text-primary bg-primary/10" : "text-gray-700 hover:text-primary hover:bg-gray-50"
-                }`} onClick={() => setIsMenuOpen(false)}>
-                  Home
-                </span>
-              </Link>
+              <button
+                onClick={() => {
+                  document.getElementById('problem-section')?.scrollIntoView({ behavior: 'smooth' });
+                  setIsMenuOpen(false);
+                }}
+                className="block w-full text-left px-4 py-3 rounded-xl text-base font-semibold cursor-pointer text-gray-700 hover:text-primary hover:bg-gray-50"
+              >
+                The Challenge
+              </button>
               
-              <Link href="/solutions">
-                <span className={`block px-4 py-3 rounded-xl text-base font-semibold cursor-pointer ${
-                  isActive("/solutions") ? "text-primary bg-primary/10" : "text-gray-700 hover:text-primary hover:bg-gray-50"
-                }`} onClick={() => setIsMenuOpen(false)}>
-                  Solutions
-                </span>
-              </Link>
+              <button
+                onClick={() => {
+                  document.getElementById('solutions-section')?.scrollIntoView({ behavior: 'smooth' });
+                  setIsMenuOpen(false);
+                }}
+                className="block w-full text-left px-4 py-3 rounded-xl text-base font-semibold cursor-pointer text-gray-700 hover:text-primary hover:bg-gray-50"
+              >
+                OTT Solutions
+              </button>
               
-              <Link href="/about">
-                <span className={`block px-4 py-3 rounded-xl text-base font-semibold cursor-pointer ${
-                  isActive("/about") ? "text-primary bg-primary/10" : "text-gray-700 hover:text-primary hover:bg-gray-50"
-                }`} onClick={() => setIsMenuOpen(false)}>
-                  Company
-                </span>
-              </Link>
+              <button
+                onClick={() => {
+                  document.getElementById('benefits-section')?.scrollIntoView({ behavior: 'smooth' });
+                  setIsMenuOpen(false);
+                }}
+                className="block w-full text-left px-4 py-3 rounded-xl text-base font-semibold cursor-pointer text-gray-700 hover:text-primary hover:bg-gray-50"
+              >
+                Benefits
+              </button>
               
-              <Link href="/resources">
-                <span className={`block px-4 py-3 rounded-xl text-base font-semibold cursor-pointer ${
-                  isActive("/resources") ? "text-primary bg-primary/10" : "text-gray-700 hover:text-primary hover:bg-gray-50"
-                }`} onClick={() => setIsMenuOpen(false)}>
-                  Resources
-                </span>
-              </Link>
-              
-              <Link href="/contact">
-                <span className={`block px-4 py-3 rounded-xl text-base font-semibold cursor-pointer ${
-                  isActive("/contact") ? "text-primary bg-primary/10" : "text-gray-700 hover:text-primary hover:bg-gray-50"
-                }`} onClick={() => setIsMenuOpen(false)}>
-                  Contact
-                </span>
-              </Link>
-              
-              <Link href="/contact">
-                <button 
-                  className="w-full mt-6 btn-premium text-white px-8 py-4 rounded-xl font-bold shadow-lg"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  <Phone className="w-4 h-4 mr-2 inline" />
-                  Book OTT Demo
-                </button>
-              </Link>
+              <button
+                onClick={() => {
+                  document.getElementById('demo-form')?.scrollIntoView({ behavior: 'smooth' });
+                  setIsMenuOpen(false);
+                }}
+                className="w-full mt-6 bg-gradient-to-r from-primary to-accent text-white px-8 py-4 rounded-xl font-bold shadow-lg"
+              >
+                <Phone className="w-4 h-4 mr-2 inline" />
+                Book OTT Demo
+              </button>
             </div>
           </div>
         )}

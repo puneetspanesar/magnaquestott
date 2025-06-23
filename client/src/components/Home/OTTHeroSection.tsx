@@ -71,7 +71,7 @@ export default function OTTHeroSection() {
   ];
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary via-primary to-accent text-white overflow-hidden">
+    <section id="demo-form" className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary via-primary to-accent text-white overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-pulse"></div>

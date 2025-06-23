@@ -58,61 +58,92 @@ export default function OTTProblemSection() {
           </div>
 
           {/* Solution Introduction */}
-          <div className="max-w-5xl mx-auto">
-            <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-12 border border-white/20">
-              <div className="flex items-center justify-center mb-8">
-                <Lightbulb className="w-8 h-8 text-yellow-300 mr-4" />
-                <span className="text-2xl font-bold text-white">The Solution</span>
-              </div>
-              
-              <h3 className="text-3xl lg:text-5xl font-bold mb-6 text-white">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h3 className="text-4xl lg:text-6xl font-bold mb-6 text-white leading-tight">
                 SURE by Magnaquest
               </h3>
               
-              <p className="text-xl lg:text-2xl text-blue-100 mb-8 leading-relaxed">
-                A unified, cloud-native subscription platform built for modern OTT providers. Whether you're launching 
+              <p className="text-xl lg:text-2xl text-blue-100 leading-relaxed max-w-4xl mx-auto">
+                SURE by Magnaquest is a unified, cloud-native subscription platform built for modern OTT providers. Whether you're launching 
                 new content bundles, managing freemium tiers, or scaling to new markets — SURE empowers you to grow without complexity.
               </p>
-              
-              {/* Key Benefits */}
-              <div className="grid md:grid-cols-3 gap-6">
-                <div className="flex items-center bg-white/5 rounded-2xl p-4">
-                  <Zap className="w-8 h-8 text-yellow-300 mr-4 flex-shrink-0" />
-                  <div className="text-left">
-                    <h4 className="font-bold text-white">Lightning Fast</h4>
-                    <p className="text-blue-200 text-sm">Deploy in days, not months</p>
+            </div>
+
+            {/* Platform Features Grid */}
+            <div className="grid lg:grid-cols-2 gap-8 mb-12">
+              <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10 hover:bg-white/10 transition-all">
+                <div className="flex items-start space-x-4">
+                  <div className="bg-white/10 rounded-2xl p-4 flex-shrink-0">
+                    <Zap className="w-10 h-10 text-white" />
                   </div>
-                </div>
-                
-                <div className="flex items-center bg-white/5 rounded-2xl p-4">
-                  <Users className="w-8 h-8 text-blue-300 mr-4 flex-shrink-0" />
-                  <div className="text-left">
-                    <h4 className="font-bold text-white">Scales Infinitely</h4>
-                    <p className="text-blue-200 text-sm">From thousands to millions</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-center bg-white/5 rounded-2xl p-4">
-                  <Globe className="w-8 h-8 text-green-300 mr-4 flex-shrink-0" />
-                  <div className="text-left">
-                    <h4 className="font-bold text-white">Global Ready</h4>
-                    <p className="text-blue-200 text-sm">Multi-currency & compliance</p>
+                  <div>
+                    <h4 className="text-2xl font-bold text-white mb-3">Rapid Deployment</h4>
+                    <p className="text-blue-200 leading-relaxed">
+                      Launch your OTT platform in days, not months. Pre-built integrations and configurable workflows 
+                      get you to market faster than traditional solutions.
+                    </p>
                   </div>
                 </div>
               </div>
-              
-              {/* CTA */}
-              <div className="mt-8">
-                <button
-                  onClick={() => {
-                    document.getElementById('demo-form')?.scrollIntoView({ behavior: 'smooth' });
-                  }}
-                  className="group bg-white text-primary px-8 py-4 text-lg font-bold rounded-2xl hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg flex items-center mx-auto"
-                >
-                  See How SURE Transforms OTT
-                  <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-1 transition-transform" />
-                </button>
+
+              <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10 hover:bg-white/10 transition-all">
+                <div className="flex items-start space-x-4">
+                  <div className="bg-white/10 rounded-2xl p-4 flex-shrink-0">
+                    <Users className="w-10 h-10 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="text-2xl font-bold text-white mb-3">Infinite Scale</h4>
+                    <p className="text-blue-200 leading-relaxed">
+                      From thousands to millions of subscribers. Cloud-native architecture automatically 
+                      scales with your growth without performance degradation.
+                    </p>
+                  </div>
+                </div>
               </div>
+
+              <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10 hover:bg-white/10 transition-all">
+                <div className="flex items-start space-x-4">
+                  <div className="bg-white/10 rounded-2xl p-4 flex-shrink-0">
+                    <Globe className="w-10 h-10 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="text-2xl font-bold text-white mb-3">Global Operations</h4>
+                    <p className="text-blue-200 leading-relaxed">
+                      Expand internationally with built-in multi-currency support, local taxation handling, 
+                      and regional compliance frameworks.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10 hover:bg-white/10 transition-all">
+                <div className="flex items-start space-x-4">
+                  <div className="bg-white/10 rounded-2xl p-4 flex-shrink-0">
+                    <Target className="w-10 h-10 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="text-2xl font-bold text-white mb-3">Smart Analytics</h4>
+                    <p className="text-blue-200 leading-relaxed">
+                      AI-powered insights predict churn, optimize pricing, and identify upsell opportunities 
+                      to maximize your revenue per user.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* CTA */}
+            <div className="text-center">
+              <button
+                onClick={() => {
+                  document.getElementById('demo-form')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+                className="group bg-white text-primary px-10 py-5 text-xl font-bold rounded-2xl hover:bg-gray-100 transition-all transform hover:scale-105 shadow-xl flex items-center mx-auto"
+              >
+                See How SURE Transforms OTT
+                <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-1 transition-transform" />
+              </button>
             </div>
           </div>
         </div>

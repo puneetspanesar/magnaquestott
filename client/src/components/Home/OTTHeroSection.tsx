@@ -119,11 +119,6 @@ export default function OTTHeroSection() {
         <div className="grid lg:grid-cols-[1.2fr,0.8fr] gap-24 items-start">
           {/* Left Column - Content */}
           <div className="text-left pr-8">
-            {/* Badge */}
-            <div className="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 mb-8 border border-white/20">
-              <div className="w-2 h-2 bg-green-400 rounded-full mr-3 animate-pulse"></div>
-              <span className="text-blue-100 font-medium">Trusted by Global OTT Leaders</span>
-            </div>
             
             {/* Main Headline */}
             <h1 className="text-4xl lg:text-6xl font-bold leading-tight mb-8">

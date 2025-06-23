@@ -4,7 +4,7 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Header from "@/components/Layout/Header";
-import Footer from "@/components/Layout/Footer";
+import OTTFooter from "@/components/Layout/OTTFooter";
 import Home from "@/pages/Home";
 import About from "@/pages/About";
 import Solutions from "@/pages/Solutions";
@@ -28,7 +28,7 @@ function Router() {
           <Route component={NotFound} />
         </Switch>
       </main>
-      <Footer />
+      <OTTFooter />
     </div>
   );
 }

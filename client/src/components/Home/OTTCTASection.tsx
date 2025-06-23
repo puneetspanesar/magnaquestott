@@ -61,65 +61,8 @@ export default function OTTCTASection() {
           ))}
         </div>
 
-        {/* Strategic CTAs */}
-        <div className="grid md:grid-cols-3 gap-6 mb-12">
-          {/* Schedule Demo CTA */}
-          <div className="bg-primary rounded-2xl p-6 text-white hover:bg-blue-700 transition-all">
-            <div className="text-center">
-              <Calendar className="w-8 h-8 text-white mx-auto mb-4" />
-              <h3 className="text-lg font-bold mb-3">Schedule a Personalized Demo</h3>
-              <p className="text-blue-100 text-sm mb-6">See how SURE transforms OTT monetization for your unique use case</p>
-              <button
-                onClick={() => {
-                  document.getElementById('demo-form')?.scrollIntoView({ behavior: 'smooth' });
-                }}
-                className="group bg-white text-primary px-6 py-3 font-bold rounded-xl hover:bg-gray-100 transition-all flex items-center mx-auto text-sm"
-              >
-                Schedule Demo
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-              </button>
-            </div>
-          </div>
-
-          {/* Download Guide CTA */}
-          <div className="bg-white border-2 border-primary rounded-2xl p-6 hover:bg-gray-50 transition-all">
-            <div className="text-center">
-              <Download className="w-8 h-8 text-primary mx-auto mb-4" />
-              <h3 className="text-lg font-bold text-gray-900 mb-3">Download the OTT Monetization Guide</h3>
-              <p className="text-gray-600 text-sm mb-6">Learn how leading providers reduce churn & boost ARPU</p>
-              <button
-                onClick={() => {
-                  document.getElementById('demo-form')?.scrollIntoView({ behavior: 'smooth' });
-                }}
-                className="group bg-primary text-white px-6 py-3 font-bold rounded-xl hover:bg-blue-700 transition-all flex items-center mx-auto text-sm"
-              >
-                Get Free Guide
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-              </button>
-            </div>
-          </div>
-
-          {/* Talk to Expert CTA */}
-          <div className="bg-accent rounded-2xl p-6 text-white hover:bg-red-700 transition-all">
-            <div className="text-center">
-              <MessageCircle className="w-8 h-8 text-white mx-auto mb-4" />
-              <h3 className="text-lg font-bold mb-3">Talk to an Expert</h3>
-              <p className="text-red-100 text-sm mb-6">Explore a tailored roadmap for your platform</p>
-              <button
-                onClick={() => {
-                  document.getElementById('demo-form')?.scrollIntoView({ behavior: 'smooth' });
-                }}
-                className="group bg-white text-accent px-6 py-3 font-bold rounded-xl hover:bg-gray-100 transition-all flex items-center mx-auto text-sm"
-              >
-                Start Conversation
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-              </button>
-            </div>
-          </div>
-        </div>
-
         {/* Proven Results */}
-        <div className="bg-primary rounded-2xl p-8 text-center text-white">
+        <div className="bg-primary rounded-2xl p-8 text-center text-white mb-12">
           <div className="flex items-center justify-center mb-4">
             <Award className="w-6 h-6 text-white mr-2" />
             <span className="text-lg font-bold">Proven Across OTT Use Cases</span>
@@ -127,6 +70,59 @@ export default function OTTCTASection() {
           <p className="text-blue-100 mb-6">
             Trusted by global OTT and streaming brands to manage over $300M+ in recurring revenues across 50+ countries.
           </p>
+        </div>
+
+        {/* Strategic CTAs */}
+        <div className="bg-gray-50 rounded-2xl p-8">
+          <div className="grid md:grid-cols-3 divide-x divide-gray-200">
+            {/* Schedule Demo CTA */}
+            <div className="text-center px-6 py-4 group hover:bg-white hover:rounded-l-xl transition-all">
+              <Calendar className="w-8 h-8 text-primary mx-auto mb-4 group-hover:scale-110 transition-transform" />
+              <h3 className="text-lg font-bold text-gray-900 mb-3">Schedule a Personalized Demo</h3>
+              <p className="text-gray-600 text-sm mb-6">See how SURE transforms OTT monetization for your unique use case</p>
+              <button
+                onClick={() => {
+                  document.getElementById('demo-form')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+                className="text-primary font-semibold hover:text-blue-700 transition-colors flex items-center mx-auto text-sm"
+              >
+                Schedule Demo
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              </button>
+            </div>
+
+            {/* Download Guide CTA */}
+            <div className="text-center px-6 py-4 group hover:bg-white transition-all">
+              <Download className="w-8 h-8 text-primary mx-auto mb-4 group-hover:scale-110 transition-transform" />
+              <h3 className="text-lg font-bold text-gray-900 mb-3">Download the OTT Monetization Guide</h3>
+              <p className="text-gray-600 text-sm mb-6">Learn how leading providers reduce churn & boost ARPU</p>
+              <button
+                onClick={() => {
+                  document.getElementById('demo-form')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+                className="text-primary font-semibold hover:text-blue-700 transition-colors flex items-center mx-auto text-sm"
+              >
+                Get Free Guide
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              </button>
+            </div>
+
+            {/* Talk to Expert CTA */}
+            <div className="text-center px-6 py-4 group hover:bg-white hover:rounded-r-xl transition-all">
+              <MessageCircle className="w-8 h-8 text-primary mx-auto mb-4 group-hover:scale-110 transition-transform" />
+              <h3 className="text-lg font-bold text-gray-900 mb-3">Talk to an Expert</h3>
+              <p className="text-gray-600 text-sm mb-6">Explore a tailored roadmap for your platform</p>
+              <button
+                onClick={() => {
+                  document.getElementById('demo-form')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+                className="text-primary font-semibold hover:text-blue-700 transition-colors flex items-center mx-auto text-sm"
+              >
+                Start Conversation
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </section>

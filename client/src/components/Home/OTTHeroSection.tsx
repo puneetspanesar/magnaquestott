@@ -105,7 +105,7 @@ export default function OTTHeroSection() {
             <h1 className="text-4xl lg:text-6xl font-bold leading-tight mb-8">
               <span className="block text-white mb-4">Streamline, Scale, and Succeed</span>
               <span className="block text-white mb-4">with Smarter</span>
-              <span className="block text-3xl lg:text-5xl bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent font-bold">
+              <span className="block text-white mb-4">
                 OTT Monetization
               </span>
             </h1>

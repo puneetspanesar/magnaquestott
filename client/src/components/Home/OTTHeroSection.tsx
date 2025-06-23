@@ -92,9 +92,9 @@ export default function OTTHeroSection() {
       </div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center pt-16">
+        <div className="grid lg:grid-cols-[1.2fr,0.8fr] gap-24 items-start pt-8">
           {/* Left Column - Content */}
-          <div className="text-left">
+          <div className="text-left pr-8 mt-12">
             {/* Badge */}
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 mb-8 border border-white/20">
               <div className="w-2 h-2 bg-green-400 rounded-full mr-3 animate-pulse"></div>
@@ -135,7 +135,7 @@ export default function OTTHeroSection() {
           </div>
 
           {/* Right Column - Demo Form */}
-          <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20">
+          <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 mt-12">
             <div className="text-center mb-8">
               <h3 className="text-2xl font-bold text-white mb-2">Book a Personalized Demo</h3>
               <p className="text-blue-100">See how SURE transforms OTT monetization for your unique use case</p>

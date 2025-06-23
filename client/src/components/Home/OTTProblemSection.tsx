@@ -1,4 +1,4 @@
-import { ArrowRight, CheckCircle, TrendingUp, Users, Globe, Zap, Target, Lightbulb } from "lucide-react";
+import { ArrowRight, CheckCircle, UserMinus, Users, Globe, Zap, Target, Lightbulb, Building2, DollarSign } from "lucide-react";
 
 export default function OTTProblemSection() {
   return (
@@ -31,24 +31,24 @@ export default function OTTProblemSection() {
               {/* Key Challenges Grid */}
               <div className="grid md:grid-cols-3 gap-6 mt-8">
                 <div className="text-center">
-                  <div className="w-12 h-12 bg-red-500/20 rounded-xl flex items-center justify-center mx-auto mb-3">
-                    <TrendingUp className="w-6 h-6 text-red-300 transform rotate-180" />
+                  <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mx-auto mb-3">
+                    <UserMinus className="w-6 h-6 text-white" />
                   </div>
                   <h4 className="font-bold text-white mb-2">Rising Churn Rates</h4>
                   <p className="text-blue-200 text-sm">Users canceling faster than ever</p>
                 </div>
                 
                 <div className="text-center">
-                  <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center mx-auto mb-3">
-                    <Globe className="w-6 h-6 text-orange-300" />
+                  <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mx-auto mb-3">
+                    <Building2 className="w-6 h-6 text-white" />
                   </div>
                   <h4 className="font-bold text-white mb-2">Complex Scaling</h4>
                   <p className="text-blue-200 text-sm">Multiple markets, currencies, regulations</p>
                 </div>
                 
                 <div className="text-center">
-                  <div className="w-12 h-12 bg-yellow-500/20 rounded-xl flex items-center justify-center mx-auto mb-3">
-                    <Users className="w-6 h-6 text-yellow-300" />
+                  <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mx-auto mb-3">
+                    <DollarSign className="w-6 h-6 text-white" />
                   </div>
                   <h4 className="font-bold text-white mb-2">Pricing Pressure</h4>
                   <p className="text-blue-200 text-sm">Struggle to maximize ARPU</p>

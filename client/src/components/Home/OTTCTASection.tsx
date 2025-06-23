@@ -5,7 +5,7 @@ export default function OTTCTASection() {
   const ctaOptions = [
     {
       icon: Calendar,
-      title: "Book a Personalized Demo",
+      title: "Schedule a Personalized Demo",
       description: "See how SURE transforms OTT monetization for your unique use case",
       buttonText: "Schedule Demo",
       buttonStyle: "bg-gradient-to-r from-primary to-accent text-white hover:shadow-2xl transform hover:scale-105",
@@ -91,7 +91,7 @@ export default function OTTCTASection() {
                 className="group bg-white text-primary px-10 py-5 text-xl font-bold rounded-2xl hover:bg-gray-100 transition-all transform hover:scale-105 shadow-2xl flex items-center"
               >
                 <Calendar className="w-6 h-6 mr-3" />
-                Book Strategy Call
+                Schedule Strategy Call
                 <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-1 transition-transform" />
               </button>
               

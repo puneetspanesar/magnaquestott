@@ -136,7 +136,7 @@ export default function OTTHeroSection() {
           {/* Right Column - Demo Form */}
           <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20">
             <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold text-white mb-2">Book a Personalized Demo</h3>
+              <h3 className="text-2xl font-bold text-white mb-2">Schedule a Personalized Demo</h3>
               <p className="text-blue-100">See how SURE transforms OTT monetization for your unique use case</p>
             </div>
 
@@ -221,7 +221,7 @@ export default function OTTHeroSection() {
                   </div>
                 ) : (
                   <>
-                    Book Your Demo
+                    Schedule Your Demo
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </>
                 )}

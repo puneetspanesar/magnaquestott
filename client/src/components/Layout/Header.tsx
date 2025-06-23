@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X, ChevronDown, Globe, Building2, Users, Award, Phone, Tv, Radio, Hospital, GraduationCap, MousePointer } from "lucide-react";
+import { Menu, X, ChevronDown, Globe, Building2, Users, Award, Phone, Tv, Radio, Hospital, GraduationCap, Calendar } from "lucide-react";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -119,8 +119,8 @@ export default function Header() {
               }}
               className="bg-gradient-to-r from-primary to-accent text-white px-6 py-3 rounded-lg font-semibold text-sm shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 group whitespace-nowrap"
             >
-              <MousePointer className="w-4 h-4 mr-2 inline group-hover:animate-pulse" />
-              Book a Demo
+              <Calendar className="w-4 h-4 mr-2 inline group-hover:animate-pulse" />
+              Schedule a Demo
             </button>
           </div>
 
@@ -176,8 +176,8 @@ export default function Header() {
                 }}
                 className="w-full mt-6 bg-gradient-to-r from-primary to-accent text-white px-8 py-4 rounded-xl font-bold shadow-lg"
               >
-                <MousePointer className="w-4 h-4 mr-2 inline" />
-                Book a Demo
+                <Calendar className="w-4 h-4 mr-2 inline" />
+                Schedule a Demo
               </button>
             </div>
           </div>

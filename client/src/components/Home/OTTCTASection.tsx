@@ -60,31 +60,32 @@ export default function OTTCTASection() {
         </div>
 
         {/* Proven Results */}
-        <div className="text-center py-8 border-t border-gray-200 mb-12">
-          <div className="flex items-center justify-center mb-6">
-            <Award className="w-6 h-6 text-primary mr-2" />
-            <span className="text-2xl font-bold text-gray-900">Proven Across OTT Use Cases</span>
+        <div className="grid lg:grid-cols-3 gap-8 border-t border-gray-200 pt-8 mb-12">
+          {/* Header Card */}
+          <div className="lg:col-span-1 text-center">
+            <div className="bg-primary rounded-full p-4 w-16 h-16 flex items-center justify-center mx-auto mb-4">
+              <Award className="w-8 h-8 text-white" />
+            </div>
+            <h3 className="text-lg font-bold text-gray-900 mb-3">Proven Across OTT Use Cases</h3>
+            <p className="text-gray-600 text-sm leading-relaxed">Trusted by global brands worldwide</p>
           </div>
           
-          {/* Stats */}
-          <div className="flex justify-center items-center space-x-12">
-            <div className="text-center">
-              <div className="bg-primary rounded-full p-3 w-12 h-12 flex items-center justify-center mx-auto mb-3">
-                <DollarSign className="w-6 h-6 text-white" />
-              </div>
-              <div className="text-3xl font-bold text-primary">$300M+</div>
-              <div className="text-sm text-gray-600">Recurring Revenue Managed</div>
+          {/* Revenue Stat */}
+          <div className="text-center">
+            <div className="bg-primary rounded-full p-4 w-16 h-16 flex items-center justify-center mx-auto mb-4">
+              <DollarSign className="w-8 h-8 text-white" />
             </div>
-            
-            <div className="w-px h-16 bg-gray-300"></div>
-            
-            <div className="text-center">
-              <div className="bg-primary rounded-full p-3 w-12 h-12 flex items-center justify-center mx-auto mb-3">
-                <MapPin className="w-6 h-6 text-white" />
-              </div>
-              <div className="text-3xl font-bold text-primary">50+</div>
-              <div className="text-sm text-gray-600">Countries Served</div>
+            <h3 className="text-lg font-bold text-gray-900 mb-3">$300M+</h3>
+            <p className="text-gray-600 text-sm leading-relaxed">Recurring Revenue Managed</p>
+          </div>
+          
+          {/* Countries Stat */}
+          <div className="text-center">
+            <div className="bg-primary rounded-full p-4 w-16 h-16 flex items-center justify-center mx-auto mb-4">
+              <MapPin className="w-8 h-8 text-white" />
             </div>
+            <h3 className="text-lg font-bold text-gray-900 mb-3">50+</h3>
+            <p className="text-gray-600 text-sm leading-relaxed">Countries Served</p>
           </div>
         </div>
 

@@ -38,24 +38,22 @@ export default function OTTCTASection() {
     <section id="benefits-section" className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="bg-primary rounded-2xl p-8 text-center text-white mb-12">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-2">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
             What You Can Achieve with SURE
           </h2>
         </div>
 
-        {/* Achievements List */}
-        <div className="space-y-6 mb-12">
+        {/* Achievements Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {achievements.map((achievement, index) => (
-            <div key={index} className="border-l-4 border-primary pl-6 py-4 hover:bg-blue-50 transition-all">
-              <div className="flex items-start space-x-4">
-                <div className="bg-white border-2 border-primary rounded-xl p-3 flex-shrink-0">
-                  <achievement.icon className="w-6 h-6 text-primary" />
+            <div key={index} className="bg-white border border-gray-200 rounded-xl p-6 hover:border-primary hover:shadow-lg transition-all">
+              <div className="text-center">
+                <div className="bg-primary rounded-full p-4 w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <achievement.icon className="w-8 h-8 text-white" />
                 </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{achievement.title}</h3>
-                  <p className="text-gray-700 leading-relaxed">{achievement.description}</p>
-                </div>
+                <h3 className="text-lg font-bold text-gray-900 mb-3">{achievement.title}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{achievement.description}</p>
               </div>
             </div>
           ))}

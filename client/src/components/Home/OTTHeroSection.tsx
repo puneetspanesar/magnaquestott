@@ -237,12 +237,7 @@ export default function OTTHeroSection() {
         </div>
       </div>
       
-      {/* Bottom Wave */}
-      <div className="absolute bottom-0 left-0 right-0">
-        <svg viewBox="0 0 1200 120" className="w-full h-auto">
-          <path d="M0,50 C300,100 900,0 1200,50 L1200,120 L0,120 Z" fill="#df222b" fillOpacity="0.1"/>
-        </svg>
-      </div>
+
     </section>
   );
 }

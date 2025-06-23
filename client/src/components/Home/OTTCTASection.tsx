@@ -62,12 +62,12 @@ export default function OTTCTASection() {
         </div>
 
         {/* Proven Results */}
-        <div className="bg-gray-900 rounded-2xl p-8 text-center text-white">
+        <div className="bg-primary rounded-2xl p-8 text-center text-white">
           <div className="flex items-center justify-center mb-4">
-            <Award className="w-6 h-6 text-accent mr-2" />
+            <Award className="w-6 h-6 text-white mr-2" />
             <span className="text-lg font-bold">Proven Across OTT Use Cases</span>
           </div>
-          <p className="text-gray-300 mb-6">
+          <p className="text-blue-100 mb-6">
             Trusted by global OTT and streaming brands to manage over $300M+ in recurring revenues across 50+ countries.
           </p>
           
@@ -75,7 +75,7 @@ export default function OTTCTASection() {
             onClick={() => {
               document.getElementById('demo-form')?.scrollIntoView({ behavior: 'smooth' });
             }}
-            className="group bg-gradient-to-r from-primary to-accent text-white px-8 py-4 text-lg font-bold rounded-xl hover:shadow-xl transition-all transform hover:scale-105 flex items-center mx-auto"
+            className="group bg-white text-primary px-8 py-4 text-lg font-bold rounded-xl hover:bg-gray-100 transition-all transform hover:scale-105 flex items-center mx-auto"
           >
             Schedule Your SURE Demo Today
             <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" />

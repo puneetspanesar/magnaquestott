@@ -131,40 +131,7 @@ export default function OTTHeroSection() {
               ))}
             </div>
             
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-start items-start mb-12">
-              <button
-                onClick={() => {
-                  document.getElementById('demo-form')?.scrollIntoView({ behavior: 'smooth' });
-                }}
-                className="group bg-white text-primary px-8 py-4 text-lg font-bold rounded-2xl hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg flex items-center"
-              >
-                <Calendar className="w-6 h-6 mr-3" />
-                <div className="text-left">
-                  <div>Book Your Demo Now</div>
-                  <div className="text-sm font-normal text-gray-600">Get started in 2 minutes</div>
-                </div>
-              </button>
-              <button className="group border-2 border-white/30 text-white px-8 py-4 text-lg font-bold rounded-2xl hover:bg-white/10 backdrop-blur-sm transition-all flex items-center">
-                <Play className="w-6 h-6 mr-3 group-hover:scale-110 transition-transform" />
-                <div className="text-left">
-                  <div>Watch Product Demo</div>
-                  <div className="text-sm font-normal text-blue-200">See SURE transform OTT monetization</div>
-                </div>
-              </button>
-            </div>
-            
-            {/* Social Proof Stats */}
-            <div className="grid grid-cols-2 gap-8">
-              <div className="text-left group">
-                <div className="text-3xl font-bold text-white mb-2 group-hover:scale-110 transition-transform">$300M+</div>
-                <div className="text-blue-200 font-medium">Recurring Revenue Managed</div>
-              </div>
-              <div className="text-left group">
-                <div className="text-3xl font-bold text-white mb-2 group-hover:scale-110 transition-transform">50+</div>
-                <div className="text-blue-200 font-medium">Countries Served</div>
-              </div>
-            </div>
+
           </div>
 
           {/* Right Column - Demo Form */}

@@ -2,7 +2,7 @@ import { ArrowRight, CheckCircle, UserMinus, Users, Globe, Zap, Target, Lightbul
 
 export default function OTTProblemSection() {
   return (
-    <section id="problem-section" className="py-20 bg-gradient-to-br from-primary via-primary to-blue-700">
+    <section id="problem-section" className="py-20 bg-primary">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Content */}
         <div className="text-center text-white">

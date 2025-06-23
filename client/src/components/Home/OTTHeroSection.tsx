@@ -3,7 +3,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Play, ArrowRight, CheckCircle, TrendingUp, Users, Globe, Shield, Award, Building2, Zap, Mail, Phone, User } from "lucide-react";
+import { Play, ArrowRight, CheckCircle, TrendingUp, Users, Globe, Shield, Award, Building2, Zap, Mail, Phone, User, Calendar } from "lucide-react";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
@@ -133,6 +133,18 @@ export default function OTTHeroSection() {
             
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-start items-start mb-12">
+              <button
+                onClick={() => {
+                  document.getElementById('demo-form')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+                className="group bg-white text-primary px-8 py-4 text-lg font-bold rounded-2xl hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg flex items-center"
+              >
+                <Calendar className="w-6 h-6 mr-3" />
+                <div className="text-left">
+                  <div>Book Your Demo Now</div>
+                  <div className="text-sm font-normal text-gray-600">Get started in 2 minutes</div>
+                </div>
+              </button>
               <button className="group border-2 border-white/30 text-white px-8 py-4 text-lg font-bold rounded-2xl hover:bg-white/10 backdrop-blur-sm transition-all flex items-center">
                 <Play className="w-6 h-6 mr-3 group-hover:scale-110 transition-transform" />
                 <div className="text-left">

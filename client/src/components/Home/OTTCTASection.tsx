@@ -60,14 +60,27 @@ export default function OTTCTASection() {
         </div>
 
         {/* Proven Results */}
-        <div className="bg-primary rounded-2xl p-8 text-center text-white mb-12">
+        <div className="text-center py-8 border-t border-gray-200 mb-12">
           <div className="flex items-center justify-center mb-4">
-            <Award className="w-6 h-6 text-white mr-2" />
-            <span className="text-lg font-bold">Proven Across OTT Use Cases</span>
+            <Award className="w-6 h-6 text-primary mr-2" />
+            <span className="text-2xl font-bold text-gray-900">Proven Across OTT Use Cases</span>
           </div>
-          <p className="text-blue-100 mb-6">
+          <p className="text-lg text-gray-600 mb-6 max-w-3xl mx-auto">
             Trusted by global OTT and streaming brands to manage over $300M+ in recurring revenues across 50+ countries.
           </p>
+          
+          {/* Stats */}
+          <div className="flex justify-center items-center space-x-8 text-primary">
+            <div className="text-center">
+              <div className="text-3xl font-bold">$300M+</div>
+              <div className="text-sm text-gray-500">Revenue Managed</div>
+            </div>
+            <div className="w-px h-12 bg-gray-300"></div>
+            <div className="text-center">
+              <div className="text-3xl font-bold">50+</div>
+              <div className="text-sm text-gray-500">Countries</div>
+            </div>
+          </div>
         </div>
 
         {/* Strategic CTAs */}

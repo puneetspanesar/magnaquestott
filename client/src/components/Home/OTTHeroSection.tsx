@@ -103,8 +103,8 @@ export default function OTTHeroSection() {
             
             {/* Main Headline */}
             <h1 className="text-4xl lg:text-6xl font-bold leading-tight mb-8">
-              <span className="block text-white mb-4">Streamline, Scale, and Succeed with Smarter</span>
-              <span className="block text-white mb-4">
+              <span className="block text-white mb-2">Streamline, Scale, and Succeed with Smarter</span>
+              <span className="block text-white">
                 OTT Monetization
               </span>
             </h1>

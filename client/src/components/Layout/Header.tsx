@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X, ChevronDown, Globe, Building2, Users, Award, Phone, Tv, Radio, Hospital, GraduationCap } from "lucide-react";
+import { Menu, X, ChevronDown, Globe, Building2, Users, Award, Phone, Tv, Radio, Hospital, GraduationCap, MousePointer } from "lucide-react";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -108,19 +108,7 @@ export default function Header() {
               Benefits
             </button>
 
-            {/* Divider */}
-            <div className="h-6 w-px bg-gradient-to-b from-transparent via-gray-300 to-transparent mx-1"></div>
 
-            {/* Demo */}
-            <button
-              onClick={() => {
-                document.getElementById('demo-form')?.scrollIntoView({ behavior: 'smooth' });
-                setActiveDropdown(null);
-              }}
-              className="relative px-5 py-4 text-base font-medium transition-all duration-300 text-primary font-semibold cursor-pointer"
-            >
-              Get Demo
-            </button>
           </nav>
 
           {/* CTA Button */}
@@ -131,8 +119,8 @@ export default function Header() {
               }}
               className="bg-gradient-to-r from-primary to-accent text-white px-6 py-3 rounded-lg font-semibold text-sm shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 group whitespace-nowrap"
             >
-              <Phone className="w-4 h-4 mr-2 inline group-hover:animate-pulse" />
-              Book OTT Demo
+              <MousePointer className="w-4 h-4 mr-2 inline group-hover:animate-pulse" />
+              Book a Demo
             </button>
           </div>
 
@@ -188,8 +176,8 @@ export default function Header() {
                 }}
                 className="w-full mt-6 bg-gradient-to-r from-primary to-accent text-white px-8 py-4 rounded-xl font-bold shadow-lg"
               >
-                <Phone className="w-4 h-4 mr-2 inline" />
-                Book OTT Demo
+                <MousePointer className="w-4 h-4 mr-2 inline" />
+                Book a Demo
               </button>
             </div>
           </div>

@@ -55,18 +55,7 @@ export default function OTTValuePropsSection() {
           ))}
         </div>
 
-        {/* CTA */}
-        <div className="text-center">
-          <button
-            onClick={() => {
-              document.getElementById('demo-form')?.scrollIntoView({ behavior: 'smooth' });
-            }}
-            className="group bg-gradient-to-r from-primary to-accent text-white px-12 py-6 text-xl font-bold rounded-2xl hover:shadow-2xl transition-all transform hover:scale-105 shadow-lg flex items-center mx-auto"
-          >
-            See How SURE Transforms OTT
-            <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-1 transition-transform" />
-          </button>
-        </div>
+
       </div>
     </section>
   );

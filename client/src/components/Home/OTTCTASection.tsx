@@ -1,4 +1,4 @@
-import { ArrowRight, TrendingDown, TrendingUp, Package, CreditCard, Zap, Globe, Award, Calendar, Download, MessageCircle } from "lucide-react";
+import { ArrowRight, TrendingDown, TrendingUp, Package, CreditCard, Zap, Globe, Award, Calendar, Download, MessageCircle, DollarSign, MapPin } from "lucide-react";
 
 export default function OTTCTASection() {
   const achievements = [
@@ -61,24 +61,29 @@ export default function OTTCTASection() {
 
         {/* Proven Results */}
         <div className="text-center py-8 border-t border-gray-200 mb-12">
-          <div className="flex items-center justify-center mb-4">
+          <div className="flex items-center justify-center mb-6">
             <Award className="w-6 h-6 text-primary mr-2" />
             <span className="text-2xl font-bold text-gray-900">Proven Across OTT Use Cases</span>
           </div>
-          <p className="text-lg text-gray-600 mb-6 max-w-3xl mx-auto">
-            Trusted by global OTT and streaming brands to manage over $300M+ in recurring revenues across 50+ countries.
-          </p>
           
           {/* Stats */}
-          <div className="flex justify-center items-center space-x-8 text-primary">
+          <div className="flex justify-center items-center space-x-12">
             <div className="text-center">
-              <div className="text-3xl font-bold">$300M+</div>
-              <div className="text-sm text-gray-500">Revenue Managed</div>
+              <div className="bg-primary rounded-full p-3 w-12 h-12 flex items-center justify-center mx-auto mb-3">
+                <DollarSign className="w-6 h-6 text-white" />
+              </div>
+              <div className="text-3xl font-bold text-primary">$300M+</div>
+              <div className="text-sm text-gray-600">Recurring Revenue Managed</div>
             </div>
-            <div className="w-px h-12 bg-gray-300"></div>
+            
+            <div className="w-px h-16 bg-gray-300"></div>
+            
             <div className="text-center">
-              <div className="text-3xl font-bold">50+</div>
-              <div className="text-sm text-gray-500">Countries</div>
+              <div className="bg-primary rounded-full p-3 w-12 h-12 flex items-center justify-center mx-auto mb-3">
+                <MapPin className="w-6 h-6 text-white" />
+              </div>
+              <div className="text-3xl font-bold text-primary">50+</div>
+              <div className="text-sm text-gray-600">Countries Served</div>
             </div>
           </div>
         </div>

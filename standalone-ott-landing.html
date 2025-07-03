@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SURE by Magnaquest - OTT Monetization Platform</title>
+    <meta name="description" content="Reduce churn and accelerate growth with SURE's comprehensive OTT monetization suite. Schedule your personalized demo today.">
+    
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        /* Color Variables */
+        :root {
+            --primary: #1267a9;
+            --accent: #df222b;
+            --white: #ffffff;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-600: #4b5563;
+            --gray-900: #111827;
+            --blue-100: #dbeafe;
+            --blue-200: #bfdbfe;
+        }
+        
+        /* Utility Classes */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary {
+            background: var(--white);
+            color: var(--primary);
+        }
+        
+        .btn-primary:hover {
+            background: var(--gray-100);
+            transform: scale(1.05);
+        }
+        
+        .input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            font-size: 16px;
+        }
+        
+        .input::placeholder {
+            color: var(--blue-200);
+        }
+        
+        .input:focus {
+            outline: none;
+            border-color: var(--white);
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--gray-200);
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            height: 40px;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--gray-900);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            color: var(--white);
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 25%;
+            left: 25%;
+            width: 300px;
+            height: 300px;
+            background: rgba(18, 103, 169, 0.2);
+            border-radius: 50%;
+            filter: blur(60px);
+            animation: pulse 4s ease-in-out infinite;
+        }
+        
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 75%;
+            right: 25%;
+            width: 400px;
+            height: 400px;
+            background: rgba(18, 103, 169, 0.15);
+            border-radius: 50%;
+            filter: blur(60px);
+            animation: pulse 4s ease-in-out infinite 2s;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 0.4; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(1.1); }
+        }
+        
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 3rem;
+            align-items: start;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 2rem;
+        }
+        
+        .hero .subtitle {
+            font-size: 1.5rem;
+            color: var(--blue-100);
+            margin-bottom: 3rem;
+            line-height: 1.4;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .feature-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .feature-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        .feature-icon {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-card h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .feature-card p {
+            font-size: 0.875rem;
+            color: var(--blue-200);
+        }
+        
+        /* Demo Form */
+        .demo-form {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 24px;
+            padding: 2rem;
+        }
+        
+        .demo-form h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+        
+        .demo-form .subtitle {
+            text-align: center;
+            color: var(--blue-100);
+            margin-bottom: 2rem;
+            font-size: 1rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .input-wrapper {
+            position: relative;
+        }
+        
+        .input-icon {
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            color: var(--blue-200);
+        }
+        
+        .input-with-icon {
+            padding-left: 44px;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            height: 56px;
+            font-size: 1.125rem;
+            font-weight: 700;
+            border-radius: 12px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Problem Section */
+        .problem-section {
+            background: var(--primary);
+            color: var(--white);
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .problem-section h2 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 2rem;
+        }
+        
+        .problem-statement {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto 4rem;
+        }
+        
+        .problem-statement p {
+            font-size: 1.5rem;
+            color: var(--blue-100);
+            line-height: 1.4;
+            margin-bottom: 2rem;
+        }
+        
+        .challenges-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .challenge-item {
+            text-align: center;
+        }
+        
+        .challenge-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+        }
+        
+        .challenge-icon svg {
+            width: 24px;
+            height: 24px;
+        }
+        
+        /* Solutions Section */
+        .solutions-section {
+            background: var(--white);
+            padding: 80px 0;
+        }
+        
+        .solutions-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .solutions-header h2 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: 1.5rem;
+        }
+        
+        .solutions-header p {
+            font-size: 1.5rem;
+            color: var(--gray-600);
+            max-width: 1200px;
+            margin: 0 auto;
+            line-height: 1.4;
+        }
+        
+        .solutions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+        
+        .solution-card {
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            border-radius: 24px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .solution-card:hover {
+            background: var(--gray-100);
+            transform: translateY(-4px);
+        }
+        
+        .solution-content {
+            display: flex;
+            gap: 1.5rem;
+        }
+        
+        .solution-icon {
+            background: var(--primary);
+            border-radius: 16px;
+            padding: 1rem;
+            flex-shrink: 0;
+            transition: transform 0.3s ease;
+        }
+        
+        .solution-card:hover .solution-icon {
+            transform: scale(1.1);
+        }
+        
+        .solution-icon svg {
+            width: 40px;
+            height: 40px;
+            color: var(--white);
+        }
+        
+        .solution-text h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: 1rem;
+        }
+        
+        .solution-text p {
+            color: var(--gray-600);
+            line-height: 1.6;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: var(--white);
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .cta-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .cta-card {
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .cta-card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: 1rem;
+        }
+        
+        .cta-card p {
+            color: var(--gray-600);
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+        }
+        
+        .cta-btn {
+            background: var(--primary);
+            color: var(--white);
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-btn:hover {
+            background: #0f5a8a;
+            transform: translateY(-2px);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--gray-900);
+            color: var(--white);
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .footer-logo {
+            height: 40px;
+            margin-bottom: 1rem;
+            filter: brightness(0) invert(1);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .solutions-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero .subtitle {
+                font-size: 1.25rem;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .problem-section h2,
+            .solutions-header h2 {
+                font-size: 2.5rem;
+            }
+            
+            .problem-statement p,
+            .solutions-header p {
+                font-size: 1.25rem;
+            }
+        }
+        
+        /* Success Message */
+        .success-message {
+            background: #10b981;
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            display: none;
+        }
+        
+        .error-message {
+            background: #ef4444;
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            display: none;
+        }
+        
+        /* Loading State */
+        .loading {
+            opacity: 0.7;
+            pointer-events: none;
+        }
+        
+        .spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 2px solid transparent;
+            border-top: 2px solid currentColor;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-right: 8px;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div>
+                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjQwIiB2aWV3Qm94PSIwIDAgMTYwIDQwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBkPSJNMTAgNUgyMFYzNUgxMFY1WiIgZmlsbD0iIzEyNjdhOSIvPgo8cGF0aCBkPSJNMjUgNUgzNVYyNUgyNVY1WiIgZmlsbD0iI2RmMjIyYiIvPgo8dGV4dCB4PSI0NSIgeT0iMjUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxMjY3YTkiPk1hZ25hcXVlc3Q8L3RleHQ+Cjwvc3ZnPgo=" alt="Magnaquest" class="logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#demo-form">The Challenge</a></li>
+                <li><a href="#solutions-section">OTT Solutions</a></li>
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#demo-form">Get Demo</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="demo-form" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <!-- Left Column - Content -->
+                <div>
+                    <h1>
+                        <span style="display: block; margin-bottom: 0.5rem;">Streamline, Scale, and Succeed with Smarter</span>
+                        <span style="display: block;">OTT Monetization</span>
+                    </h1>
+                    
+                    <p class="subtitle">
+                        Reduce churn and accelerate growth with a comprehensive end-to-end monetization suite.
+                    </p>
+                    
+                    <!-- Key Features Grid -->
+                    <div class="features-grid">
+                        <div class="feature-card" title="Advanced AI-powered retention strategies with real-time churn prediction">
+                            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="m3 12 2-2m0 0 7-7 7 7M5 10v10a1 1 0 0 0 1 1h3m10-11 2 2m-2-2v10a1 1 0 0 1-1 1h-3m-6 0a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1m-6 0h6"/>
+                            </svg>
+                            <h4>Reduce Subscriber Churn</h4>
+                            <p>Personalized journeys and churn prediction analytics</p>
+                        </div>
+                        
+                        <div class="feature-card" title="Smart monetization engine with dynamic pricing and bundling">
+                            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                            </svg>
+                            <h4>Increase Revenue Per User</h4>
+                            <p>Upsell, cross-sell, and bundle with ease</p>
+                        </div>
+                        
+                        <div class="feature-card" title="Seamless international expansion with automated compliance">
+                            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="m4.93 4.93 4.24 4.24"/>
+                                <path d="m14.83 9.17 4.24-4.24"/>
+                                <path d="m14.83 14.83 4.24 4.24"/>
+                                <path d="m9.17 14.83-4.24 4.24"/>
+                            </svg>
+                            <h4>Global Reach, Local Compliance</h4>
+                            <p>Multi-currency, multi-taxation support</p>
+                        </div>
+                        
+                        <div class="feature-card" title="Flexible pricing that scales with your subscriber base">
+                            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect width="20" height="14" x="2" y="5" rx="2"/>
+                                <path d="M2 10h20"/>
+                            </svg>
+                            <h4>Pay As You Grow</h4>
+                            <p>Scalable cloud-native architecture</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column - Demo Form -->
+                <div class="demo-form">
+                    <h3>Schedule a Personalized Demo</h3>
+                    <p class="subtitle">See how SURE transforms OTT monetization for your unique use case</p>
+
+                    <div id="success-message" class="success-message">
+                        Demo Request Submitted! Our OTT experts will contact you within 24 hours to schedule your personalized demo.
+                    </div>
+                    
+                    <div id="error-message" class="error-message">
+                        Submission Failed. Please try again or contact our support team.
+                    </div>
+
+                    <form id="demo-form-element">
+                        <div class="form-group">
+                            <label class="form-label" for="name">Full Name *</label>
+                            <div class="input-wrapper">
+                                <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="12" cy="7" r="4"/>
+                                </svg>
+                                <input type="text" id="name" name="name" class="input input-with-icon" placeholder="Your full name" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="email">Business Email *</label>
+                            <div class="input-wrapper">
+                                <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                                <input type="email" id="email" name="email" class="input input-with-icon" placeholder="your.email@company.com" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="phone">Phone Number *</label>
+                            <div class="input-wrapper">
+                                <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                </svg>
+                                <input type="tel" id="phone" name="phone" class="input input-with-icon" placeholder="+1 (555) 123-4567" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="organization">OTT Platform/Company *</label>
+                            <div class="input-wrapper">
+                                <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M3 21h18"/>
+                                    <path d="M5 21V7l8-4v18"/>
+                                    <path d="M19 21V11l-6-4"/>
+                                </svg>
+                                <input type="text" id="organization" name="organization" class="input input-with-icon" placeholder="Your OTT platform name" required>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary submit-btn">
+                            <span id="submit-text">Schedule Your Demo</span>
+                            <svg id="submit-arrow" style="width: 20px; height: 20px; margin-left: 8px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14"/>
+                                <path d="m12 5 7 7-7 7"/>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section id="problem-section" class="problem-section">
+        <div class="container">
+            <div style="display: inline-flex; align-items: center; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border-radius: 9999px; padding: 12px 24px; margin-bottom: 2rem; border: 1px solid rgba(255, 255, 255, 0.2);">
+                <svg style="width: 20px; height: 20px; margin-right: 12px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <circle cx="12" cy="12" r="6"/>
+                    <circle cx="12" cy="12" r="2"/>
+                </svg>
+                <span style="font-weight: 600;">The OTT Challenge</span>
+            </div>
+            
+            <h2>
+                <span style="display: block; margin-bottom: 1rem;">Struggling with subscriber churn</span>
+                <span style="display: block; margin-bottom: 1rem;">and revenue stagnation in an</span>
+                <span style="display: block; color: var(--blue-200);">increasingly competitive OTT landscape?</span>
+            </h2>
+
+            <div class="problem-statement">
+                <p>
+                    Today's OTT landscape demands more than just content delivery. You need the agility to experiment with pricing, 
+                    retain users, and expand across geographies — all while optimizing operations.
+                </p>
+                
+                <div class="challenges-grid">
+                    <div class="challenge-item">
+                        <div class="challenge-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                <circle cx="8.5" cy="7" r="4"/>
+                                <line x1="18" y1="8" x2="23" y2="13"/>
+                                <line x1="23" y1="8" x2="18" y2="13"/>
+                            </svg>
+                        </div>
+                        <h4 style="font-weight: 700; margin-bottom: 0.5rem;">Rising Churn Rates</h4>
+                        <p style="color: var(--blue-200); font-size: 0.875rem;">Users canceling faster than ever</p>
+                    </div>
+                    
+                    <div class="challenge-item">
+                        <div class="challenge-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 21h18"/>
+                                <path d="M5 21V7l8-4v18"/>
+                                <path d="M19 21V11l-6-4"/>
+                            </svg>
+                        </div>
+                        <h4 style="font-weight: 700; margin-bottom: 0.5rem;">Complex Scaling</h4>
+                        <p style="color: var(--blue-200); font-size: 0.875rem;">Multiple markets, currencies, regulations</p>
+                    </div>
+                    
+                    <div class="challenge-item">
+                        <div class="challenge-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                            </svg>
+                        </div>
+                        <h4 style="font-weight: 700; margin-bottom: 0.5rem;">Pricing Pressure</h4>
+                        <p style="color: var(--blue-200); font-size: 0.875rem;">Struggle to maximize ARPU</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section id="solutions-section" class="solutions-section">
+        <div class="container">
+            <div class="solutions-header">
+                <h2>SURE by Magnaquest</h2>
+                <p>
+                    SURE by Magnaquest is a unified, cloud-native subscription platform built for modern OTT providers. Whether you're launching 
+                    new content bundles, managing freemium tiers, or scaling to new markets — SURE empowers you to grow without complexity.
+                </p>
+            </div>
+
+            <div class="solutions-grid">
+                <div class="solution-card">
+                    <div class="solution-content">
+                        <div class="solution-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                            </svg>
+                        </div>
+                        <div class="solution-text">
+                            <h3>Rapid Deployment</h3>
+                            <p>Launch your OTT platform in days, not months. Pre-built integrations and configurable workflows get you to market faster than traditional solutions.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="solution-card">
+                    <div class="solution-content">
+                        <div class="solution-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                        </div>
+                        <div class="solution-text">
+                            <h3>Infinite Scale</h3>
+                            <p>From thousands to millions of subscribers. Cloud-native architecture automatically scales with your growth without performance degradation.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="solution-card">
+                    <div class="solution-content">
+                        <div class="solution-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="m4.93 4.93 4.24 4.24"/>
+                                <path d="m14.83 9.17 4.24-4.24"/>
+                                <path d="m14.83 14.83 4.24 4.24"/>
+                                <path d="m9.17 14.83-4.24 4.24"/>
+                            </svg>
+                        </div>
+                        <div class="solution-text">
+                            <h3>Global Operations</h3>
+                            <p>Expand internationally with built-in multi-currency support, local taxation handling, and regional compliance frameworks.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="solution-card">
+                    <div class="solution-content">
+                        <div class="solution-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <circle cx="12" cy="12" r="6"/>
+                                <circle cx="12" cy="12" r="2"/>
+                            </svg>
+                        </div>
+                        <div class="solution-text">
+                            <h3>Smart Analytics</h3>
+                            <p>AI-powered insights predict churn, optimize pricing, and identify upsell opportunities to maximize your revenue per user.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="benefits" class="cta-section">
+        <div class="container">
+            <h2 style="font-size: 3rem; font-weight: 700; color: var(--gray-900); margin-bottom: 3rem; text-align: center;">Take the Next Step</h2>
+            
+            <div class="cta-grid">
+                <div class="cta-card">
+                    <h3>Schedule Demo</h3>
+                    <p>Get a personalized walkthrough of SURE's OTT monetization capabilities</p>
+                    <a href="#demo-form" class="cta-btn">Schedule Demo</a>
+                </div>
+                
+                <div class="cta-card">
+                    <h3>Download Guide</h3>
+                    <p>Learn proven strategies for OTT revenue optimization and churn reduction</p>
+                    <a href="#demo-form" class="cta-btn">Download Guide</a>
+                </div>
+                
+                <div class="cta-card">
+                    <h3>Talk to Expert</h3>
+                    <p>Discuss your specific OTT monetization challenges with our solution architects</p>
+                    <a href="#demo-form" class="cta-btn">Talk to Expert</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjQwIiB2aWV3Qm94PSIwIDAgMTYwIDQwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBkPSJNMTAgNUgyMFYzNUgxMFY1WiIgZmlsbD0id2hpdGUiLz4KPHA
+
+
+dGggZD0iTTI1IDVIMzVWMjVIMjVWNVoiIGZpbGw9IndoaXRlIi8+Cjx0ZXh0IHg9IjQ1IiB5PSIyNSIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE4IiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0id2hpdGUiPk1hZ25hcXVlc3Q8L3RleHQ+Cjwvc3ZnPgo=" alt="Magnaquest" class="footer-logo">
+            <p style="margin-top: 1rem; color: #9ca3af;">© 2025 Magnaquest Technologies. Global HQ: Hyderabad, India</p>
+        </div>
+    </footer>
+
+    <script>
+        // Form submission handling
+        document.getElementById('demo-form-element').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.querySelector('.submit-btn');
+            const submitText = document.getElementById('submit-text');
+            const submitArrow = document.getElementById('submit-arrow');
+            const successMessage = document.getElementById('success-message');
+            const errorMessage = document.getElementById('error-message');
+            
+            // Hide any existing messages
+            successMessage.style.display = 'none';
+            errorMessage.style.display = 'none';
+            
+            // Show loading state
+            submitBtn.classList.add('loading');
+            submitText.innerHTML = '<span class="spinner"></span>Scheduling Demo...';
+            submitArrow.style.display = 'none';
+            
+            // Get form data
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                organization: document.getElementById('organization').value
+            };
+            
+            // Simulate API call (replace with actual API endpoint)
+            setTimeout(() => {
+                // Reset button state
+                submitBtn.classList.remove('loading');
+                submitText.textContent = 'Schedule Your Demo';
+                submitArrow.style.display = 'inline';
+                
+                // Show success message
+                successMessage.style.display = 'block';
+                
+                // Reset form
+                document.getElementById('demo-form-element').reset();
+                
+                // Log form data (for demonstration - replace with actual API call)
+                console.log('Demo request submitted:', formData);
+                
+                // Optionally send to your backend
+                // fetch('/api/demo-requests', {
+                //     method: 'POST',
+                //     headers: { 'Content-Type': 'application/json' },
+                //     body: JSON.stringify(formData)
+                // });
+                
+            }, 2000);
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Add header background on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+            }
+        });
+    </script>
+</body>
+</html>
